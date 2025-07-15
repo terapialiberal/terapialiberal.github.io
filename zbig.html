@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Gran Tablero Mundial: La Profecía de Brzezinski | Análisis Definitivo Terapia Liberal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #f5f5f5;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #d4af37 0%, #dc2626 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass-section {
+            background: rgba(17, 24, 39, 0.5);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(107, 114, 128, 0.2);
+        }
+        .gold { color: #d4af37; }
+        .red { color: #dc2626; }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #d4af37;
+            transform: translateY(-2px);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #d4af37 0%, #dc2626 100%);
+            color: #000;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+        .sticky-nav {
+            backdrop-filter: blur(16px);
+            background: rgba(0, 0, 0, 0.9);
+            border-bottom: 1px solid rgba(107, 114, 128, 0.2);
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #d4af37 0%, #dc2626 100%);
+            color: #000;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5);
+        }
+        .timeline-item {
+            border-left: 3px solid #d4af37;
+            padding-left: 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            background: #d4af37;
+            border-radius: 50%;
+        }
+        .pivot-card {
+            background: rgba(17, 24, 39, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        .pivot-card:hover {
+            border-color: #d4af37;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+        }
+        .status-active { background: #dc2626; color: white; }
+        .status-allied { background: #059669; color: white; }
+        .status-neutral { background: #d97706; color: white; }
+        .status-resistant { background: #7c2d12; color: white; }
+        .alert-box {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(239, 68, 68, 0.1) 100%);
+            border: 1px solid #dc2626;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 20px 0;
+        }
+        .prediction-fulfilled {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(22, 163, 74, 0.1) 100%);
+            border: 1px solid #22c55e;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 20px 0;
+        }
+        .section-number {
+            background: linear-gradient(135deg, #d4af37 0%, #dc2626 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+        .map-container {
+            position: relative;
+            margin: 30px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .map-container img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .map-container:hover img {
+            transform: scale(1.02);
+        }
+        .quote-box {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid #d4af37;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
+        .data-stat {
+            background: rgba(17, 24, 39, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .data-stat:hover {
+            border-color: #d4af37;
+            background: rgba(212, 175, 55, 0.1);
+        }
+        .nav-sections {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .nav-sections a {
+            background: rgba(17, 24, 39, 0.6);
+            border: 1px solid rgba(107, 114, 128, 0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+        }
+        .nav-sections a:hover {
+            background: rgba(212, 175, 55, 0.2);
+            border-color: #d4af37;
+            color: #d4af37;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky top-0 z-50 sticky-nav">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <img src="https://yt3.ggpht.com/ZzVyDrXt4x8YWoKbISHZzC9CCtkEPCN4GRET1Xxf_wssNyw7mfN-xTbBmpwEJHO0DRQrg0Dgug=s68-c-k-c0x00ffffff-no-rj" 
+                         alt="Terapia Liberal" class="w-12 h-12 rounded-full">
+                    <h1 class="text-2xl font-bold gradient-text">Terapia Liberal</h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#introduccion" class="nav-link">Introducción</a>
+                    <a href="#arquitecto" class="nav-link">El Arquitecto</a>
+                    <a href="#teoria" class="nav-link">Teoría</a>
+                    <a href="#implementacion" class="nav-link">Implementación</a>
+                    <a href="#rivales" class="nav-link">Rivales</a>
+                    <a href="#predicciones" class="nav-link">Predicciones</a>
+                </nav>
+            </div>
+            <!-- Navigation Sections -->
+            <div class="nav-sections">
+                <a href="#que-es">¿Qué es?</a>
+                <a href="#brzezinski">Brzezinski</a>
+                <a href="#heartland">Heartland</a>
+                <a href="#eurasia">Eurasia</a>
+                <a href="#pivotes">Países Pivotes</a>
+                <a href="#cecom">CECOM</a>
+                <a href="#chokepoints">Chokepoints</a>
+                <a href="#china-rusia">China-Rusia</a>
+                <a href="#nueva-guerra-fria">Nueva Guerra Fría</a>
+                <a href="#elites">Élites</a>
+                <a href="#trump">Trump</a>
+                <a href="#palantir">Palantir</a>
+                <a href="#cronologia">Cronología</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="introduccion" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl md:text-7xl font-black mb-6">
+                    <span class="gradient-text">El Gran Tablero</span>
+                    <br>
+                    <span class="text-white">de Brzezinski</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                    La Visión Geopolítica de Zbigniew Brzezinski
+                </p>
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto">
+                    Un análisis profundo del blueprint para la dominación global americana en Eurasia
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parte I: Fundamentos -->
+    <section id="que-es" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="glass-section rounded-2xl p-8 mb-12">
+                <div class="flex items-center mb-8">
+                    <span class="section-number mr-6">1</span>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text">¿Qué es El Gran Tablero?</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                            "The Grand Chessboard: American Primacy and Its Geostrategic Imperatives" es una obra fundamental de 1997 donde Zbigniew Brzezinski expone la estrategia geopolítica que Estados Unidos debe seguir para mantener su hegemonía global.
+                        </p>
+                        <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                            Para aquellos que buscan entender los acontecimientos actuales más allá de la narrativa mediática, este libro es esencial. Brzezinski no oculta sus intenciones: describe Eurasia como un tablero de ajedrez donde cada movimiento determina el equilibrio de poder mundial.
+                        </p>
+                        
+                        <div class="quote-box">
+                            <h4 class="text-lg font-semibold mb-2 gold">Cita Clave:</h4>
+                            <p class="text-gray-200">"Eurasia es el tablero de ajedrez en el que se desarrolla la lucha por la primacía global."</p>
+                        </div>
+                        
+                        <div class="alert-box">
+                            <h4 class="text-lg font-semibold mb-2 flex items-center">
+                                <i class="fas fa-exclamation-triangle mr-2"></i>
+                                Advertencia Profética (1997):
+                            </h4>
+                            <p class="text-gray-200">"Como América se vuelve una sociedad más multicultural, puede resultar más difícil forjar un consenso sobre asuntos de política exterior, excepto en la circunstancia de una amenaza externa masiva y ampliamente percibida."</p>
+                            <p class="text-sm text-gray-400 mt-2">Esta cita cobra especial relevancia tras los eventos del 11-S...</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="map-container">
+                            <img src="https://m.media-amazon.com/images/I/71r4Z7pIHdL._UF1000,1000_QL80_.jpg" 
+                                 alt="El Gran Tablero Mundial - Portada del Libro" 
+                                 class="mx-auto rounded-lg shadow-2xl max-w-md">
+                        </div>
+                        <p class="text-sm text-gray-400 mt-4">Portada original de "The Grand Chessboard" (1997)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brzezinski: El Arquitecto -->
+    <section id="brzezinski" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="glass-section rounded-2xl p-8 mb-12">
+                <div class="flex items-center mb-8">
+                    <span class="section-number mr-6">2</span>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text">Zbigniew Brzezinski: El Arquitecto</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="map-container mb-8">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Zbigniew_Brzezinski%2C_1977.jpg" 
+                                 alt="Zbigniew Brzezinski - Asesor de Seguridad Nacional" 
+                                 class="w-full rounded-lg">
+                        </div>
+                        <p class="text-sm text-gray-400 text-center">Zbigniew Brzezinski como Asesor de Seguridad Nacional (1977)</p>
+                    </div>
+                    
+                    <div>
+                        <div class="mb-8">
+                            <h3 class="text-2xl font-bold gold mb-4">El Globalista</h3>
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex items-center">
+                                    <i class="fas fa-star gold mr-3"></i>
+                                    Asesor de Seguridad Nacional (1977-1981)
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-globe gold mr-3"></i>
+                                    Co-fundador de la Comisión Trilateral
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-building gold mr-3"></i>
+                                    Miembro del Council on Foreign Relations
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-graduation-cap gold mr-3"></i>
+                                    Mentor de figuras como Madeleine Albright
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <h3 class="text-2xl font-bold gold mb-4">Trayectoria Académica</h3>
+                            <div class="space-y-2 text-gray-300">
+                                <p><strong>1949-1950:</strong> B.A. y M.A. en McGill University, Montreal</p>
+                                <p><strong>1953:</strong> Ph.D. en Harvard University</p>
+                                <p><strong>1960-1989:</strong> Profesor en Columbia University</p>
+                                <p><strong>1973:</strong> Co-fundador de la Comisión Trilateral con David Rockefeller</p>
+                            </div>
+                        </div>
+                        
+                        <div class="quote-box">
+                            <h4 class="text-lg font-semibold mb-2 gold">La Visión Tecnocrática</h4>
+                            <p class="text-gray-200 mb-4">En "Between Two Ages" (1970), Brzezinski anticipó la era "tecnotrónica" - una sociedad controlada por élites tecnológicas.</p>
+                            <p class="italic">"La era tecnotrónica implica la aparición gradual de una sociedad más controlada... dominada por una élite."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parte II: Teoría Geopolítica -->
+    <section id="heartland" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="glass-section rounded-2xl p-8 mb-12">
+                <div class="flex items-center mb-8">
+                    <span class="section-number mr-6">3</span>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text">El Heartland de Mackinder</h2>
+                </div>
+                
+                <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                    Brzezinski se basa en la teoría de Halford Mackinder: "Quien controle el Heartland de Europa del Este dominará la Isla Mundial. Quien domine la Isla Mundial controlará el mundo."
+                </p>
+                
+                <div class="map-container mb-8">
+                    <img src="https://cdn.britannica.com/90/245490-050-C4A1D07E/Locator-map-heartland.jpg" 
+                         alt="Mapa del Heartland de Mackinder" 
+                         class="w-full">
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold gold mb-4">Componentes del Heartland:</h3>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-center">
+                                <i class="fas fa-map-marker-alt red mr-3"></i>
+                                Rusia Central y Siberia
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-map-marker-alt red mr-3"></i>
+                                Asia Central (Kazajistán, Uzbekistán)
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-map-marker-alt red mr-3"></i>
+                                Irán e Irak
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-map-marker-alt red mr-3"></i>
+                                Partes de Europa del Este
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold gold mb-4">Objetivo de EEUU:</h3>
+                        <div class="alert-box">
+                            <p class="text-lg font-semibold">Impedir que cualquier potencia controle todo el Heartland</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eurasia: Centro del Poder -->
+    <section id="eurasia" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="glass-section rounded-2xl p-8 mb-12">
+                <div class="flex items-center mb-8">
+                    <span class="section-number mr-6">4</span>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text">Eurasia: Centro del Poder Mundial</h2>
+                </div>
+                
+                <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                    La concentración de recursos energéticos en Eurasia explica por qué Brzezinski considera esta región como el centro del poder mundial. Las cifras son abrumadoras.
+                </p>
+                
+                <!-- Cifras de Eurasia -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="data-stat">
+                        <div class="text-3xl font-bold gold mb-2">75%</div>
+                        <div class="text-sm text-gray-400">Población Mundial</div>
+                    </div>
+                    <div class="data-stat">
+                        <div class="text-3xl font-bold gold mb-2">60%</div>
+                        <div class="text-sm text-gray-400">PIB Global</div>
+                    </div>
+                    <div class="data-stat">
+                        <div class="text-3xl font-bold gold mb-2">75%</div>
+                        <div class="text-sm text-gray-400">Recursos Energéticos</div>
+                    </div>
+                    <div class="data-stat">
+                        <div class="text-3xl font-bold gold mb-2">36%</div>
+                        <div class="text-sm text-gray-400">Superficie Terrestre</div>
+                    </div>
+                </div>
+                
+                <div class="quote-box mb-8">
+                    <p class="text-lg">"Eurasia representa aproximadamente las tres cuartas partes de los recursos energéticos conocidos del mundo."</p>
+                    <p class="text-sm text-gray-400 mt-2">- The Grand Chessboard, 1997</p>
+                </div>
+                
+                <div class="map-container mb-8">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Map-of-countries-by-proven-oil-reserves-%28in-millions-of-barrels%29---2017---US-EIA---Jo-Di-graphics.jpg" 
+                         alt="Reservas de Petróleo Mundial" 
+                         class="w-full">
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold gold mb-4">Principales Reservas Petroleras</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center p-3 bg-gray-800 rounded">
+                                <span>Venezuela</span>
+                                <span class="gold font-bold">300.9 Gbbl</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-800 rounded">
+                                <span>Arabia Saudí</span>
+                                <span class="gold font-bold">266.5 Gbbl</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-800 rounded">
+                                <span>Irán</span>
+                                <span class="gold font-bold">158.4 Gbbl</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-800 rounded">
+                                <span>Irak</span>
+                                <span class="gold font-bold">142.5 Gbbl</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-800 rounded">
+                                <span>Kuwait</span>
+                                <span class="gold font-bold">101.5 Gbbl</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold gold mb-4">Importancia Demográfica</h3>
+                        <div class="space-y-4">
+                            <div class="data-stat">
+                                <div class="text-2xl font-bold gold mb-2">5.4 mil millones</div>
+                                <div class="text-sm text-gray-400">Habitantes de Eurasia</div>
+                            </div>
+                            <div class="data-stat">
+                                <div class="text-2xl font-bold gold mb-2">1.4 mil millones</div>
+                                <div class="text-sm text-gray-400">China</div>
+                            </div>
+                            <div class="data-stat">
+                                <div class="text-2xl font-bold gold mb-2">1.4 mil millones</div>
+                                <div class="text-sm text-gray-400">India</div>
+                            </div>
+                            <div class="data-stat">
+                                <div class="text-2xl font-bold gold mb-2">146 millones</div>
+                                <div class="text-sm text-gray-400">Rusia</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-center text-gray-400 mt-8 italic">
+                    Este mapa muestra la concentración masiva de recursos energéticos en Eurasia, particularmente en el Golfo Pérsico, Mar Caspio y Rusia. El control de estas regiones significa el control del poder global.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Países Pivotes -->
+    <section id="pivotes" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="glass-section rounded-2xl p-8 mb-12">
+                <div class="flex items-center mb-8">
+                    <span class="section-number mr-6">5</span>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text">Los Países Pivotes de Brzezinski</h2>
+                </div>
+                
+                <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                    Brzezinski identifica países específicos cuyo control es crucial para dominar Eurasia. Cada uno cumple una función estratégica específica:
+                </p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    <!-- Ucrania -->
+                    <div class="pivot-card">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-yellow-400">🇺🇦 Ucrania</h3>
+                            <span class="status-active px-3 py-1 rounded-full text-xs">CONFLICTO ACTIVO</span>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3"><strong>Función:</strong> Impedir la restauración imperial rusa</p>
+                        <div class="quote-box text-sm">
+                            <p>"Sin Ucrania, Rusia deja de ser un imperio euroasiático."</p>
+                        </div>
+                        <p class="text-xs text-red-400 mt-2">2022-presente: Guerra activa</p>
+                    </div>
+                    
+                    <!-- Azerbaiyán -->
+                    <div class="pivot-card">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-blue-400">🇦🇿 Azerbaiyán</h3>
+                            <span class="status-allied px-3 py-1 rounded-full text-xs">ALIADO ESTRATÉGICO</span>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3"><strong>Función:</strong> Corredor energético del Caspio</p>
+                        <p class="text-sm text-gray-300">Control de rutas energéticas que bypasean Rusia</p>
+                        <p class="text-xs text-green-400 mt-2">Aliado estratégico EEUU</p>
+                    </div>
+                    
+                    <!-- Turquía -->
+                    <div class="pivot-card">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-red-400">🇹🇷 Turquía</h3>
+                            <span class="status-neutral px-3 py-1 rounded-full text-xs">ALIADO OTAN (COMPLEJO)</span>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3"><strong>Función:</strong> Puente entre Europa y Asia</p>
+                        <p class="text-sm text-gray-300">Control de estrechos y rutas energéticas del Caspio</p>
+                        <p class="text-xs text-orange-400 mt-2">Relación compleja con OTAN</p>
+                    </div>
+                    
+                    <!-- Irán -->
+                    <div class="pivot-card">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-green-400">🇮🇷 Irán</h3>
+                            <span class="status-resistant px-3 py-1 rounded-full text-xs">RESISTENCIA ANTI-HEGEMONÍA</span>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3"><strong>Función:</strong> Control del Golfo Pérsico</p>
+                        <p class="text-sm text-gray-300">Enormes reservas energéticas y posición estratégica</p>
+                        <p class="text-xs text-red-400 mt-2">Resistencia activa al orden occidental</p>
+                    </div>
+                    
+                    <!-- Kazajistán -->
+                    <div class="pivot-card">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-blue-300">🇰🇿 Kazajistán</h3>
+                            <span class="status-neutral px-3 py-1 rounded-full text-xs">DIPLOMACIA MULTI-VECTORIAL</span>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3"><strong>Función:</strong> Recursos y territorio masivo</p>
+                        <p class="text-sm text-gray-300">Petróleo, uranio y posición geográfica central</p>
+                        <p class="text-xs text-orange-400 mt-2">Equilibrio entre potencias</p>
+                    </div>
+                    
+                    <!-- Uzbekistán -->
+                    <div class="pivot-card">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-purple-400">🇺🇿 Uzbekistán</h3>
+                            <span class="status-neutral px-3 py-1 rounded-full text-xs">EQUILIBRIO ENTRE POTENCIAS</span>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3"><strong>Función:</strong> Centro de Asia Central</p>
+                        <p class="text-sm text-gray-300">País más poblado de Asia Central, clave para influencia regional</p>
+                        <p class="text-xs text-orange-400 mt-2">Política exterior balanceada</p>
+                    </div>
+                </div>
+                
+                <div class="alert-box">
+                    <h4 class="text-lg font-semibold mb-2 flex items-center">
+                        <i class="fas fa-chess gold mr-2"></i>
+                        La Estrategia:
+                    </h4>
+                    <p class="text-gray-200">Estados Unidos debe mantener estos países fuera de la órbita de influencia de Rusia o China, utilizando una combinación de incentivos económicos, presión diplomática, presencia militar y, cuando es necesario, intervención directa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parte III: Implementación Militar -->
+    <section id="cecom" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="glass-section rounded-2xl p-8 mb-12">
+                <div class="flex items-center mb-8">
+                    <span class="section-number mr-6">6</span>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text">Los CECOM: Implementación del Gran Tablero</h2>
+                </div>
+                
+                <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                    Los CECOM (Unified Combatant Commands) son la materialización operativa de la estrategia de Brzezinski, dividiendo el mundo en zonas de control militar estadounidense.
+                </p>
+                
+                <div class="map-container mb-8">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Unified_Combatant_Commands_map.png" 
+                         alt="Mapa de Comandos Combatientes Unificados" 
+                         class="w-full">
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div class="pivot-card text-center">
+                        <h3 class="text-xl font-bold gold mb-3">EUCOM</h3>
+                        <p class="text-sm text-gray-400 mb-2">European Command</p>
+                        <p class="text-xs text-gray-300">Europa, Rusia occidental</p>
+                        <div class="alert-box mt-3 text-xs">
+                            <strong>EL MÁS CRÍTICO</strong> para contener Rusia
+                        </div>
+                    </div>
+                    
+                    <div class="pivot-card text-center">
+                        <h3 class="text-xl font-bold gold mb-3">CENTCOM</h3>
+                        <p class="text-sm text-gray-400 mb-2">Central Command</p>
+                        <p class="text-xs text-gray-300">Medio Oriente, Asia Central</p>
+                        <p class="text-xs text-green-400 mt-3">Control energético</p>
+                    </div>
+                    
+                    <div class="pivot-card text-center">
+                        <h3 class="text-xl font-bold gold mb-3">INDOPACOM</h3>
+                        <p class="text-sm text-gray-400 mb-2">Indo-Pacific Command</p>
+                        <p class="text-xs text-gray-300">Contención de China</p>
+                        <p class="text-xs text-blue-400 mt-3">Cerco marítimo</p>
+                    </div>
+                    
+                    <div class="pivot-card text-center">
+                        <h3 class="text-xl font-bold gold mb-3">AFRICOM</h3>
+                        <p class="text-sm text-gray-400 mb-2">Africa Command</p>
+                        <p class="text-xs text-gray-300">África</p>
+                        <p class="text-xs text-orange-400 mt-3">Prevenir influencia china/rusa</p>
+                    </div>
+                </div>
+                
+                <div class="quote-box">
+                    <h4 class="text-lg font-semibold mb-2 gold">EUCOM: El Comando Más Estratégico</h4>
+                    <p class="text-gray-200 mb-4">El Comando Europeo (EUCOM) es el más crucial para la estrategia de Brzezinski, ya que controla directamente el acceso al Heartland euroasiático.</p>
+                    <div class="grid grid-cols-3 gap-4 text-center text-sm">
+                        <div>
+                            <div class="text-xl font-bold gold">Stuttgart</div>
+                            <div class="text-gray-400">Sede</div>
+                        </div>
+                        <div>
+                            <div class="text-xl font-bold gold">~70,000</div>
+                            <div class="text-gray-400">Efectivos</div>
+                        </div>
+                        <div>
+                            <div class="text-xl font-bold gold">51</div>
+                            <div class="text-gray-400">Países</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="prediction-fulfilled">
+                    <p class="text-lg font-semibold mb-2">Brzezinski sobre Europa:</p>
+                    <p class="italic">"Europa es la cabeza de puente geoestratégica de América en Eurasia... Es a través de Europa que Estados Unidos ejerce una influencia decisiva sobre Rusia."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cerco Militar -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="glass-section rounded-2xl p-8 mb-12">
+                <div class="flex items-center mb-8">
+                    <span class="section-number mr-6">7</span>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text">Cerco Militar a Eurasia</h2>
+                </div>
+                
+                <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                    800+ bases militares rodean el Heartland euroasiático, implementando físicamente la estrategia de Brzezinski.
+                </p>
+                
+                <div class="map-container mb-8">
+                    <img src="https://www.ibon.org/wp-content/uploads/2024/05/mil-footprint-us-v1-ed240524-1230pm.png" 
+                         alt="Bases Militares Estadounidenses Mundial" 
+                         class="w-full">
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="data-stat">
+                        <div class="text-3xl font-bold gold mb-2">119</div>
+                        <div class="text-sm text-gray-400">Bases en Alemania</div>
+                        <div class="text-xs text-gray-500 mt-1">Europa</div>
+                    </div>
+                    <div class="data-stat">
+                        <div class="text-3xl font-bold gold mb-2">119</div>
+                        <div class="text-sm text-gray-400">Bases en Japón</div>
+                        <div class="text-xs text-gray-500 mt-1">Asia</div>
+                    </div>
+                    <div class="data-stat">
+                        <div class="text-3xl font-bold gold mb-2">800+</div>
+                        <div class="text-sm text-gray-400">Total Mundial</div>
+                        <div class="text-xs text-gray-500 mt-1">Todas las regiones</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chokepoints Marítimos -->
+    <section id="chokepoints" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="glass-section rounded-2xl p-8 mb-12">
+                <div class="flex items-center mb-8">
+                    <span class="section-number mr-6">8</span>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text">Chokepoints Marítimos: Control del Comercio Global</h2>
+                </div>
+                
+                <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                    El control de los estrechos estratégicos es fundamental para mantener la hegemonía global. Estos puntos de estrangulamiento pueden paralizar el comercio mundial.
+                </p>
+                
+                <div class="map-container mb-8">
+                    <img src="https://www.visualcapitalist.com/wp-content/uploads/2021/03/maritime-choke-points.png" 
+                         alt="Chokepoints Marítimos Mundiales" 
+                         class="w-full">
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                    <div class="pivot-card text-center">
+                        <h3 class="text-lg font-bold gold mb-2">🇪🇬 Suez</h3>
+                        <div class="text-2xl font-bold text-blue-400 mb-1">12%</div>
+                        <div class="text-xs text-gray-400">del comercio mundial</div>
+                    </div>
+                    <div class="pivot-card text-center">
+                        <h3 class="text-lg font-bold gold mb-2">🇮🇷 Hormuz</h3>
+                        <div class="text-2xl font-bold text-red-400 mb-1">20%</div>
+                        <div class="text-xs text-gray-400">del petróleo mundial</div>
+                    </div>
+                    <div class="pivot-card text-center">
+                        <h3 class="text-lg font-bold gold mb-2">🇲🇾 Malacca</h3>
+                        <div class="text-2xl font-bold text-green-400 mb-1">25%</div>
+                        <div class="text-xs text-gray-400">del comercio global</div>
+                    </div>
+                    <div class="pivot-card text-center">
+                        <h3 class="text-lg font-bold gold mb-2">🇵🇦 Panamá</h3>
+                        <div class="text-2xl font-bold text-purple-400 mb-1">6%</div>
+                        <div class="text-xs text-gray-400">del comercio mundial</div>
+                    </div>
+                </div>
+                
+                <div class="alert-box">
+                    <h4 class="text-lg font-semibold mb-2 flex items-center">
+                        <i class="fas fa-ship gold mr-2"></i>
+                        Estrategia de Control:
+                    </h4>
+                    <p class="text-gray-200">EEUU mantiene presencia naval en todos los chokepoints críticos, mientras China busca rutas alternativas (BRI, Ruta Polar) y Rusia desarrolla capacidades árticas (Ruta del Norte).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parte IV: Los Rivales Principales -->
+    <section id="china-rusia" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="glass-section rounded-2xl p-8 mb-12">
+                <div class="flex items-center mb-8">
+                    <span class="section-number mr-6">9</span>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text">China y Rusia: Los Rivales Principales</h2>
+                </div>
+                
+                <div class="alert-box mb-8">
+                    <h4 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-exclamation-triangle mr-2"></i>
+                        La Gran Coalición Temida
+                    </h4>
+                    <p class="text-lg italic mb-2">"Potencialmente, el escenario más peligroso sería una gran coalición de China, Rusia, y quizás Irán, una coalición 'antihegemónica' unida no por ideología sino por quejas complementarias."</p>
+                    <p class="text-sm text-gray-400">- Brzezinski, The Grand Chessboard, 1997</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <!-- China -->
+                    <div class="pivot-card">
+                        <h3 class="text-2xl font-bold text-red-400 mb-4">🇨🇳 China: El Desafío Sistemático</h3>
+                        <p class="text-gray-300 mb-4">China desafía la hegemonía estadounidense exactamente como Brzezinski predijo, creando rutas comerciales que bypasean el control occidental.</p>
+                        
+                        <div class="map-container mb-4">
+                            <img src="https://merics.org/sites/default/files/2020-06/Silkroad-Projekt_EN_2020_150dpi.png" 
+                                 alt="Belt and Road Initiative" 
+                                 class="w-full">
+                        </div>
+                        
+                        <div class="quote-box text-sm">
+                            <p><strong>Brzezinski sobre China:</strong></p>
+                            <p>"China representa el desafío más serio a la primacía estadounidense en Eurasia."</p>
+                        </div>
+                        
+                        <h4 class="font-bold gold mt-4 mb-2">La Nueva Ruta de la Seda:</h4>
+                        <ul class="text-sm text-gray-300 space-y-1">
+                            <li>• Bypasea chokepoints tradicionales</li>
+                            <li>• Conecta Eurasia sin control occidental</li>
+                            <li>• Desafía el orden económico global</li>
+                            <li>• Crea dependencias hacia China</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Rusia -->
+                    <div class="pivot-card">
+                        <h3 class="text-2xl font-bold text-blue-400 mb-4">🇷🇺 Rusia: La Amenaza Territorial</h3>
+                        <p class="text-gray-300 mb-4">Rusia busca restaurar su influencia sobre el espacio post-soviético y usar la energía como arma geopolítica.</p>
+                        
+                        <div class="map-container mb-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Major_russian_gas_pipelines_to_europe.png/640px-Major_russian_gas_pipelines_to_europe.png" 
+                                 alt="Gasoductos Rusos a Europa" 
+                                 class="w-full">
+                        </div>
+                        
+                        <div class="prediction-fulfilled text-sm">
+                            <p><strong>Predicción Cumplida:</strong></p>
+                            <p>El sabotaje de Nord Stream en 2022 fue la materialización de la estrategia de Brzezinski: impedir que Rusia use la energía como arma geopolítica.</p>
+                        </div>
+                        
+                        <h4 class="font-bold gold mt-4 mb-2">Pivote hacia Asia:</h4>
+                        <ul class="text-sm text-gray-300 space-y-1">
+                            <li>• Power of Siberia hacia China</li>
+                            <li>• Alternativas al mercado europeo</li>
+                            <li>• Alianza energética con Beijing</li>
+                            <li>• Ruta del Norte ártica</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="quote-box">
+                    <h4 class="text-lg font-semibold mb-2 gold">La Convergencia Estratégica</h4>
+                    <p class="text-gray-200">La alianza China-Rusia-Irán representa exactamente el escenario que Brzezinski identificó como la mayor amenaza al orden unipolar estadounidense. Esta coalición combina el poder económico chino, los recursos energéticos rusos y la posición estratégica iraní.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva Guerra Fría -->
+    <section id="nueva-guerra-fria" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="glass-section rounded-2xl p-8 mb-12">
+                <div class="flex items-center mb-8">
+                    <span class="section-number mr-6">10</span>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text">La Nueva Guerra Fría: Marco Brzezinski</h2>
+                </div>
+                
+                <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                    El marco conceptual de Brzezinski sigue siendo relevante para entender la competencia estratégica actual entre Estados Unidos, China y Rusia.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-2xl font-bold gold mb-4">Bipolaridad vs Multipolaridad</h3>
+                        <div class="space-y-4">
+                            <div class="pivot-card">
+                                <h4 class="font-bold mb-2">Guerra Fría Original (1947-1991)</h4>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• EEUU vs URSS</li>
+                                    <li>• Competencia ideológica</li>
+                                    <li>• Bloques claramente definidos</li>
+                                    <li>• Disuasión nuclear mutua</li>
+                                </ul>
+                            </div>
+                            <div class="pivot-card">
+                                <h4 class="font-bold mb-2">Nueva Guerra Fría (2014-presente)</h4>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• EEUU vs China-Rusia</li>
+                                    <li>• Competencia sistémica</li>
+                                    <li>• Alianzas flexibles</li>
+                                    <li>• Guerra híbrida y tecnológica</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold gold mb-4">Tecnología como Campo de Batalla</h3>
+                        <div class="space-y-3">
+                            <div class="data-stat">
+                                <div class="text-lg font-bold gold mb-1">Semiconductores</div>
+                                <div class="text-xs text-gray-400">Control de la cadena de suministro</div>
+                            </div>
+                            <div class="data-stat">
+                                <div class="text-lg font-bold gold mb-1">Inteligencia Artificial</div>
+                                <div class="text-xs text-gray-400">Supremacía en IA militar</div>
+                            </div>
+                            <div class="data-stat">
+                                <div class="text-lg font-bold gold mb-1">5G/6G</div>
+                                <div class="text-xs text-gray-400">Infraestructura de comunicaciones</div>
+                            </div>
+                            <div class="data-stat">
+                                <div class="text-lg font-bold gold mb-1">Espacio</div>
+                                <div class="text-xs text-gray-400">Militarización del espacio exterior</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="alert-box">
+                    <h4 class="text-lg font-semibold mb-2 flex items-center">
+                        <i class="fas fa-shield-alt gold mr-2"></i>
+                        Alianzas Flexibles:
+                    </h4>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                        <div>
+                            <div class="font-bold text-blue-400">AUKUS</div>
+                            <div class="text-xs text-gray-400">Australia, Reino Unido, EEUU</div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-green-400">QUAD</div>
+                            <div class="text-xs text-gray-400">EEUU, Japón, India, Australia</div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-purple-400">CINCO OJOS</div>
+                            <div class="text-xs text-gray-400">Inteligencia anglosajona</div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-red-400">OTAN</div>
+                            <div class="text-xs text-gray-400">Alianza atlántica expandida</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parte VI: Poder Financiero y Político -->
+    <section id="elites" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="glass-section rounded-2xl p-8 mb-12">
+                <div class="flex items-center mb-8">
+                    <span class="section-number mr-6">11</span>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text">Élites Financieras: El Factor Rockefeller</h2>
+                </div>
+                
+                <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                    Brzezinski no actuaba solo. Era parte de una red de instituciones globalistas financiada y dirigida por las élites financieras estadounidenses, especialmente los Rockefeller.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-2xl font-bold gold mb-4">Brzezinski como Protegido del Capital</h3>
+                        <div class="space-y-4">
+                            <div class="pivot-card">
+                                <h4 class="font-bold gold mb-2">David Rockefeller: El Mentor</h4>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Presidente de Chase Manhattan Bank</li>
+                                    <li>• Co-fundador de la Comisión Trilateral</li>
+                                    <li>• Financiador de think tanks globalistas</li>
+                                    <li>• Arquitecto del sistema financiero global</li>
+                                </ul>
+                            </div>
+                            <div class="quote-box text-sm">
+                                <p>"La Comisión Trilateral fue fundada por las maniobras persistentes de David Rockefeller y Zbigniew Brzezinski."</p>
+                                <p class="text-gray-400 mt-1">- Trilaterals Over Washington, 1979</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold gold mb-4">Red de Instituciones Globalistas</h3>
+                        <div class="space-y-3">
+                            <div class="data-stat">
+                                <div class="text-lg font-bold gold mb-1">Comisión Trilateral (1973)</div>
+                                <div class="text-xs text-gray-400">Coordinación corporativa global</div>
+                            </div>
+                            <div class="data-stat">
+                                <div class="text-lg font-bold gold mb-1">Council on Foreign Relations</div>
+                                <div class="text-xs text-gray-400">Think tank de política exterior</div>
+                            </div>
+                            <div class="data-stat">
+                                <div class="text-lg font-bold gold mb-1">Centro de Estudios Estratégicos</div>
+                                <div class="text-xs text-gray-400">Formación de nuevas generaciones</div>
+                            </div>
+                            <div class="data-stat">
+                                <div class="text-lg font-bold gold mb-1">Brookings Institution</div>
+                                <div class="text-xs text-gray-400">Investigación y políticas públicas</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold gold mb-4">Deuda como Control</h3>
+                    <p class="text-gray-300 mb-4">El sistema financiero internacional diseñado por las élites estadounidenses utiliza la deuda como mecanismo de control geopolítico.</p>
+                    
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="data-stat">
+                            <div class="text-2xl font-bold gold mb-2">$12.8T</div>
+                            <div class="text-sm text-gray-400">Deuda externa de países en desarrollo</div>
+                        </div>
+                        <div class="data-stat">
+                            <div class="text-2xl font-bold gold mb-2">$33T</div>
+                            <div class="text-sm text-gray-400">Deuda nacional estadounidense</div>
+                        </div>
+                        <div class="data-stat">
+                            <div class="text-2xl font-bold gold mb-2">60%</div>
+                            <div class="text-sm text-gray-400">Reservas mundiales en dólares</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="alert-box">
+                    <h4 class="text-lg font-semibold mb-2 flex items-center">
+                        <i class="fas fa-dollar-sign gold mr-2"></i>
+                        Migración Neocon al Partido Demócrata:
+                    </h4>
+                    <p class="text-gray-200 mb-4">El miedo de Brzezinski se ha materializado: los neoconservadores straussianos han migrado masivamente al Partido Demócrata, convirtiendo a los demócratas en el partido de la guerra.</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm">
+                        <div>
+                            <div class="font-bold text-blue-400">Victoria Nuland</div>
+                            <div class="text-xs text-gray-400">Subsecretaria de Estado</div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-green-400">Jake Sullivan</div>
+                            <div class="text-xs text-gray-400">Asesor de Seguridad Nacional</div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-purple-400">Antony Blinken</div>
+                            <div class="text-xs text-gray-400">Secretario de Estado</div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-red-400">Samantha Power</div>
+                            <div class="text-xs text-gray-400">USAID</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quote-box">
+                    <h4 class="text-lg font-semibold mb-2 gold">Alternativas al Dólar: SDR y BRICS</h4>
+                    <p class="text-gray-200 mb-4">La amenaza más seria al sistema financiero controlado por las élites estadounidenses viene de las alternativas monetarias:</p>
+                    <ul class="text-sm text-gray-300 space-y-1">
+                        <li>• <strong>SDR (Derechos Especiales de Giro):</strong> Moneda de reserva del FMI como plan de emergencia</li>
+                        <li>• <strong>Moneda BRICS:</strong> Cesta de monedas para comercio bilateral</li>
+                        <li>• <strong>Yuan Digital:</strong> Alternativa tecnológica china al sistema SWIFT</li>
+                        <li>• <strong>Desdolarización:</strong> Tendencia creciente en comercio internacional</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parte VII: Tecnocracia Moderna -->
+    <section id="palantir" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="glass-section rounded-2xl p-8 mb-12">
+                <div class="flex items-center mb-8">
+                    <span class="section-number mr-6">12</span>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text">Palantir: Brzezinski Hecho Realidad</h2>
+                </div>
+                
+                <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                    Las predicciones de Brzezinski en "Between Two Ages" (1970) sobre la sociedad tecnocrática se han materializado de forma inquietante a través de empresas como Palantir.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-2xl font-bold gold mb-4">La Visión Profética (1970)</h3>
+                        
+                        <div class="quote-box mb-4">
+                            <h4 class="font-bold mb-2">Control Social Total</h4>
+                            <p class="text-sm italic">"Pronto será posible ejercer una vigilancia casi continua sobre cada ciudadano y mantener archivos completos y actualizados que contengan incluso la información más personal sobre el ciudadano."</p>
+                            <p class="text-xs text-gray-400 mt-2">- Between Two Ages, 1970</p>
+                        </div>
+                        
+                        <div class="quote-box mb-4">
+                            <h4 class="font-bold mb-2">Manipulación de Masas</h4>
+                            <p class="text-sm italic">"En la sociedad tecnotrónica, la tendencia parecería dirigirse hacia la agregación del apoyo individual de millones de ciudadanos no coordinados, fácilmente al alcance de personalidades magnéticas y atractivas que explotan las últimas técnicas de comunicación para manipular emociones y controlar la razón."</p>
+                            <p class="text-xs text-gray-400 mt-2">- Between Two Ages, 1970</p>
+                        </div>
+                        
+                        <div class="alert-box">
+                            <h4 class="font-bold mb-2">Elite Tecnocrática</h4>
+                            <p class="text-sm">"La era tecnotrónica involucra la aparición gradual de una sociedad más controlada. Tal sociedad estaría dominada por una élite, no restringida por valores tradicionales."</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold gold mb-4">Palantir como Implementación</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="pivot-card">
+                                <h4 class="font-bold gold mb-2">Gotham: Control Urbano</h4>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Análisis de patrones de comportamiento</li>
+                                    <li>• Vigilancia predictiva de ciudadanos</li>
+                                    <li>• Integración con cámaras y sensores</li>
+                                    <li>• Perfiles de riesgo automatizados</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="pivot-card">
+                                <h4 class="font-bold gold mb-2">Foundry: Análisis Masivo</h4>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Procesamiento de big data</li>
+                                    <li>• Inteligencia artificial predictiva</li>
+                                    <li>• Correlación de múltiples fuentes</li>
+                                    <li>• Modelado de comportamiento social</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="pivot-card">
+                                <h4 class="font-bold gold mb-2">Apollo: Integración Gubernamental</h4>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Conexión con agencias de inteligencia</li>
+                                    <li>• Archivos completos y actualizados</li>
+                                    <li>• Vigilancia casi continua</li>
+                                    <li>• Control de información personal</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="prediction-fulfilled">
+                    <h4 class="text-lg font-semibold mb-2">La Sociedad Controlada Materializada</h4>
+                    <p class="text-gray-200">Palantir representa la materialización exacta de las predicciones de Brzezinski: una empresa privada que ejerce vigilancia casi continua sobre ciudadanos, mantiene archivos completos de información personal, y facilita el control social por parte de una élite tecnológica no restringida por valores tradicionales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trump: El Vehículo Populista -->
+    <section id="trump" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="glass-section rounded-2xl p-8 mb-12">
+                <div class="flex items-center mb-8">
+                    <span class="section-number mr-6">13</span>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text">Trump: El Vehículo Populista</h2>
+                </div>
+                
+                <div class="alert-box mb-8">
+                    <h3 class="text-2xl font-bold mb-4">La Paradoja Trump</h3>
+                    <p class="text-lg text-gray-300">Trump representa un fenómeno fascinante: un populista rodeado de tecnócratas straussianos y implementando estrategias brzezinskianas.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-2xl font-bold gold mb-4">Círculo Interno Straussiano:</h3>
+                        <div class="space-y-3">
+                            <div class="pivot-card">
+                                <h4 class="font-bold text-blue-400">J.D. Vance</h4>
+                                <p class="text-sm text-gray-400">(protegido de Thiel)</p>
+                            </div>
+                            <div class="pivot-card">
+                                <h4 class="font-bold text-green-400">Mike Pompeo</h4>
+                                <p class="text-sm text-gray-400">(West Point, neocon)</p>
+                            </div>
+                            <div class="pivot-card">
+                                <h4 class="font-bold text-red-400">John Bolton</h4>
+                                <p class="text-sm text-gray-400">(clásico straussiano)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold gold mb-4">Agenda Brzezinski 2.0:</h3>
+                        <div class="space-y-3">
+                            <div class="data-stat">
+                                <div class="font-bold text-red-400">Confrontación con China</div>
+                                <div class="text-xs text-gray-400">Guerra comercial y tecnológica</div>
+                            </div>
+                            <div class="data-stat">
+                                <div class="font-bold text-blue-400">Presión sobre aliados europeos</div>
+                                <div class="text-xs text-gray-400">Mayor gasto militar y dependencia</div>
+                            </div>
+                            <div class="data-stat">
+                                <div class="font-bold text-green-400">Control energético (fracking)</div>
+                                <div class="text-xs text-gray-400">Independencia energética</div>
+                            </div>
+                            <div class="data-stat">
+                                <div class="font-bold text-purple-400">Expansión de bases militares</div>
+                                <div class="text-xs text-gray-400">Fortalecimiento del cerco</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="text-2xl font-bold gold mb-6">La Estrategia Dual</h3>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h4 class="text-xl font-bold text-blue-400 mb-4">Política Exotérica (Para las Masas):</h4>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-center">
+                                <i class="fas fa-flag-usa gold mr-3"></i>
+                                "America First" - Nacionalismo populista
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-hammer gold mr-3"></i>
+                                "Drain the Swamp" - Anti-establishment
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-star gold mr-3"></i>
+                                "Make America Great Again" - Nostalgia
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-xl font-bold text-red-400 mb-4">Política Esotérica (Para las Élites):</h4>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-center">
+                                <i class="fas fa-globe gold mr-3"></i>
+                                Mantenimiento de la hegemonía global
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-cogs gold mr-3"></i>
+                                Integración tecnócrata-militar
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-chess gold mr-3"></i>
+                                Implementación del "Gran Tablero" 2.0
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="quote-box">
+                    <h4 class="text-xl font-bold gold mb-4">La Convergencia:</h4>
+                    <p class="text-lg italic text-gray-200">Trump 2.0 representa la síntesis perfecta: el populismo como vehículo para implementar la agenda tecnocrática straussiana con la estrategia geopolítica brzeziskiana. Las masas creen votar contra el "establishment", mientras las élites consolidan un control sin precedentes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parte VIII: Predicciones Cumplidas -->
+    <section id="cronologia" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="glass-section rounded-2xl p-8 mb-12">
+                <div class="flex items-center mb-8">
+                    <span class="section-number mr-6">14</span>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text">Cronología 1997-2025: Predicciones Cumplidas</h2>
+                </div>
+                
+                <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                    La precisión profética de Brzezinski es inquietante. Sus predicciones de 1997 se han cumplido con exactitud casi matemática.
+                </p>
+                
+                <div class="space-y-6">
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-bold gold mb-2">1997 - Publicación del Gran Tablero</h3>
+                        <p class="text-gray-300">Brzezinski expone su estrategia para mantener la hegemonía estadounidense en Eurasia.</p>
+                        <div class="quote-box mt-2 text-sm">
+                            <p>"Sin Ucrania, Rusia deja de ser un imperio euroasiático."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-bold gold mb-2">1999 - Primera Expansión OTAN</h3>
+                        <p class="text-gray-300">Polonia, República Checa y Hungría se unen a la OTAN, comenzando el cerco a Rusia.</p>
+                        <div class="prediction-fulfilled mt-2 text-sm">
+                            <p><strong>Predicción cumplida:</strong> Expansión hacia el este como predijo Brzezinski.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-bold gold mb-2">2004 - Segunda Expansión OTAN</h3>
+                        <p class="text-gray-300">Los países bálticos (Estonia, Letonia, Lituania) se unen a la OTAN.</p>
+                        <div class="prediction-fulfilled mt-2 text-sm">
+                            <p><strong>Predicción cumplida:</strong> Control del Báltico para contener Rusia.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-bold gold mb-2">2008 - Crisis de Georgia y Promesa a Ucrania</h3>
+                        <p class="text-gray-300">Guerra en Georgia y promesa de membresía OTAN a Ucrania y Georgia.</p>
+                        <div class="alert-box mt-2 text-sm">
+                            <p><strong>Punto de inflexión:</strong> Rusia reacciona a la expansión occidental.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-bold gold mb-2">2014 - Revolución de Maidan</h3>
+                        <p class="text-gray-300">Cambio de régimen en Ucrania respaldado por Occidente, anexión de Crimea por Rusia.</p>
+                        <div class="prediction-fulfilled mt-2 text-sm">
+                            <p><strong>Predicción cumplida:</strong> Ucrania como pivote clave del conflicto.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-bold gold mb-2">2022 - Invasión de Ucrania</h3>
+                        <p class="text-gray-300">Rusia invade Ucrania, materializing completamente la predicción central de Brzezinski.</p>
+                        <div class="prediction-fulfilled mt-2 text-sm">
+                            <p><strong>LA PREDICCIÓN CENTRAL CUMPLIDA:</strong> Ucrania como centro del conflicto por Eurasia.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-bold gold mb-2">2022 - Sabotaje Nord Stream</h3>
+                        <p class="text-gray-300">Explosiones "misteriosas" destruyen los gasoductos Nord Stream 1 y 2.</p>
+                        <div class="prediction-fulfilled mt-2 text-sm">
+                            <p><strong>Predicción cumplida:</strong> Impedir que Rusia use la energía como arma.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-bold gold mb-2">2025 - Estado Actual</h3>
+                        <p class="text-gray-300">Nueva Guerra Fría en pleno desarrollo, alianza China-Rusia-Irán consolidada.</p>
+                        <div class="alert-box mt-2 text-sm">
+                            <p><strong>Escenario actual:</strong> La "gran coalición" temida por Brzezinski es realidad.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quote-box mt-8">
+                    <h4 class="text-xl font-bold gold mb-4">Reflexión Crítica:</h4>
+                    <p class="text-lg text-gray-200">Los eventos actuales no son "espontáneos". Siguen el blueprint trazado por Brzezinski hace más de 25 años. La precisión de sus predicciones no es casualidad: son el resultado de un plan geopolítico implementado sistemáticamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusiones -->
+    <section id="conclusiones" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="glass-section rounded-2xl p-8 mb-12">
+                <div class="flex items-center mb-8">
+                    <span class="section-number mr-6">15</span>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text">Conclusiones para Mentes Críticas</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8 mb-8">
+                    <div class="pivot-card text-center">
+                        <h3 class="text-2xl font-bold gold mb-4">Transparencia Brutal</h3>
+                        <p class="text-gray-300">Brzezinski no oculta las intenciones imperiales. "El Gran Tablero" es un manual de dominación global presentado sin eufemismos.</p>
+                    </div>
+                    
+                    <div class="pivot-card text-center">
+                        <h3 class="text-2xl font-bold gold mb-4">Arquitectura del Control</h3>
+                        <p class="text-gray-300">La combinación de control geopolítico y tecnológico crea un sistema de dominación sin precedentes en la historia.</p>
+                    </div>
+                    
+                    <div class="pivot-card text-center">
+                        <h3 class="text-2xl font-bold gold mb-4">Urgencia Actual</h3>
+                        <p class="text-gray-300">Los eventos contemporáneos cobran sentido cuando se entienden como implementación de estas estrategias geopolíticas.</p>
+                    </div>
+                </div>
+                
+                <div class="quote-box">
+                    <h4 class="text-xl font-bold gold mb-4">Para Profundizar</h4>
+                    <p class="text-lg text-gray-200 mb-4">Este análisis es solo el comienzo. El conocimiento de estas dinámicas de poder es fundamental para entender el mundo actual.</p>
+                    <p class="text-lg italic text-center">"Quien controla el pasado controla el futuro. Quien controla el presente controla el pasado." - George Orwell</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-8 mb-6">
+                <a href="https://www.youtube.com/@terapialiberal" class="text-gray-400 hover:text-red-500 transition-colors text-2xl">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.patreon.com/terapialiberal" class="text-gray-400 hover:text-gold transition-colors text-2xl">
+                    <i class="fab fa-patreon"></i>
+                </a>
+            </div>
+            <p class="text-gray-400 text-sm">© 2025 Terapia Liberal. Análisis independiente para mentes críticas.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Back to top functionality
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
