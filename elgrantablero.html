@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Gran Tablero Geopolítico - Brzezinski marca el Rumbo Multipolar | Terapia Liberal</title>
-    <meta name="description" content="Análisis profundo de la estrategia geopolítica de Zbigniew Brzezinski y su influencia en el orden mundial multipolar. Incluye análisis de 'El Gran Tablero' y sus implicaciones actuales con China, Rusia e Irán.">
     
+    <!-- SEO y Metadata -->
+    <meta name="author" content="Terapia Liberal">
+    <meta name="description" content="Análisis profundo de la estrategia geopolítica de Zbigniew Brzezinski y su influencia en el orden mundial multipolar. Incluye análisis de 'El Gran Tablero' y sus implicaciones actuales con China, Rusia e Irán.">
+    <meta name="keywords" content="Terapia Liberal, Zbigniew Brzezinski, El Gran Tablero, geopolítica, realpolitik, multipolaridad, China, Rusia, Irán, Eurasia, Heartland, Comisión Trilateral, CFR, Rockefeller, OTAN, Franja y la Ruta">
+    
+    <!-- Open Graph Metadata (para redes sociales) -->
+    <meta property="og:title" content="El Gran Tablero Geopolítico - Brzezinski marca el Rumbo Multipolar | Terapia Liberal">
+    <meta property="og:description" content="Análisis de la estrategia geopolítica de Zbigniew Brzezinski y su influencia en el orden mundial multipolar.">
+    <meta property="og:image" content="https://c8.alamy.com/comp/G39DCG/symbol-of-geopolitics-chess-board-out-of-the-world-map-with-chess-G39DCG.jpg">
+    <meta property="og:url" content="URL_DE_ESTA_PAGINA">
+    <meta property="og:type" content="article">
+
     <!-- CDN Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
@@ -79,12 +90,12 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
         
-        .image-container img {
-            transition: transform 0.3s ease;
-        }
-        
-        .image-container:hover img {
+        .image-container:hover .animated-image {
             transform: scale(1.05);
+        }
+
+        .animated-image {
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         
         .quote-box {
@@ -128,12 +139,13 @@
     <header class="nav-sticky fixed top-0 left-0 right-0 z-50 py-4">
         <div class="container mx-auto px-6">
             <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-4">
+                <!-- CAMBIO: Logo y Título ahora son un link, y el título es más grande -->
+                <a href="https://terapialiberal.github.io/" class="flex items-center space-x-4 group">
                     <img src="https://yt3.ggpht.com/ZzVyDrXt4x8YWoKbISHZzC9CCtkEPCN4GRET1Xxf_wssNyw7mfN-xTbBmpwEJHO0DRQrg0Dgug=s68-c-k-c0x00ffffff-no-rj" 
                          alt="Terapia Liberal" 
-                         class="w-12 h-12 rounded-full shadow-lg">
-                    <h1 class="text-2xl font-bold text-gold">Terapia Liberal</h1>
-                </div>
+                         class="w-12 h-12 rounded-full shadow-lg transition-transform duration-300 group-hover:scale-110">
+                    <h1 class="text-3xl font-bold text-gold transition-colors duration-300 group-hover:text-yellow-300">Terapia Liberal</h1>
+                </a>
                 <nav class="hidden md:flex space-x-8">
                     <a href="#introduccion" class="text-gray-300 hover:text-gold transition-all duration-300">Introducción</a>
                     <a href="#brzezinski" class="text-gray-300 hover:text-gold transition-all duration-300">Brzezinski</a>
@@ -147,7 +159,7 @@
     <!-- Main Content -->
     <main class="pt-24">
         <!-- Hero Section -->
-        <section class="py-20 text-center">
+        <section class="py-20 text-center" data-tags="video, introduccion, geopolitica, brzezinski, multipolar">
             <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto">
                     <h1 class="text-5xl md:text-6xl font-bold title-yellow mb-6">
@@ -180,7 +192,7 @@
         </section>
 
         <!-- Introducción -->
-        <section id="introduccion" class="py-16">
+        <section id="introduccion" class="py-16" data-tags="realpolitik, china, iran, ruta-ferroviaria, trump, brzezinski">
             <div class="container mx-auto px-6">
                 <div class="max-w-6xl mx-auto">
                     <div class="section-card">
@@ -198,7 +210,7 @@
                             <div class="image-container">
                                 <img src="https://cdn.presstv.ir/Photo/2025/5/31/92d78827-6e66-4976-b9a3-d7f16eedba1f.jpg" 
                                      alt="Ruta ferroviaria China-Irán" 
-                                     class="w-full h-64 object-cover rounded-lg">
+                                     class="w-full h-64 object-cover rounded-lg animated-image">
                             </div>
                         </div>
 
@@ -223,7 +235,7 @@
         </section>
 
         <!-- Brzezinski Section -->
-        <section id="brzezinski" class="py-16">
+        <section id="brzezinski" class="py-16" data-tags="brzezinski, kissinger, rockefeller, comision-trilateral, cfr, bilderberg, era-tecnotronica">
             <div class="container mx-auto px-6">
                 <div class="max-w-6xl mx-auto">
                     <div class="section-card">
@@ -233,17 +245,17 @@
                             <div class="image-container">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Zbigniew_Brzezinski%2C_1977.jpg" 
                                      alt="Zbigniew Brzezinski" 
-                                     class="w-full h-80 object-cover rounded-lg">
+                                     class="w-full h-80 object-cover rounded-lg animated-image">
                             </div>
                             <div class="image-container">
                                 <img src="https://cdn.cfr.org/sites/default/files/styles/immersive_image_3_2_large_mobile_3x/public/image/2023/05/RockefellerKissinger.jpg.webp" 
                                      alt="Brzezinski con Rockefeller y Kissinger" 
-                                     class="w-full h-80 object-cover rounded-lg">
+                                     class="w-full h-80 object-cover rounded-lg animated-image">
                             </div>
                             <div class="image-container">
                                 <img src="https://cdn.britannica.com/87/253887-050-84E9553D/David-Rockefeller-1985.jpg" 
                                      alt="David Rockefeller y la Comisión Trilateral" 
-                                     class="w-full h-80 object-cover rounded-lg">
+                                     class="w-full h-80 object-cover rounded-lg animated-image">
                             </div>
                         </div>
 
@@ -284,7 +296,7 @@
         </section>
 
         <!-- El Gran Tablero -->
-        <section id="gran-tablero" class="py-16">
+        <section id="gran-tablero" class="py-16" data-tags="gran-tablero, eurasia, hegemonia, heartland, mackinder, imperativos-geopoliticos">
             <div class="container mx-auto px-6">
                 <div class="max-w-6xl mx-auto">
                     <div class="section-card">
@@ -294,7 +306,7 @@
                             <div class="image-container max-w-md mx-auto">
                                 <img src="https://c8.alamy.com/comp/G39DCG/symbol-of-geopolitics-chess-board-out-of-the-world-map-with-chess-G39DCG.jpg" 
                                      alt="Tablero geopolítico mundial" 
-                                     class="w-full h-64 object-cover rounded-lg">
+                                     class="w-full h-64 object-cover rounded-lg animated-image">
                             </div>
                         </div>
 
@@ -325,12 +337,12 @@
                                 <div class="image-container">
                                     <img src="https://cdn.britannica.com/90/245490-050-C4A1D07E/Locator-map-heartland.jpg" 
                                          alt="Mapa del Heartland de Mackinder" 
-                                         class="w-full h-64 object-cover rounded-lg">
+                                         class="w-full h-64 object-cover rounded-lg animated-image">
                                 </div>
                                 <div class="image-container">
                                     <img src="https://arktos.com/wp-content/uploads/2023/12/Heartland-jpg.webp" 
                                          alt="Teoría del Heartland" 
-                                         class="w-full h-64 object-cover rounded-lg">
+                                         class="w-full h-64 object-cover rounded-lg animated-image">
                                 </div>
                             </div>
                             <p class="text-gray-300 mt-4 leading-relaxed">
@@ -368,7 +380,7 @@
         </section>
 
         <!-- Estrategia Actual -->
-        <section class="py-16">
+        <section class="py-16" data-tags="estrategia, paises-pivote, ucrania, iran, turquia, otan, franja-y-ruta">
             <div class="container mx-auto px-6">
                 <div class="max-w-6xl mx-auto">
                     <div class="section-card">
@@ -388,7 +400,7 @@
                             <div class="image-container">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/History_of_NATO_enlargement.svg/1200px-History_of_NATO_enlargement.svg.png" 
                                      alt="Expansión de la OTAN hacia el este" 
-                                     class="w-full h-64 object-cover rounded-lg">
+                                     class="w-full h-64 object-cover rounded-lg animated-image">
                             </div>
                         </div>
 
@@ -398,7 +410,7 @@
                                 <div class="image-container">
                                     <img src="https://merics.org/sites/default/files/2020-06/Silkroad-Projekt_EN_2020_150dpi.png" 
                                          alt="Iniciativa de la Franja y la Ruta de China" 
-                                         class="w-full h-64 object-cover rounded-lg">
+                                         class="w-full h-64 object-cover rounded-lg animated-image">
                                 </div>
                                 <div>
                                     <p class="text-gray-300 mb-4 leading-relaxed">
@@ -423,7 +435,7 @@
         </section>
 
         <!-- Alianza Actual -->
-        <section class="py-16">
+        <section class="py-16" data-tags="alianza, coalicion, china, rusia, iran, sanciones, multipolaridad, trump">
             <div class="container mx-auto px-6">
                 <div class="max-w-6xl mx-auto">
                     <div class="section-card">
@@ -433,17 +445,17 @@
                             <div class="image-container">
                                 <img src="https://cdn.cfr.org/sites/default/files/styles/immersive_image_3_2_desktop_2x/public/image/2022/06/China_Russia_BGR.webp" 
                                      alt="China y Rusia alianza" 
-                                     class="w-full h-64 object-cover rounded-lg">
+                                     class="w-full h-64 object-cover rounded-lg animated-image">
                             </div>
                             <div class="image-container">
                                 <img src="https://cepa.org/wp-content/uploads/2023/02/2023-02-14T071531Z_228206069_RC2PAZ93F7BO_RTRMADP_3_CHINA-IRAN-scaled.jpg" 
                                      alt="China e Irán cooperación" 
-                                     class="w-full h-64 object-cover rounded-lg">
+                                     class="w-full h-64 object-cover rounded-lg animated-image">
                             </div>
                             <div class="image-container">
                                 <img src="https://carnegie-production-assets.s3.amazonaws.com/static/media/images/putin-xi-russia-china-GettyImages-1248996329.jpg" 
                                      alt="Putin y Xi Jinping" 
-                                     class="w-full h-64 object-cover rounded-lg">
+                                     class="w-full h-64 object-cover rounded-lg animated-image">
                             </div>
                         </div>
 
@@ -487,7 +499,7 @@
         </section>
 
         <!-- Fuentes -->
-        <section id="fuentes" class="py-16">
+        <section id="fuentes" class="py-16" data-tags="fuentes, referencias, libros, analisis, sutton, mackinder">
             <div class="container mx-auto px-6">
                 <div class="max-w-6xl mx-auto">
                     <div class="section-card">
