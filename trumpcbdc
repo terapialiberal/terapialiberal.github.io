@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trump: El Caballo de Troya Tecnocrático - Análisis | Terapia Liberal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #E5E7EB;
+        }
+        .golden { color: #d4af37; }
+        .red-accent { color: #dc2626; }
+        .bg-glass { 
+            background: rgba(31, 41, 55, 0.5);
+            backdrop-filter: blur(8px);
+            border: 1px solid #374151;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #d4af37, #dc2626);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hover-golden:hover { color: #d4af37; transition: all 0.3s ease; }
+        .btn-gradient {
+            background: linear-gradient(to right, #FBBF24, #DC2626);
+            color: #000000;
+            transition: all 0.3s ease;
+        }
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+        }
+        .video-responsive {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        .video-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .section-border {
+            border-left: 4px solid #d4af37;
+            border-radius: 0 8px 8px 0;
+        }
+        .alert-danger {
+            background: rgba(220, 38, 38, 0.1);
+            border: 1px solid #dc2626;
+        }
+        .source-item {
+            transition: all 0.3s ease;
+        }
+        .source-item:hover {
+            transform: translateY(-2px);
+            border-color: #d4af37;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-glass border-b border-gray-600">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center space-x-4">
+            <img src="https://yt3.ggpht.com/ZzVyDrXt4x8YWoKbISHZzC9CCtkEPCN4GRET1Xxf_wssNyw7mfN-xTbBmpwEJHO0DRQrg0Dgug=s68-c-k-c0x00ffffff-no-rj" 
+                 alt="Terapia Liberal Logo" class="w-12 h-12 rounded-full">
+            <h1 class="text-2xl font-bold golden">Terapia Liberal</h1>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <div class="bg-glass rounded-2xl p-8 mb-8 text-center">
+            <div class="text-red-accent font-semibold mb-2">24 de Julio, 2025</div>
+            <h1 class="text-4xl md:text-5xl font-bold gradient-text mb-4">
+                Trump ES el Caballo de Troya Tecnocrático
+            </h1>
+            <p class="text-xl text-gray-300 mb-6">
+                Lanza la Estructura de CBDC y AI.GOV - Análisis Profundo de la "Big Beautiful Bill"
+            </p>
+            <div class="text-gray-400">
+                <i class="fas fa-clock mr-2"></i>Duración: 1h 25m | <i class="fas fa-eye ml-4 mr-2"></i>Análisis Independiente
+            </div>
+        </div>
+
+        <!-- Video Section -->
+        <div class="bg-glass rounded-2xl p-6 mb-8">
+            <div class="video-responsive rounded-lg overflow-hidden shadow-2xl">
+                <iframe src="https://www.youtube.com/embed/UEgEIzZ9dYo" 
+                        title="Trump ES el Caballo de Troya Tecnocrático! Lanza la Estructura de CBDC y AI.GOV"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Introducción -->
+        <div class="bg-glass rounded-2xl p-8 mb-8 section-border">
+            <h2 class="text-3xl font-bold golden mb-6 flex items-center">
+                <i class="fas fa-exclamation-triangle red-accent mr-3"></i>
+                Introducción: El Gran Engaño Revelado
+            </h2>
+            
+            <div class="mb-6">
+                <img src="https://assets1.cbsnewsstatic.com/hub/i/2025/07/04/6fa1fa18-903b-4fda-a785-7411870154b4/cbsn-fusion-trump-signs-big-beautiful-bill-as-tariff-deadline-looms-thumbnail.jpg" 
+                     alt="Trump firmando la Big Beautiful Bill" 
+                     class="w-full max-w-2xl mx-auto rounded-lg shadow-lg mb-4">
+                <p class="text-center text-gray-400 text-sm italic">Trump firmando el "One Big Beautiful Bill" en la Casa Blanca</p>
+            </div>
+
+            <div class="prose prose-lg max-w-none text-gray-300 space-y-4">
+                <p>
+                    El <span class="gradient-text font-semibold">"One Big Beautiful Bill"</span> de Donald Trump, aprobado por la Cámara de Representantes, 
+                    representa mucho más que una simple reforma fiscal. Como revela este análisis exhaustivo, constituye un 
+                    <strong class="golden">caballo de Troya para la implementación de la CBDC</strong> en Estados Unidos, 
+                    pese a su prohibición expresa en otros proyectos.
+                </p>
+
+                <p>
+                    La legislación agrega <strong class="red-accent">3.4 billones de dólares a la deuda</strong> estadounidense, 
+                    siguiendo exactamente la misma receta que provocó la caída de Liz Truss en el Reino Unido: 
+                    mayor gasto con recortes de impuestos simultáneos.
+                </p>
+
+                <div class="alert-danger rounded-lg p-6 my-6">
+                    <h4 class="text-lg font-semibold red-accent mb-3">
+                        <i class="fas fa-warning mr-2"></i>Punto Crítico Revelado
+                    </h4>
+                    <p>
+                        La resistencia del Congreso a incluir la prohibición de CBDC en la ley (manteniendo solo la orden ejecutiva) 
+                        revela que el sistema ya está diseñado para ser implementado una vez que cambie la administración 
+                        o se revoque la orden ejecutiva.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Las Cuentas Trump: CBDC Encubierta -->
+        <div class="bg-glass rounded-2xl p-8 mb-8 section-border">
+            <h2 class="text-3xl font-bold golden mb-6 flex items-center">
+                <i class="fas fa-coins red-accent mr-3"></i>
+                Las "Cuentas Trump": La CBDC Que No Se Atreve a Decir Su Nombre
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-6">
+                <div>
+                    <img src="https://www.investopedia.com/thmb/aIQPzjYXDrcU57Ft-hiRB5HKARc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/terms_c_central-bank-digital-currency-cbdc_FINAL-671aefb2905b407583007d63fa46e49d.jpg" 
+                         alt="Central Bank Digital Currency" 
+                         class="w-full rounded-lg shadow-lg">
+                    <p class="text-center text-gray-400 text-sm italic mt-2">Las CBDCs permiten control total de transacciones</p>
+                </div>
+                <div class="space-y-4">
+                    <p class="text-gray-300">
+                        Las llamadas <span class="gradient-text font-semibold">"cuentas de inversión"</span> para recién nacidos 
+                        no estarán ubicadas en bancos comerciales, sino directamente en la 
+                        <strong class="golden">cuenta general del Tesoro de Estados Unidos</strong>, 
+                        que reside en la Reserva Federal.
+                    </p>
+                    <p class="text-gray-300">
+                        Este es precisamente el modelo que propuso <strong>Saule Omarova</strong> en 2021 con su 
+                        "People's Ledger" y que fue rechazado por el Congreso en su momento.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gray-800 rounded-lg p-6 mb-6">
+                <h4 class="text-lg font-semibold golden mb-4">Características del Sistema Implementado:</h4>
+                <ul class="space-y-2 text-gray-300">
+                    <li class="flex items-start"><i class="fas fa-chevron-right golden mr-3 mt-1"></i>Cuentas directas en la Reserva Federal (no en bancos comerciales)</li>
+                    <li class="flex items-start"><i class="fas fa-chevron-right golden mr-3 mt-1"></i>Sistema de un solo nivel bancario (modelo soviético actualizado)</li>
+                    <li class="flex items-start"><i class="fas fa-chevron-right golden mr-3 mt-1"></i>Transacciones en blockchain según la orden ejecutiva de Musk</li>
+                    <li class="flex items-start"><i class="fas fa-chevron-right golden mr-3 mt-1"></i>Integración con la plataforma AI.GOV para gobierno tecnocrático</li>
+                    <li class="flex items-start"><i class="fas fa-chevron-right golden mr-3 mt-1"></i>Identificación biométrica obligatoria desde el nacimiento</li>
+                </ul>
+            </div>
+
+            <div class="bg-blue-900 bg-opacity-30 rounded-lg p-6">
+                <h4 class="text-lg font-semibold text-blue-300 mb-3">El Plan BlackRock "Going Direct" en Acción</h4>
+                <p class="text-gray-300">
+                    Scott Bessent confirmó que puede ocupar simultáneamente los cargos de presidente de la Fed y secretario del Tesoro, 
+                    materializando la fusión institucional que BlackRock propuso en 2019 con su plan "Going Direct".
+                </p>
+            </div>
+        </div>
+
+        <!-- El Complejo Militar-Tecnológico: Peter Thiel -->
+        <div class="bg-glass rounded-2xl p-8 mb-8 section-border">
+            <h2 class="text-3xl font-bold golden mb-6 flex items-center">
+                <i class="fas fa-network-wired red-accent mr-3"></i>
+                El Nuevo Complejo Militar-Tecnológico: Peter Thiel y la Red Palantir
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-6">
+                <div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Peter_Thiel_by_Gage_Skidmore.jpg" 
+                         alt="Peter Thiel" 
+                         class="w-full rounded-lg shadow-lg mb-4">
+                    <p class="text-center text-gray-400 text-sm italic">Peter Thiel, arquitecto del modelo tecnocrático</p>
+                </div>
+                <div>
+                    <img src="https://theintercept.com/wp-content/uploads/2017/02/Palantir_Solution-1487021968.png" 
+                         alt="Sistema de vigilancia Palantir" 
+                         class="w-full rounded-lg shadow-lg mb-4">
+                    <p class="text-center text-gray-400 text-sm italic">Cómo Palantir ayudó a la NSA a espiar al mundo</p>
+                </div>
+            </div>
+
+            <div class="prose prose-lg max-w-none text-gray-300 space-y-4 mb-6">
+                <p>
+                    El análisis demuestra cómo <strong class="golden">Peter Thiel</strong>, a través de Palantir Technologies 
+                    y Anduril Industries, se ha posicionado como el arquitecto principal del nuevo modelo tecnocrático estadounidense. 
+                    La "Big Beautiful Bill" destina fondos masivos a estos contratos.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <h4 class="text-lg font-semibold golden mb-4">Beneficiarios Principales:</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><strong class="text-yellow-400">Palantir Technologies:</strong> Contratos expandidos para vigilancia biométrica</li>
+                        <li><strong class="text-yellow-400">Anduril Industries:</strong> $23,000 millones para Golden Dome y drones</li>
+                        <li><strong class="text-yellow-400">SpaceX:</strong> Financiamiento para puertos espaciales</li>
+                        <li><strong class="text-yellow-400">BlackRock:</strong> Gestión de ETFs para "cuentas Trump"</li>
+                    </ul>
+                </div>
+                <div class="alert-danger rounded-lg p-6">
+                    <h4 class="text-lg font-semibold red-accent mb-3">
+                        <i class="fas fa-eye mr-2"></i>El Panóptico Digital
+                    </h4>
+                    <p class="text-gray-300">
+                        Estamos presenciando la implementación del "panóptico digital" completo: 
+                        identificación biométrica universal, transacciones rastreables en blockchain, 
+                        e inteligencia artificial que monitorea cada aspecto de la vida ciudadana.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- La Carrera Energética -->
+        <div class="bg-glass rounded-2xl p-8 mb-8 section-border">
+            <h2 class="text-3xl font-bold golden mb-6 flex items-center">
+                <i class="fas fa-bolt red-accent mr-3"></i>
+                La Verdadera Guerra: Energía para la Supremacía de la IA
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-6">
+                <div>
+                    <img src="https://images.squarespace-cdn.com/content/v1/5936d98f6a4963bcd1ed94d3/ea458647-18a9-4573-a9ea-01ac4f88cf61/Picture1.png" 
+                         alt="Centros de datos y demanda energética" 
+                         class="w-full rounded-lg shadow-lg mb-4">
+                    <p class="text-center text-gray-400 text-sm italic">Los centros de datos consumen energía como ciudades enteras</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-gray-800 rounded-lg p-4">
+                        <h4 class="font-semibold golden mb-2">Declaración Reveladora de Eric Schmidt:</h4>
+                        <blockquote class="italic text-gray-300 border-l-4 border-golden pl-4">
+                            "El límite natural de la inteligencia artificial no son los chips, sino la producción de energía"
+                        </blockquote>
+                    </div>
+                    <p class="text-gray-300">
+                        Esta declaración confirma que toda la carrera geopolítica por la IA se reduce al 
+                        <strong class="golden">control de recursos energéticos</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Gráfico de Producción Energética -->
+            <div class="bg-gray-800 rounded-lg p-6 mb-6">
+                <h4 class="text-lg font-semibold golden mb-4">Producción Energética Mundial por Fuente</h4>
+                <div style="height: 400px;">
+                    <canvas id="energyChart"></canvas>
+                </div>
+                <p class="text-sm text-gray-400 mt-2 text-center italic">
+                    Las energías renovables representan solo una fracción del total, ilustrando la imposibilidad 
+                    de reemplazar completamente los combustibles fósiles para uso civil mientras se destina energía masiva a IA
+                </p>
+            </div>
+
+            <div class="alert-danger rounded-lg p-6">
+                <h4 class="text-lg font-semibold red-accent mb-3">
+                    <i class="fas fa-chart-line mr-2"></i>Impacto en Consumidores
+                </h4>
+                <p class="text-gray-300">
+                    ZeroHedge advierte que los ciudadanos deben "prepararse para el aumento de las facturas de electricidad" 
+                    ya que la red eléctrica establece costos en niveles récord para alimentar la IA. 
+                    En palabras simples: <em>"si querés IA, incluso si no la querés, no podrás permitirte el aire acondicionado"</em>.
+                </p>
+            </div>
+        </div>
+
+        <!-- El Modelo Global -->
+        <div class="bg-glass rounded-2xl p-8 mb-8 section-border">
+            <h2 class="text-3xl font-bold golden mb-6 flex items-center">
+                <i class="fas fa-globe red-accent mr-3"></i>
+                El Patrón Global: Sincronización Tecnocrática Internacional
+            </h2>
+
+            <div class="prose prose-lg max-w-none text-gray-300 space-y-4 mb-6">
+                <p>
+                    El análisis demuestra que esto no es un fenómeno únicamente estadounidense, sino parte de una 
+                    <strong class="golden">transformación global coordinada</strong>:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <h4 class="text-lg font-semibold golden mb-4">Implementaciones Paralelas:</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><strong class="text-yellow-400">Alemania:</strong> Cuentas de jubilación para niños de 6 años</li>
+                        <li><strong class="text-yellow-400">España:</strong> €2,400 por cada hijo menor de 18 años</li>
+                        <li><strong class="text-yellow-400">Reino Unido:</strong> £32 millones para armas autónomas de Thiel</li>
+                        <li><strong class="text-yellow-400">Países Bajos:</strong> Racionamiento eléctrico inteligente</li>
+                    </ul>
+                </div>
+                <div class="bg-blue-900 bg-opacity-30 rounded-lg p-6">
+                    <h4 class="text-lg font-semibold text-blue-300 mb-3">Corte Internacional de Justicia</h4>
+                    <p class="text-gray-300">
+                        El 23 de julio de 2025, dictaminó que el cambio climático es un "riesgo universal" 
+                        que requiere "vigilancia y prevención elevadas", proporcionando el marco legal internacional 
+                        para las medidas tecnocráticas.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Presupuesto de la Big Beautiful Bill -->
+        <div class="bg-glass rounded-2xl p-8 mb-8 section-border">
+            <h2 class="text-3xl font-bold golden mb-6 flex items-center">
+                <i class="fas fa-chart-bar red-accent mr-3"></i>
+                Desglose del Presupuesto: Hacia Dónde Va el Dinero
+            </h2>
+            <div style="height: 500px;" class="mb-4">
+                <canvas id="budgetChart"></canvas>
+            </div>
+            <p class="text-center text-gray-400 text-sm italic">
+                Desglose de los $3.4 trillones agregados a la deuda estadounidense según el CBO
+            </p>
+        </div>
+
+        <!-- Fuentes de Investigación -->
+        <div class="bg-glass rounded-2xl p-8 mb-8 section-border">
+            <h2 class="text-3xl font-bold golden mb-6 flex items-center">
+                <i class="fas fa-book red-accent mr-3"></i>
+                Fuentes de Investigación y Referencias
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-6">
+                <div class="source-item bg-gray-800 rounded-lg p-4 border border-gray-600">
+                    <a href="https://www.whitehouse.gov/articles/2025/07/president-trumps-one-big-beautiful-bill-is-now-the-law/" 
+                       target="_blank" class="hover-golden font-semibold block mb-2">
+                        <i class="fas fa-external-link-alt mr-2"></i>Casa Blanca Oficial
+                    </a>
+                    <p class="text-gray-400 text-sm">Documento oficial sobre el "One Big Beautiful Bill"</p>
+                </div>
+
+                <div class="source-item bg-gray-800 rounded-lg p-4 border border-gray-600">
+                    <a href="https://www.ft.com/content/76c2b360-79b3-443a-a142-32eeef7598c4" 
+                       target="_blank" class="hover-golden font-semibold block mb-2">
+                        <i class="fas fa-external-link-alt mr-2"></i>Financial Times
+                    </a>
+                    <p class="text-gray-400 text-sm">Análisis de beneficiarios corporativos del proyecto</p>
+                </div>
+
+                <div class="source-item bg-gray-800 rounded-lg p-4 border border-gray-600">
+                    <a href="https://www.biometricupdate.com/202506/trumps-megabill-expands-biometric-surveillance" 
+                       target="_blank" class="hover-golden font-semibold block mb-2">
+                        <i class="fas fa-external-link-alt mr-2"></i>Biometric Update
+                    </a>
+                    <p class="text-gray-400 text-sm">Expansión de vigilancia biométrica</p>
+                </div>
+
+                <div class="source-item bg-gray-800 rounded-lg p-4 border border-gray-600">
+                    <a href="https://www.axios.com/2025/07/07/americas-newborns-trump-accounts" 
+                       target="_blank" class="hover-golden font-semibold block mb-2">
+                        <i class="fas fa-external-link-alt mr-2"></i>Axios
+                    </a>
+                    <p class="text-gray-400 text-sm">Detalles sobre las "cuentas Trump" para bebés</p>
+                </div>
+
+                <div class="source-item bg-gray-800 rounded-lg p-4 border border-gray-600">
+                    <a href="https://www.blackrock.com/institutions/en-au/insights/blackrock-investment-institute/coronavirus-policy-response" 
+                       target="_blank" class="hover-golden font-semibold block mb-2">
+                        <i class="fas fa-external-link-alt mr-2"></i>BlackRock Going Direct
+                    </a>
+                    <p class="text-gray-400 text-sm">Plan original de fusión Fed-Tesoro de 2019</p>
+                </div>
+
+                <div class="source-item bg-gray-800 rounded-lg p-4 border border-gray-600">
+                    <a href="https://www.zerohedge.com/technology/brace-soaring-electricity-bills-biggest-us-power-grid-sets-power-costs-record-high-feed" 
+                       target="_blank" class="hover-golden font-semibold block mb-2">
+                        <i class="fas fa-external-link-alt mr-2"></i>ZeroHedge
+                    </a>
+                    <p class="text-gray-400 text-sm">Alerta sobre aumento de facturas eléctricas para IA</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conclusiones -->
+        <div class="bg-glass rounded-2xl p-8 mb-8 section-border">
+            <h2 class="text-3xl font-bold golden mb-6 flex items-center">
+                <i class="fas fa-chess-king red-accent mr-3"></i>
+                Conclusiones: El Jaque Mate Tecnocrático
+            </h2>
+
+            <div class="alert-danger rounded-lg p-6 mb-6">
+                <h4 class="text-lg font-semibold red-accent mb-3">
+                    <i class="fas fa-lightbulb mr-2"></i>Reflexión Final de Nicolás Martínez Lage
+                </h4>
+                <blockquote class="italic text-gray-300 text-lg">
+                    "Hasta que no entendamos que los políticos son títeres de los que verdaderamente están 
+                    planificando y moviendo los hilos de esto, que son los que lucran con esto, nunca vamos a poder salir adelante"
+                </blockquote>
+            </div>
+
+            <div class="prose prose-lg max-w-none text-gray-300 space-y-4 mb-6">
+                <p>
+                    El análisis revela que estamos presenciando la implementación del <strong class="golden">modelo tecnocrático completo</strong> 
+                    bajo la fachada de políticas "conservadoras" y "patrióticas". La "Big Beautiful Bill" de Trump no es diferente 
+                    a las políticas que habría implementado cualquier administración globalista - simplemente utiliza una narrativa 
+                    diferente para llegar al mismo destino.
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-yellow-900 to-red-900 rounded-lg p-6 mb-6">
+                <h4 class="text-lg font-semibold golden mb-4">Infraestructura Tecnocrática Completa:</h4>
+                <ul class="space-y-2 text-gray-200">
+                    <li><strong>Control Financiero:</strong> CBDC encubierta a través de "cuentas Trump" en la Reserva Federal</li>
+                    <li><strong>Vigilancia Total:</strong> Identificación biométrica + IA + blockchain para rastreo completo</li>
+                    <li><strong>Control Energético:</strong> Monopolización de recursos para centros de datos, escasez para ciudadanos</li>
+                    <li><strong>Gobierno por IA:</strong> Plataforma AI.gov para automatizar decisiones gubernamentales</li>
+                    <li><strong>Control Social:</strong> Scoring social implementado a través del sistema financiero tokenizado</li>
+                </ul>
+            </div>
+
+            <div class="text-center">
+                <a href="https://www.youtube.com/@terapialiberal" target="_blank" 
+                   class="btn-gradient px-8 py-3 rounded-lg font-bold inline-flex items-center">
+                    <i class="fab fa-youtube mr-3"></i>
+                    Seguir el Canal para Más Análisis
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-90 border-t border-gray-600 py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-8 mb-4">
+                <a href="https://www.youtube.com/@terapialiberal" target="_blank" 
+                   class="text-gray-400 hover:text-red-500 text-3xl transition-colors">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.patreon.com/terapialiberal" target="_blank" 
+                   class="text-gray-400 hover:text-yellow-500 text-3xl transition-colors">
+                    <i class="fab fa-patreon"></i>
+                </a>
+            </div>
+            <p class="text-gray-400">© 2025 Terapia Liberal. Análisis independiente para mentes críticas.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Energy Chart
+        const energyCtx = document.getElementById('energyChart').getContext('2d');
+        new Chart(energyCtx, {
+            type: 'line',
+            data: {
+                labels: ['2000', '2005', '2010', '2015', '2020', '2025'],
+                datasets: [{
+                    label: 'Carbón',
+                    data: [38, 40, 42, 39, 36, 34],
+                    borderColor: '#4B5563',
+                    backgroundColor: 'rgba(75, 85, 99, 0.1)',
+                    fill: true
+                }, {
+                    label: 'Gas Natural',
+                    data: [21, 23, 25, 28, 32, 35],
+                    borderColor: '#7C3AED',
+                    backgroundColor: 'rgba(124, 58, 237, 0.1)',
+                    fill: true
+                }, {
+                    label: 'Petróleo',
+                    data: [32, 30, 28, 26, 24, 22],
+                    borderColor: '#DC2626',
+                    backgroundColor: 'rgba(220, 38, 38, 0.1)',
+                    fill: true
+                }, {
+                    label: 'Nuclear',
+                    data: [6, 6, 5, 4, 4, 4],
+                    borderColor: '#F59E0B',
+                    backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                    fill: true
+                }, {
+                    label: 'Renovables',
+                    data: [3, 1, 0, 3, 4, 5],
+                    borderColor: '#D4AF37',
+                    backgroundColor: 'rgba(212, 175, 55, 0.1)',
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#E5E7EB'
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: { color: '#9CA3AF' },
+                        grid: { color: '#374151' }
+                    },
+                    y: {
+                        ticks: { color: '#9CA3AF' },
+                        grid: { color: '#374151' },
+                        title: {
+                            display: true,
+                            text: 'Porcentaje de Producción Global',
+                            color: '#E5E7EB'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Budget Chart
+        const budgetCtx = document.getElementById('budgetChart').getContext('2d');
+        new Chart(budgetCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Defensa/Golden Dome', 'ICE/Frontera', 'Recortes Fiscales', 'Infraestructura IA', 'Otros Gastos'],
+                datasets: [{
+                    label: 'Miles de Millones de Dólares',
+                    data: [150, 60, 1500, 500, 1290],
+                    backgroundColor: [
+                        '#DC2626',
+                        '#D4AF37',
+                        '#7C3AED',
+                        '#F59E0B',
+                        '#4B5563'
+                    ],
+                    borderColor: [
+                        '#B91C1C',
+                        '#B45309',
+                        '#6D28D9',
+                        '#D97706',
+                        '#374151'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: { 
+                            color: '#9CA3AF',
+                            maxRotation: 45
+                        },
+                        grid: { color: '#374151' }
+                    },
+                    y: {
+                        ticks: { color: '#9CA3AF' },
+                        grid: { color: '#374151' },
+                        title: {
+                            display: true,
+                            text: 'Miles de Millones ($)',
+                            color: '#E5E7EB'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
