@@ -15,7 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <!-- Font Awesome actualizado para que el icono de X funcione -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
     <!-- Chart.js for data visualization -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -69,10 +70,14 @@
         }
         
         .brand-title {
-            font-size: 1.5rem;
+            font-size: 1.8rem; /* Tamaño aumentado */
             font-weight: bold;
             color: #d4af37;
-            text-decoration: none;
+            text-decoration: none; /* Se convierte en enlace */
+            transition: color 0.3s ease;
+        }
+        .brand-title:hover {
+            color: #e6c56d;
         }
         
         .header-social {
@@ -93,10 +98,6 @@
         
         .social-patreon:hover {
             color: #d4af37;
-        }
-        
-        .social-x {
-            color: #9CA3AF;
         }
         
         .social-x:hover {
@@ -141,11 +142,7 @@
             margin-bottom: 1rem;
         }
         
-        /* Video Section */
-        .video-section {
-            margin-bottom: 3rem;
-        }
-        
+        /* Video Container (ahora dentro del Hero) */
         .video-container {
             position: relative;
             width: 100%;
@@ -154,6 +151,7 @@
             border-radius: 1rem;
             overflow: hidden;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+            margin-top: 2.5rem; /* Espacio para separarlo del subtítulo */
         }
         
         .video-container iframe {
@@ -200,22 +198,30 @@
             font-weight: 600;
         }
         
-        /* Images */
+        /* --- IMAGES ANIMATION --- */
         .section-image {
             width: 100%;
             max-width: 600px;
             height: auto;
             border-radius: 0.5rem;
-            margin: 1.5rem 0;
+            margin: 1.5rem auto;
+            display: block;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
             opacity: 0;
             transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
-            transition: transform 0.3s ease;
+        }
+
+        .section-image.is-animated {
+            animation: fadeInUp 0.8s ease forwards;
         }
         
         .section-image:hover {
             transform: scale(1.05);
+        }
+
+        .section-image.is-animated:hover {
+            transform: translateY(0) scale(1.05);
         }
         
         @keyframes fadeInUp {
@@ -449,7 +455,7 @@
         <div class="header-container">
             <div class="header-left">
                 <img src="https://yt3.ggpht.com/ZzVyDrXt4x8YWoKbISHZzC9CCtkEPCN4GRET1Xxf_wssNyw7mfN-xTbBmpwEJHO0DRQrg0Dgug=s68-c-k-c0x00ffffff-no-rj" alt="Terapia Liberal Logo" class="logo">
-                <h2 class="brand-title">Terapia Liberal</h2>
+                <a href="https://terapialiberal.github.io/" class="brand-title">Terapia Liberal</a>
             </div>
             <div class="header-social">
                 <a href="https://www.youtube.com/@terapialiberal" target="_blank" class="social-youtube">
@@ -467,15 +473,11 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
+        <!-- Hero Section con Video Integrado -->
         <section class="hero-section">
             <div class="video-date">24 de Julio, 2025</div>
             <h1 class="hero-title">Trump ES el Caballo de Troya Tecnocrático</h1>
             <p class="hero-subtitle">Análisis profundo sobre la "Big Beautiful Bill" y la implementación encubierta de CBDCs y el sistema de vigilancia AI.GOV</p>
-        </section>
-
-        <!-- Video Section -->
-        <section class="video-section">
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/UEgEIzZ9dYo" title="Trump ES el Caballo de Troya Tecnocrático! Lanza la Estructura de CBDC y AI.GOV" allowfullscreen></iframe>
             </div>
@@ -765,186 +767,122 @@
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
     <script>
-        // Back to Top functionality
-        window.addEventListener('scroll', function() {
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Back to Top functionality
             const backToTop = document.getElementById('backToTop');
-            if (window.pageYOffset > 300) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
-        });
-
-        document.getElementById('backToTop').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
             });
-        });
 
-        // Smooth scrolling for internal links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            document.getElementById('backToTop').addEventListener('click', (e) => {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
             });
-        });
 
-        // Image animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationDelay = '0.1s';
-                    entry.target.style.animationFillMode = 'forwards';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all images
-        document.querySelectorAll('.section-image').forEach(img => {
-            observer.observe(img);
-        });
-
-        // Chart.js configurations
-        const ctx1 = document.getElementById('budgetChart').getContext('2d');
-        const budgetChart = new Chart(ctx1, {
-            type: 'doughnut',
-            data: {
-                labels: ['Defensa/Golden Dome', 'ICE/Frontera', 'Recortes Fiscales', 'Infraestructura IA', 'Otros Gastos'],
-                datasets: [{
-                    data: [150, 60, 2000, 500, 690],
-                    backgroundColor: ['#dc2626', '#d4af37', '#f59e0b', '#ef4444', '#9ca3af'],
-                    borderColor: '#374151',
-                    borderWidth: 2
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        labels: {
-                            color: '#E5E7EB',
-                            font: {
-                                family: 'Inter'
-                            }
-                        }
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                return context.label + ': $' + context.parsed + 'B';
-                            }
-                        }
+            // Animate images on scroll
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-animated');
+                        observer.unobserve(entry.target);
                     }
-                }
-            }
-        });
+                });
+            }, { 
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
 
-        const ctx2 = document.getElementById('energyChart').getContext('2d');
-        const energyChart = new Chart(ctx2, {
-            type: 'line',
-            data: {
-                labels: ['2010', '2015', '2020', '2025'],
-                datasets: [
-                    {
-                        label: 'Carbón',
-                        data: [7800, 7200, 6800, 6500],
+            document.querySelectorAll('.section-image').forEach(img => {
+                imageObserver.observe(img);
+            });
+
+            // Chart.js configurations
+            const ctx1 = document.getElementById('budgetChart').getContext('2d');
+            const budgetChart = new Chart(ctx1, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Defensa/Golden Dome', 'ICE/Frontera', 'Recortes Fiscales', 'Infraestructura IA', 'Otros Gastos'],
+                    datasets: [{
+                        data: [150, 60, 2000, 500, 690],
+                        backgroundColor: ['#dc2626', '#d4af37', '#f59e0b', '#ef4444', '#9ca3af'],
                         borderColor: '#374151',
-                        backgroundColor: 'rgba(55, 65, 81, 0.1)',
-                        tension: 0.1
-                    },
-                    {
-                        label: 'Gas Natural',
-                        data: [3200, 3800, 4200, 4600],
-                        borderColor: '#9ca3af',
-                        backgroundColor: 'rgba(156, 163, 175, 0.1)',
-                        tension: 0.1
-                    },
-                    {
-                        label: 'Petróleo',
-                        data: [4100, 4300, 4000, 3800],
-                        borderColor: '#1f2937',
-                        backgroundColor: 'rgba(31, 41, 55, 0.1)',
-                        tension: 0.1
-                    },
-                    {
-                        label: 'Nuclear',
-                        data: [650, 670, 700, 750],
-                        borderColor: '#dc2626',
-                        backgroundColor: 'rgba(220, 38, 38, 0.1)',
-                        tension: 0.1
-                    },
-                    {
-                        label: 'Hidroeléctrica',
-                        data: [350, 380, 420, 450],
-                        borderColor: '#2563eb',
-                        backgroundColor: 'rgba(37, 99, 235, 0.1)',
-                        tension: 0.1
-                    },
-                    {
-                        label: 'Solar',
-                        data: [5, 50, 250, 600],
-                        borderColor: '#d4af37',
-                        backgroundColor: 'rgba(212, 175, 55, 0.1)',
-                        tension: 0.1
-                    },
-                    {
-                        label: 'Eólica',
-                        data: [40, 180, 350, 650],
-                        borderColor: '#059669',
-                        backgroundColor: 'rgba(5, 150, 105, 0.1)',
-                        tension: 0.1
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        labels: {
-                            color: '#E5E7EB',
-                            font: {
-                                family: 'Inter'
-                            }
-                        }
-                    }
+                        borderWidth: 2
+                    }]
                 },
-                scales: {
-                    x: {
-                        ticks: {
-                            color: '#9CA3AF'
-                        },
-                        grid: {
-                            color: '#374151'
-                        }
-                    },
-                    y: {
-                        ticks: {
-                            color: '#9CA3AF',
-                            callback: function(value) {
-                                return value + ' TWh';
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#E5E7EB',
+                                font: {
+                                    family: 'Inter'
+                                }
                             }
                         },
-                        grid: {
-                            color: '#374151'
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': $' + context.parsed + 'B';
+                                }
+                            }
                         }
                     }
                 }
-            }
+            });
+
+            const ctx2 = document.getElementById('energyChart').getContext('2d');
+            const energyChart = new Chart(ctx2, {
+                type: 'line',
+                data: {
+                    labels: ['2010', '2015', '2020', '2025'],
+                    datasets: [
+                        { label: 'Carbón', data: [7800, 7200, 6800, 6500], borderColor: '#374151', backgroundColor: 'rgba(55, 65, 81, 0.1)', tension: 0.1 },
+                        { label: 'Gas Natural', data: [3200, 3800, 4200, 4600], borderColor: '#9ca3af', backgroundColor: 'rgba(156, 163, 175, 0.1)', tension: 0.1 },
+                        { label: 'Petróleo', data: [4100, 4300, 4000, 3800], borderColor: '#1f2937', backgroundColor: 'rgba(31, 41, 55, 0.1)', tension: 0.1 },
+                        { label: 'Nuclear', data: [650, 670, 700, 750], borderColor: '#dc2626', backgroundColor: 'rgba(220, 38, 38, 0.1)', tension: 0.1 },
+                        { label: 'Hidroeléctrica', data: [350, 380, 420, 450], borderColor: '#2563eb', backgroundColor: 'rgba(37, 99, 235, 0.1)', tension: 0.1 },
+                        { label: 'Solar', data: [5, 50, 250, 600], borderColor: '#d4af37', backgroundColor: 'rgba(212, 175, 55, 0.1)', tension: 0.1 },
+                        { label: 'Eólica', data: [40, 180, 350, 650], borderColor: '#059669', backgroundColor: 'rgba(5, 150, 105, 0.1)', tension: 0.1 }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#E5E7EB',
+                                font: {
+                                    family: 'Inter'
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: { color: '#9CA3AF' },
+                            grid: { color: '#374151' }
+                        },
+                        y: {
+                            ticks: {
+                                color: '#9CA3AF',
+                                callback: function(value) { return value + ' TWh'; }
+                            },
+                            grid: { color: '#374151' }
+                        }
+                    }
+                }
+            });
         });
     </script>
 </body>
