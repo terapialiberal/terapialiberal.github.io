@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Terapia Liberal</title>
+    
+    <!-- Fonts y Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Nuestros estilos -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <style>
+        .admin-nav {
+            background: var(--card-bg);
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .admin-nav button {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: #9ca3af;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .admin-nav button.active,
+        .admin-nav button:hover {
+            background: var(--gold);
+            color: #000;
+            border-color: var(--gold);
+        }
+        
+        .admin-section {
+            display: none;
+        }
+        
+        .admin-section.active {
+            display: block;
+        }
+        
+        .posts-list {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        
+        .post-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .post-item:last-child {
+            border-bottom: none;
+        }
+        
+        .post-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .btn-small {
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+        
+        .btn-edit {
+            background: #3b82f6;
+            color: white;
+        }
+        
+        .btn-delete {
+            background: var(--red);
+            color: white;
+        }
+        
+        .preview-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="https://yt3.ggpht.com/ZzVyDrXt4x8YWoKbISHZzC9CCtkEPCN4GRET1Xxf_wssNyw7mfN-xTbBmpwEJHO0DRQrg0Dgug=s68-c-k-c0x00ffffff-no-rj" alt="Terapia Liberal">
+                <h1>Panel de Administración</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="../index.html" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Sitio</a>
+                <a href="https://www.youtube.com/@terapialiberal" target="_blank"><i class="fab fa-youtube"></i></a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-container">
+        <!-- Navigation -->
+        <div class="admin-nav">
+            <button onclick="showSection('create')" class="active" id="nav-create">
+                <i class="fas fa-plus"></i> Crear Post
+            </button>
+            <button onclick="showSection('manage')" id="nav-manage">
+                <i class="fas fa-list"></i> Gestionar Posts
+            </button>
+            <button onclick="showSection('settings')" id="nav-settings">
+                <i class="fas fa-cog"></i> Configuración
+            </button>
+        </div>
+
+        <!-- Crear Post Section -->
+        <div id="section-create" class="admin-section active">
+            <div class="admin-header">
+                <h2 class="text-3xl font-bold gold-text">Crear Nuevo Análisis</h2>
+                <p class="text-gray-300 mt-2">Completa la información para generar automáticamente la página HTML</p>
+            </div>
+
+            <form id="post-form" class="admin-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Título del Análisis</label>
+                        <input type="text" id="title" class="form-input" required 
+                               placeholder="Ej: Los Dueños de MAGA y el Futuro">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Fecha</label>
+                        <input type="date" id="date" class="form-input" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Video ID de YouTube</label>
+                        <input type="text" id="video_id" class="form-input" required 
+                               placeholder="Ej: -wntkT1oDS4">
+                        <small style="color: #9ca3af;">Solo el ID, no la URL completa</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Categoría</label>
+                        <select id="category" class="form-select">
+                            <option value="economia">Economía</option>
+                            <option value="geopolitica">Geopolítica</option>
+                            <option value="filosofia">Filosofía Liberal</option>
+                            <option value="investigacion">Investigación</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Descripción/Resumen</label>
+                    <textarea id="description" class="form-textarea" required 
+                              placeholder="Describe brevemente el análisis para el índice..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Contenido del Análisis (HTML)</label>
+                    <textarea id="content" class="form-textarea" required style="min-height: 300px;"
+                              placeholder="Escribe aquí el contenido completo del análisis. Puedes usar HTML..."></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Tags (separados por comas)</label>
+                        <input type="text" id="tags" class="form-input" 
+                               placeholder="Trump, Geopolítica, Economía">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">¿Es destacado?</label>
+                        <select id="featured" class="form-select">
+                            <option value="false">No</option>
+                            <option value="true">Sí - Aparecerá como destacado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn-primary" style="width: 100%; padding: 16px;">
+                        <i class="fas fa-magic"></i> Generar Post y Página HTML
+                    </button>
+                </div>
+            </form>
+
+            <!-- Preview Section -->
+            <div id="preview-section" class="preview-section" style="display: none;">
+                <h3 class="text-xl font-bold gold-text mb-4">Vista Previa</h3>
+                <div id="preview-content"></div>
+            </div>
+        </div>
+
+        <!-- Gestionar Posts Section -->
+        <div id="section-manage" class="admin-section">
+            <div class="admin-header">
+                <h2 class="text-3xl font-bold gold-text">Gestionar Posts</h2>
+                <p class="text-gray-300 mt-2">Edita o elimina posts existentes</p>
+            </div>
+
+            <div class="posts-list">
+                <div id="posts-list-content">
+                    <div class="text-center p-8">
+                        <div class="loading"></div>
+                        <p class="mt-4 text-gray-400">Cargando posts...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Configuración Section -->
+        <div id="section-settings" class="admin-section">
+            <div class="admin-header">
+                <h2 class="text-3xl font-bold gold-text">Configuración</h2>
+                <p class="text-gray-300 mt-2">Configuración general del sitio</p>
+            </div>
+
+            <div class="admin-form">
+                <div class="form-group">
+                    <label class="form-label">Título del Sitio</label>
+                    <input type="text" value="Terapia Liberal" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Descripción del Sitio</label>
+                    <textarea class="form-textarea">Análisis independientes sobre economía, geopolítica y filosofía liberal.</textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button class="btn-primary">Guardar Configuración</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
