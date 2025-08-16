@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Terapia Liberal</title>
+    
+    <!-- Fonts y Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Nuestros estilos -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <style>
+        .admin-nav {
+            background: var(--card-bg);
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .admin-nav button {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: #9ca3af;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .admin-nav button.active,
+        .admin-nav button:hover {
+            background: var(--gold);
+            color: #000;
+            border-color: var(--gold);
+        }
+        
+        .admin-section {
+            display: none;
+        }
+        
+        .admin-section.active {
+            display: block;
+        }
+        
+        .posts-list {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        
+        .post-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .post-item:last-child {
+            border-bottom: none;
+        }
+        
+        .post-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .btn-small {
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+        
+        .btn-edit {
+            background: #3b82f6;
+            color: white;
+        }
+        
+        .btn-delete {
+            background: var(--red);
+            color: white;
+        }
+        
+        .preview-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="https://yt3.ggpht.com/ZzVyDrXt4x8YWoKbISHZzC9CCtkEPCN4GRET1Xxf_wssNyw7mfN-xTbBmpwEJHO0DRQrg0Dgug=s68-c-k-c0x00ffffff-no-rj" alt="Terapia Liberal">
+                <h1>Panel de Administración</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="../index.html" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Sitio</a>
+                <button onclick="logout()" class="btn-gradient" style="border: none; cursor: pointer;">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                </button>
+                <a href="https://www.youtube.com/@terapialiberal" target="_blank"><i class="fab fa-youtube"></i></a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-container">
+        <!-- Navigation -->
+        <div class="admin-nav">
+            <button onclick="showSection('create')" class="active" id="nav-create">
+                <i class="fas fa-plus"></i> Crear Post
+            </button>
+            <button onclick="showSection('manage')" id="nav-manage">
+                <i class="fas fa-list"></i> Gestionar Posts
+            </button>
+            <button onclick="showSection('settings')" id="nav-settings">
+                <i class="fas fa-cog"></i> Configuración
+            </button>
+        </div>
+
+        <!-- Crear Post Section -->
+        <div id="section-create" class="admin-section active">
+            <div class="admin-header">
+                <h2 class="text-3xl font-bold gold-text">Crear Nuevo Análisis</h2>
+                <p class="text-gray-300 mt-2">Completa la información para generar automáticamente la página HTML</p>
+            </div>
+
+            <form id="post-form" class="admin-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Título del Análisis</label>
+                        <input type="text" id="title" class="form-input" required 
+                               placeholder="Ej: Los Dueños de MAGA y el Futuro">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Fecha</label>
+                        <input type="date" id="date" class="form-input" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Video ID de YouTube</label>
+                        <input type="text" id="video_id" class="form-input" required 
+                               placeholder="Ej: -wntkT1oDS4">
+                        <small style="color: #9ca3af;">Solo el ID, no la URL completa</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Categoría</label>
+                        <select id="category" class="form-select">
+                            <option value="economia">Economía</option>
+                            <option value="geopolitica">Geopolítica</option>
+                            <option value="filosofia">Filosofía Liberal</option>
+                            <option value="investigacion">Investigación</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Descripción/Resumen</label>
+                    <textarea id="description" class="form-textarea" required 
+                              placeholder="Describe brevemente el análisis para el índice..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Contenido del Análisis (HTML)</label>
+                    <textarea id="content" class="form-textarea" required style="min-height: 300px;"
+                              placeholder="Escribe aquí el contenido completo del análisis. Puedes usar HTML..."></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Tags (separados por comas)</label>
+                        <input type="text" id="tags" class="form-input" 
+                               placeholder="Trump, Geopolítica, Economía">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">¿Es destacado?</label>
+                        <select id="featured" class="form-select">
+                            <option value="false">No</option>
+                            <option value="true">Sí - Aparecerá como destacado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn-primary" style="width: 100%; padding: 16px;">
+                        <i class="fas fa-magic"></i> Generar Post y Página HTML
+                    </button>
+                </div>
+            </form>
+
+            <!-- Preview Section -->
+            <div id="preview-section" class="preview-section" style="display: none;">
+                <h3 class="text-xl font-bold gold-text mb-4">Vista Previa</h3>
+                <div id="preview-content"></div>
+            </div>
+        </div>
+
+        <!-- Gestionar Posts Section -->
+        <div id="section-manage" class="admin-section">
+            <div class="admin-header">
+                <h2 class="text-3xl font-bold gold-text">Gestionar Posts</h2>
+                <p class="text-gray-300 mt-2">Edita o elimina posts existentes</p>
+            </div>
+
+            <div class="posts-list">
+                <div id="posts-list-content">
+                    <div class="text-center p-8">
+                        <div class="loading"></div>
+                        <p class="mt-4 text-gray-400">Cargando posts...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Configuración Section -->
+        <div id="section-settings" class="admin-section">
+            <div class="admin-header">
+                <h2 class="text-3xl font-bold gold-text">Configuración</h2>
+                <p class="text-gray-300 mt-2">Configuración general del sitio</p>
+            </div>
+
+            <div class="admin-form">
+                <div class="form-group">
+                    <label class="form-label">Título del Sitio</label>
+                    <input type="text" value="Terapia Liberal" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Descripción del Sitio</label>
+                    <textarea class="form-textarea">Análisis independientes sobre economía, geopolítica y filosofía liberal.</textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button class="btn-primary">Guardar Configuración</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <!-- Sistema de Autenticación -->
+    <div id="auth-overlay" style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    ">
+        <div style="
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 16px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+        ">
+            <i class="fas fa-lock text-4xl gold-text mb-4"></i>
+            <h2 class="text-2xl font-bold gold-text mb-4">Panel Privado</h2>
+            <p class="text-gray-300 mb-6">Este panel es de acceso restringido.<br>Solo para administradores.</p>
+            
+            <form id="auth-form">
+                <div class="form-group">
+                    <input type="password" id="admin-password" class="form-input" 
+                           placeholder="Contraseña de administrador" required>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">
+                    <i class="fas fa-unlock"></i> Acceder al Panel
+                </button>
+            </form>
+            
+            <div id="auth-error" class="alert alert-error" style="display: none; margin-top: 1rem;">
+                Contraseña incorrecta
+            </div>
+            
+            <div class="mt-4 pt-4 border-t border-gray-700">
+                <small class="text-gray-500">
+                    <i class="fas fa-shield-alt"></i> Acceso protegido para Terapia Liberal
+                </small>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Sistema de autenticación simple pero efectivo
+        const AUTH_CONFIG = {
+            // Hash SHA-256 de la contraseña (cambiar por una segura)
+            passwordHash: 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', // "hello" - CAMBIAR ESTO
+            sessionKey: 'tl_admin_session',
+            sessionDuration: 2 * 60 * 60 * 1000 // 2 horas
+        };
+
+        // Función para hashear password (SHA-256)
+        async function hashPassword(password) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(password);
+            const hash = await crypto.subtle.digest('SHA-256', data);
+            return Array.from(new Uint8Array(hash))
+                .map(b => b.toString(16).padStart(2, '0'))
+                .join('');
+        }
+
+        // Verificar sesión existente
+        function checkExistingSession() {
+            const session = localStorage.getItem(AUTH_CONFIG.sessionKey);
+            if (session) {
+                const sessionData = JSON.parse(session);
+                const now = Date.now();
+                
+                if (now < sessionData.expires) {
+                    // Sesión válida
+                    hideAuthOverlay();
+                    return true;
+                } else {
+                    // Sesión expirada
+                    localStorage.removeItem(AUTH_CONFIG.sessionKey);
+                }
+            }
+            return false;
+        }
+
+        // Ocultar overlay de autenticación
+        function hideAuthOverlay() {
+            document.getElementById('auth-overlay').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Mostrar error de autenticación
+        function showAuthError() {
+            const errorDiv = document.getElementById('auth-error');
+            errorDiv.style.display = 'block';
+            setTimeout(() => {
+                errorDiv.style.display = 'none';
+            }, 3000);
+        }
+
+        // Manejar formulario de autenticación
+        document.getElementById('auth-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const password = document.getElementById('admin-password').value;
+            const hashedPassword = await hashPassword(password);
+            
+            if (hashedPassword === AUTH_CONFIG.passwordHash) {
+                // Contraseña correcta - crear sesión
+                const sessionData = {
+                    authenticated: true,
+                    expires: Date.now() + AUTH_CONFIG.sessionDuration,
+                    timestamp: Date.now()
+                };
+                
+                localStorage.setItem(AUTH_CONFIG.sessionKey, JSON.stringify(sessionData));
+                hideAuthOverlay();
+                
+                // Mostrar mensaje de bienvenida
+                setTimeout(() => {
+                    const welcome = document.createElement('div');
+                    welcome.className = 'alert alert-success';
+                    welcome.textContent = '¡Bienvenido al Panel de Administración!';
+                    document.querySelector('main').insertBefore(welcome, document.querySelector('main').firstChild);
+                    setTimeout(() => welcome.remove(), 3000);
+                }, 500);
+                
+            } else {
+                // Contraseña incorrecta
+                showAuthError();
+                document.getElementById('admin-password').value = '';
+            }
+        });
+
+        // Función para cerrar sesión
+        function logout() {
+            localStorage.removeItem(AUTH_CONFIG.sessionKey);
+            location.reload();
+        }
+
+        // Verificar autenticación al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!checkExistingSession()) {
+                // Bloquear scroll del body
+                document.body.style.overflow = 'hidden';
+            }
+        });
+
+        // Verificar sesión cada 5 minutos
+        setInterval(() => {
+            if (!checkExistingSession()) {
+                location.reload();
+            }
+        }, 5 * 60 * 1000);
+
+        // INSTRUCCIONES PARA CAMBIAR LA CONTRASEÑA:
+        // 1. Ve a https://emn178.github.io/online-tools/sha256.html
+        // 2. Escribe tu contraseña deseada
+        // 3. Copia el hash SHA-256 generado
+        // 4. Reemplaza el valor de passwordHash arriba
+        console.log('🔒 Para cambiar la contraseña del admin:');
+        console.log('1. Ve a: https://emn178.github.io/online-tools/sha256.html');
+        console.log('2. Genera el hash SHA-256 de tu contraseña');
+        console.log('3. Reemplaza passwordHash en el código');
+    </script>
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de Investigaciones - Terapia Liberal | Análisis Independiente</title>
+    <meta name="description" content="Biblioteca de investigaciones con vistas previas de YouTube para cada video análisis. Análisis independientes sobre economía, geopolítica y filosofía liberal.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- CORRECCIÓN: Enlace a Font Awesome actualizado para que el icono de X funcione -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); color: #ffffff; min-height: 100vh; }
+        .gold-text { color: #d4af37; }
+        .red-text { color: #dc2626; }
+        .section-bg { background: rgba(31, 41, 55, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(75, 85, 99, 0.3); }
+        .hover-gold:hover { color: #d4af37; transition: all 0.3s ease; }
+        .video-thumbnail { position: relative; overflow: hidden; border-radius: 12px; transition: transform 0.3s ease; cursor: pointer; height: 200px; }
+        .video-thumbnail img { width: 100%; height: 100%; object-fit: cover; }
+        .video-thumbnail:hover { transform: scale(1.05); }
+        .video-thumbnail-featured { position: relative; overflow: hidden; border-radius: 12px; transition: transform 0.3s ease; cursor: pointer; }
+        .video-thumbnail-featured:hover { transform: scale(1.02); }
+        .video-thumbnail-featured img { width: 100%; height: 320px; object-fit: cover; }
+        .play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.7); color: #d4af37; border-radius: 50%; padding: 15px; font-size: 24px; transition: all 0.3s ease; pointer-events: none; }
+        .play-button-featured { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.7); color: #d4af37; border-radius: 50%; padding: 20px; font-size: 32px; transition: all 0.3s ease; pointer-events: none; }
+        .date-badge { background: linear-gradient(135deg, #d4af37 0%, #dc2626 100%); color: #000; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; display: inline-block; }
+        .btn-gradient { background: linear-gradient(135deg, #d4af37 0%, #dc2626 100%); color: #000; padding: 8px 16px; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; text-decoration: none; display: inline-block; }
+        .btn-gradient:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3); }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-black bg-opacity-90 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4"><div class="flex items-center justify-between"><div class="flex items-center space-x-4"><img src="https://yt3.ggpht.com/ZzVyDrXt4x8YWoKbISHZzC9CCtkEPCN4GRET1Xxf_wssNyw7mfN-xTbBmpwEJHO0DRQrg0Dgug=s68-c-k-c0x00ffffff-no-rj" alt="Terapia Liberal" class="w-12 h-12 rounded-full"><h1 class="text-2xl font-bold gold-text">Terapia Liberal</h1></div><nav class="flex space-x-6"><a href="https://www.youtube.com/@terapialiberal" target="_blank" class="text-gray-300 hover-gold"><i class="fab fa-youtube"></i></a><a href="https://x.com/terapia_liberal" target="_blank" class="text-gray-300 hover-gold"><i class="fa-brands fa-x-twitter"></i></a><a href="https://www.patreon.com/terapialiberal" target="_blank" class="text-gray-300 hover-gold"><i class="fab fa-patreon"></i></a></nav></div></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        
+        <!-- Library Hero Section -->
+        <section class="section-bg rounded-2xl py-16 px-8 mb-16">
+            <div class="text-center">
+                <h2 class="text-5xl font-bold mb-4 gold-text">Biblioteca de Investigaciones</h2>
+                <p class="text-gray-300 max-w-3xl mx-auto">Análisis independientes sobre economía, geopolítica y filosofía liberal. Investigaciones profundas que conectan los eventos globales con las agendas ocultas del poder.</p>
+            </div>
+        </section>
+
+        <!-- Featured Analysis -->
+        <section class="mb-16">
+            <h3 class="text-2xl font-semibold mb-8 gold-text">Análisis Destacado</h3>
+            <div class="section-bg rounded-2xl p-8">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-1/2">
+                        <div class="video-thumbnail-featured" onclick="window.open('https://youtu.be/-wntkT1oDS4', '_blank')">
+                            <img src="https://img.youtube.com/vi/-wntkT1oDS4/maxresdefault.jpg" alt="INVESTIGACION: LOS DUEÑOS DE MAGA Y...EL FUTURO?">
+                            <div class="play-button-featured"><i class="fas fa-play"></i></div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 flex flex-col">
+                        <div class="date-badge mb-4">07/08/2025 ÚLTIMO ANÁLISIS</div>
+                        <h4 class="text-2xl font-bold mb-4 gold-text">INVESTIGACION: LOS DUEÑOS DE MAGA Y...EL FUTURO?</h4>
+                        <p class="text-gray-300 mb-6 flex-grow">Una investigación sobre los dueños de MAGA y las proyecciones futuras.</p>
+                        <div class="flex gap-4 mt-auto">
+                            <a href="https://terapialiberal.github.io/due%C3%B1osmaga.html" class="btn-gradient">Ver Análisis Completo</a>
+                            <a href="https://youtu.be/-wntkT1oDS4" target="_blank" class="btn-gradient">Ver Video</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Previous Analysis Section -->
+        <section class="mb-16">
+            <h3 class="text-2xl font-semibold mb-8 gold-text">Análisis Anteriores</h3>
+            <div id="grid-analisis" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Contenido generado por el script -->
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section-bg rounded-2xl p-8">
+            <div class="flex flex-col md:flex-row gap-8 items-center"><div class="md:w-1/3"><img src="https://i.postimg.cc/8C3ZkxNy/1660176107980.jpg" alt="Nicolás Martínez Lage" class="w-48 h-48 rounded-full mx-auto object-cover"></div><div class="md:w-2/3"><h3 class="text-2xl font-bold mb-2 gold-text">Nicolás Martínez Lage</h3><p class="text-gray-400 mb-4">Analista Independiente</p><h4 class="text-xl font-semibold mb-3 gold-text">Sobre Terapia Liberal</h4><p class="text-gray-300 mb-4">Plataforma de análisis independiente que conecta eventos económicos y geopolíticos globales con las agendas de poder. Investigaciones profundas que van más allá de la narrativa mainstream para revelar las estructuras y mecanismos del control financiero mundial.</p><div class="flex gap-4 flex-wrap"><span class="bg-gray-700 px-3 py-1 rounded-lg text-sm">Análisis Económico</span><span class="bg-gray-700 px-3 py-1 rounded-lg text-sm">Geopolítica</span><span class="bg-gray-700 px-3 py-1 rounded-lg text-sm">Filosofía Liberal</span></div></div></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-90 py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center"><div class="flex justify-center space-x-6 mb-4"><a href="https://www.youtube.com/@terapialiberal" target="_blank" class="text-gray-400 hover:text-red-500 transition-colors"><i class="fab fa-youtube text-2xl"></i></a><a href="https://x.com/terapia_liberal" target="_blank" class="text-gray-400 hover-gold transition-colors"><i class="fa-brands fa-x-twitter text-2xl"></i></a><a href="https://www.patreon.com/terapialiberal" target="_blank" class="text-gray-400 hover-gold transition-colors"><i class="fab fa-patreon text-2xl"></i></a></div><p class="text-gray-400">© 2025 Terapia Liberal. Análisis independiente para mentes críticas.</p></div>
+    </footer>
+
+    <script>
+        const baseDeDatosAnalisis = [
+            {
+                fecha: "24/07/2025 ANÁLISIS PREVIO",
+                titulo: "TRUMP ES el Caballo de Troya Tecnocrático!",
+                descripcion: "La batalla por el control ha comenzado!",
+                url_html: "https://terapialiberal.github.io/trumpcbdc.html",
+                video_id: "UEgEIzZ9dYo"
+            },
+            {
+                fecha: "05/07/2025 ANÁLISIS PREVIO",
+                titulo: "El Gran Tablero Geopolítico - Brzezinski marca el Rumbo Multipolar",
+                descripcion: "Análisis profundo de la estrategia geopolítica de Zbigniew Brzezinski y su influencia en el orden mundial actual. Desde las ideas de \"El Gran Tablero\" hasta la formación de la coalición China-Rusia-Irán.",
+                url_html: "https://terapialiberal.github.io/elgrantablero.html",
+                video_id: "QTDXeE8bey0"
+            },
+            {
+                fecha: "29/06/2025 ANÁLISIS PREVIO",
+                titulo: "Los Ganadores del Nuevo Complejo Militar TECNOLÓGICO",
+                descripcion: "El entramado entre Silicon Valley, Wall Street y el complejo militar global. Análisis del sistema militar-industrial-tecnológico donde BlackRock, Palantir y las élites financieras convierten la guerra en negocio.",
+                url_html: "https://terapialiberal.github.io/29062025-nuevocomplejomilitar.html",
+                video_id: "k3mX98Xo_qc"
+            },
+            {
+                fecha: "25/06/2025 ANÁLISIS PREVIO",
+                titulo: "El Segundo Borrador del Orden Mundial",
+                descripcion: "Rediseño del orden financiero global, geopolítica, CBDC y nueva arquitectura del poder monetario. Análisis completo de la agenda oculta tras la crisis en Medio Oriente.",
+                url_html: "https://terapialiberal.github.io/140625-SEGUNDAGLOBALIZACION.html",
+                video_id: "zYV-hGwE-RQ"
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const grid = document.getElementById('grid-analisis');
+            if (!grid) return;
+            const tarjetasHTML = baseDeDatosAnalisis.map(analisis => {
+                const urlVideo = `https://youtu.be/${analisis.video_id}`;
+                return `
+                <div class="section-bg rounded-2xl p-6 flex flex-col h-full">
+                    <div class="video-thumbnail mb-4" onclick="window.open('${urlVideo}', '_blank')">
+                        <img src="https://img.youtube.com/vi/${analisis.video_id}/maxresdefault.jpg" alt="${analisis.titulo}">
+                        <div class="play-button"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="flex-grow flex flex-col">
+                        <div class="date-badge mb-3">${analisis.fecha}</div>
+                        <h4 class="text-xl font-bold mb-3 gold-text">${analisis.titulo}</h4>
+                        <p class="text-gray-300 mb-4 flex-grow">${analisis.descripcion}</p>
+                        <div class="flex gap-3 mt-auto">
+                            <a href="${analisis.url_html}" class="btn-gradient text-sm">Ver Análisis</a>
+                            <a href="${urlVideo}" target="_blank" class="btn-gradient text-sm">Ver Video</a>
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+            grid.innerHTML = tarjetasHTML;
+        });
+    </script>
+</body>
+</html>
