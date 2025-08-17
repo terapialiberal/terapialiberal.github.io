@@ -40,8 +40,8 @@ class TerapiaLiberal {
 
         container.innerHTML = `
             <div class="section-bg rounded-2xl p-8">
-                <div class="featured-content">
-                    <div class="featured-video">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-1/2">
                         <div class="video-thumbnail-featured" onclick="window.open('${post.video_url}', '_blank')">
                             <img src="https://img.youtube.com/vi/${post.video_id}/maxresdefault.jpg" 
                                  alt="${post.title}" loading="lazy">
@@ -50,17 +50,13 @@ class TerapiaLiberal {
                             </div>
                         </div>
                     </div>
-                    <div class="featured-text">
+                    <div class="lg:w-1/2 flex flex-col">
                         <div class="date-badge mb-4">${post.date} - DESTACADO</div>
-                        <h4 class="text-3xl font-bold mb-4 gold-text">${post.title}</h4>
-                        <p class="text-gray-300 mb-6 text-lg leading-relaxed">${post.description}</p>
-                        <div class="flex gap-4 flex-wrap">
-                            <a href="/posts/${post.slug}.html" class="btn-gradient text-lg px-6 py-3">
-                                <i class="fas fa-file-alt"></i> Ver Análisis Completo
-                            </a>
-                            <a href="${post.video_url}" target="_blank" class="btn-primary text-lg px-6 py-3">
-                                <i class="fab fa-youtube"></i> Ver Video
-                            </a>
+                        <h4 class="text-2xl font-bold mb-4 gold-text">${post.title}</h4>
+                        <p class="text-gray-300 mb-6 flex-grow">${post.description}</p>
+                        <div class="flex gap-4 mt-auto">
+                            <a href="/posts/${post.slug}.html" class="btn-gradient">Ver Análisis Completo</a>
+                            <a href="${post.video_url}" target="_blank" class="btn-gradient">Ver Video</a>
                         </div>
                     </div>
                 </div>
