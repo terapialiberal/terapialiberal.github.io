@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Administración - Terapia Liberal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            line-height: 1.6;
+            text-rendering: optimizeLegibility;
+        }
+        .gold-text { color: #d4af37; }
+        .section-bg {
+            background: rgba(31, 41, 55, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(75, 85, 99, 0.4);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        input[type="text"],
+        input[type="password"],
+        textarea {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            color: #f0f0f0;
+            padding: 10px 15px;
+            border-radius: 8px;
+            width: 100%;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        textarea:focus {
+            border-color: #d4af37;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
+            outline: none;
+        }
+        textarea {
+            min-height: 150px;
+            font-family: monospace;
+            resize: vertical;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #d4af37 0%, #dc2626 100%);
+            color: #000;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(212, 175, 55, 0.4);
+        }
+        .btn-secondary {
+            background-color: #4a5568;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #2d3748;
+        }
+        .output-box {
+            background-color: #111;
+            border: 1px solid #333;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    
+
+    
+
+    <!-- Main Content -->
+    <div id="main-content" class="container mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold mb-8 text-center gold-text">Panel de Administración</h1>
+
+        <div class="section-bg p-6 md:p-8 rounded-lg mb-8">
+            <h2 class="text-2xl font-bold mb-6 gold-text">Detalles del Nuevo Artículo</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label for="title" class="block text-gray-300 text-sm font-bold mb-2">Título del Artículo</label>
+                    <input type="text" id="title" placeholder="Ej: El Gran Reinicio y la Agenda 2030">
+                </div>
+                <div>
+                    <label for="video_id" class="block text-gray-300 text-sm font-bold mb-2">ID del Video de YouTube (Opcional)</label>
+                    <input type="text" id="video_id" placeholder="Ej: dQw4w9WgXcQ (solo el ID)">
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <label for="description" class="block text-gray-300 text-sm font-bold mb-2">Descripción (para la tarjeta del index)</label>
+                <textarea id="description" rows="3" placeholder="Una breve descripción que aparecerá en la página principal."></textarea>
+            </div>
+
+            <div class="mb-6">
+                <label for="article_html" class="block text-gray-300 text-sm font-bold mb-2">Contenido HTML del Artículo (de genspark)</label>
+                <textarea id="article_html" rows="10" placeholder="Pega aquí el HTML completo del artículo generado."></textarea>
+            </div>
+
+            <button onclick="generateFiles()" class="btn-primary w-full text-xl">
+                Generar Códigos
+            </button>
+        </div>
+
+        <!-- Outputs Section -->
+        <div id="outputs" class="hidden">
+            <h2 class="text-3xl font-bold mb-6 text-center gold-text">Códigos Generados</h2>
+
+            <div class="output-box mb-6">
+                <h3 class="text-xl font-bold mb-3 gold-text">1. HTML para el Nuevo Artículo</h3>
+                <p class="text-gray-400 text-sm mb-3">Copia este código y guárdalo en un nuevo archivo dentro de la carpeta `articles/`. Nómbralo usando el título, por ejemplo: `el-gran-reinicio.html`.</p>
+                <textarea id="output_article_html" readonly class="mb-3"></textarea>
+                <button onclick="copyToClipboard('output_article_html')" class="btn-secondary w-full">
+                    <i class="fas fa-copy mr-2"></i> Copiar HTML del Artículo
+                </button>
+            </div>
+
+            <div class="output-box">
+                <h3 class="text-xl font-bold mb-3 gold-text">2. HTML Actualizado para `index.html`</h3>
+                <p class="text-gray-400 text-sm mb-3">Copia TODO este código y reemplaza el contenido completo de tu archivo `index.html` en la raíz del proyecto.</p>
+                <textarea id="output_index_html" readonly class="mb-3"></textarea>
+                <button onclick="copyToClipboard('output_index_html')" class="btn-secondary w-full">
+                    <i class="fas fa-copy mr-2"></i> Copiar HTML de Index
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Utility Functions ---
+        function checkPassword() {
+            document.getElementById('auth-overlay').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        }
+
+        function getTodayDate() {
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const year = today.getFullYear();
+            return `${day}/${month}/${year}`;
+        }
+
+        function copyToClipboard(elementId) {
+            const textarea = document.getElementById(elementId);
+            textarea.select();
+            textarea.setSelectionRange(0, 99999); // For mobile devices
+            document.execCommand("copy");
+            alert('¡Copiado al portapapeles!');
+        }
+
+        // --- HTML Generation Functions (from previous admin.html) ---
+        function generateArticleHTML(title, content) {
+            return `<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${title} - Terapia Liberal</title>
+    <link href="../css/article-styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto px-4 py-8">
+        <a href="../index.html" class="text-yellow-400 hover:text-yellow-500 mb-4 inline-block">&larr; Volver a la Biblioteca</a>
+        <div class="bg-gray-800 rounded-lg shadow-lg p-8">
+            <h1 class="text-4xl font-bold mb-6 text-yellow-400">${title}</h1>
+            <div class="prose prose-invert max-w-none">
+                ${content}
+            </div>
+        </div>
+    </div>
+</body>
+</html>`;
+        }
+
+        function generateCardHTML(title, description, video_id, date, articleHref) {
+            let mediaHtml = '';
+            let videoLink = '';
+
+            if (video_id) {
+                const urlVideo = `https://youtu.be/${video_id}`;
+                mediaHtml = "                <div class=\"video-thumbnail\" onclick=\"window.open('" + urlVideo + "', '_blank')\">
+                    <img src=\"https://img.youtube.com/vi/${video_id}/maxresdefault.jpg\" alt=\"" + title + "">
+                    <div class=\"play-button\"><i class=\"fas fa-play\"></i></div>
+                </div>";
+                videoLink = `<a href="${urlVideo}" target="_blank" class="btn-gradient text-sm">Ver Video</a>`;
+            } else {
+                mediaHtml = '';
+                videoLink = '';
+            }
+
+            const cleanTitle = title.replace(/\s+/g, ' ').trim();
+            const cleanDescription = description.replace(/\s+/g, ' ').trim();
+            const cleanDate = date.replace(/\s+/g, ' ').trim();
+
+            return `
+            <div class="section-bg rounded-2xl p-6 flex flex-col h-full">
+                ${mediaHtml}
+                <div class="flex-grow flex flex-col">
+                    <div class="date-badge mb-3">${cleanDate}</div>
+                    <h4 class="text-xl font-bold mb-3 gold-text">${cleanTitle}</h4>
+                    <p class="text-gray-300 mb-4 flex-grow">${cleanDescription}</p>
+                    <div class="flex gap-3 mt-auto">
+                        <a href="${articleHref}" class="btn-gradient text-sm">Ver Análisis</a>
+                        ${videoLink}
+                    </div>
+                </div>
+            </div>`;
+        }
+
+        function generateFeaturedMediaHTML(title, video_id) {
+            if (video_id) {
+                const urlVideo = `https://youtu.be/${video_id}`;
+                return `
+            <div class="video-thumbnail-featured" onclick="window.open('${urlVideo}', '_blank')">
+                <img src="https://img.youtube.com/vi/${video_id}/maxresdefault.jpg" alt="${title}">
+                <div class="play-button-featured"><i class="fas fa-play"></i></div>
+            </div>`;
+            } else {
+                return '';
+            }
+        }
+
+        function generateFeaturedTextHTML(title, description, newArticleFileName, video_id) {
+            let videoLinkHtml = '';
+            if (video_id) {
+                videoLinkHtml = `<a href="https://youtu.be/${video_id}" target="_blank" class="btn-gradient">Ver Video</a>`;
+            }
+            return `
+        <div class="date-badge mb-4">${getTodayDate()} ÚLTIMO ANÁLISIS</div>
+        <h4 class="text-2xl font-bold mb-4 gold-text">${title}</h4>
+        <p class="text-gray-300 mb-6 flex-grow">${description}</p>
+        <div class="flex gap-4 mt-auto">
+            <a href="${newArticleFileName}" class="btn-gradient">Ver Análisis Completo</a>
+            ${videoLinkHtml}
+        </div>`;
+        }
+
+        // --- Main Logic ---
+        async function generateFiles() {
+            const newTitle = document.getElementById('title').value;
+            const newVideoId = document.getElementById('video_id').value;
+            const newDescription = document.getElementById('description').value;
+            const newArticleHtml = document.getElementById('article_html').value;
+
+            if (!newTitle || !newDescription || !newArticleHtml) {
+                alert('Por favor, completa todos los campos requeridos.');
+                return;
+            }
+
+            // --- 1. Generate HTML for the new article file ---
+            const newArticleContent = generateArticleHTML(newTitle, newArticleHtml);
+            document.getElementById('output_article_html').value = newArticleContent;
+            const newArticleFileName = "articles/" + newTitle.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') + '.html';
+
+            // --- 2. Generate the new index.html with rotation logic ---
+            try {
+                const response = await fetch('../index.html');
+                if (!response.ok) {
+                    throw new Error('No se pudo cargar el index.html. Asegúrate de que el panel admin.html está en la carpeta 'articles/' y que index.html está en la raíz.');
+                }
+                const indexContent = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(indexContent, 'text/html');
+
+                // --- Step A: Find the featured section ---
+                const featuredH3 = Array.from(doc.querySelectorAll('h3')).find(el => el.textContent.includes('Análisis Destacado'));
+                if (!featuredH3) throw new Error('No se pudo encontrar la sección "Análisis Destacado".');
+                const featuredContainer = featuredH3.closest('section');
+                if (!featuredContainer) throw new Error('No se pudo encontrar el contenedor de la sección de destacados.');
+
+                // --- Step B: Extract data from the OLD featured article ---
+                const oldTitle = featuredContainer.querySelector('h4').textContent;
+                const oldDescription = featuredContainer.querySelector('p').textContent;
+                const oldArticleLink = featuredContainer.querySelector('a[href^="articles/"]');
+                const oldArticleHref = oldArticleLink ? oldArticleLink.getAttribute('href') : '';
+                const oldVideoLink = featuredContainer.querySelector('a[href^="https://youtu.be/"]');
+                const oldVideoId = oldVideoLink ? new URL(oldVideoLink.href).pathname.substring(1) : '';
+                const oldDateBadge = featuredContainer.querySelector('.date-badge');
+                const oldDate = oldDateBadge ? oldDateBadge.textContent.replace('ÚLTIMO ANÁLISIS', 'ANÁLISIS PREVIO') : getTodayDate() + ' ANÁLISIS PREVIO';
+
+                // --- Step C: Create a grid card with the old featured data ---
+                if (oldArticleHref) {
+                    const oldFeaturedCardHTML = generateCardHTML(oldTitle, oldDescription, oldVideoId, oldDate, oldArticleHref);
+                    const grid = doc.getElementById('grid-analisis');
+                    if (grid) {
+                        grid.insertAdjacentHTML('afterbegin', oldFeaturedCardHTML);
+                    } else {
+                        console.warn('Grid con id "grid-analisis" no encontrado. No se pudo degradar el artículo destacado anterior.');
+                    }
+                }
+
+                // --- Step D: Update the featured section with the NEW article data ---
+                featuredContainer.querySelector('h4').textContent = newTitle;
+                featuredContainer.querySelector('p').textContent = newDescription;
+                if (oldDateBadge) oldDateBadge.textContent = getTodayDate() + ' ÚLTIMO ANÁLISIS';
+
+                const featuredImg = featuredContainer.querySelector('img');
+                if (featuredImg) {
+                    featuredImg.src = `https://img.youtube.com/vi/${newVideoId}/maxresdefault.jpg`;
+                    featuredImg.alt = newTitle;
+                }
+
+                const featuredVideoContainer = featuredContainer.querySelector('.video-thumbnail-featured');
+                if (featuredVideoContainer) featuredVideoContainer.setAttribute('onclick', `window.open('https://youtu.be/${newVideoId}', '_blank')`);
+
+                const links = featuredContainer.querySelectorAll('a.btn-gradient');
+                if (links.length >= 2) {
+                    links[0].href = newArticleFileName; // "Ver Análisis Completo"
+                    links[1].href = `https://youtu.be/${newVideoId}`; // "Ver Video"
+                }
+
+                // --- Step E: Serialize and display the final HTML ---
+                const finalHtml = "<!DOCTYPE html>\n" + doc.documentElement.outerHTML;
+                document.getElementById('output_index_html').value = finalHtml;
+
+            } catch (error) {
+                alert('Error al procesar index.html: ' + error.message);
+                return;
+            }
+
+            document.getElementById('outputs').style.display = 'block';
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+    </script>
+</body>
+</html>
