@@ -5,8 +5,330 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trump Activa Poderes de Emergencia: COG, Proyecto 2025 y el Control de Washington DC - Terapia Liberal</title>
     <meta name="description" content="Análisis profundo sobre la activación de poderes de emergencia por parte de Trump, su conexión con la Continuidad de Gobierno y el Proyecto 2025.">
-    <link rel="stylesheet" href="../css/article-styles.css">
-    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* Solid dark background */
+            color: #E5E7EB; /* Main text color */
+            line-height: 1.6;
+            overflow-x: hidden;
+            text-rendering: optimizeLegibility;
+        }
+
+        /* Color Palette */
+        .gold-text { color: #d4af37; } /* Primary Gold */
+        .red-accent { color: #dc2626; } /* Red Accent */
+        .main-text { color: #E5E7EB; } /* Main Text */
+        .secondary-text { color: #9CA3AF; } /* Secondary Text */
+
+        /* Hyperlinks */
+        a {
+            color: #d4af37; /* Gold link color */
+            text-decoration: underline; /* Always underlined */
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #e6c866; /* Lighter gold on hover */
+            text-decoration: underline;
+        }
+
+        /* Header */
+        .header {
+            position: sticky; /* Changed from fixed to sticky for better flow with content */
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-img {
+            width: 50px; /* Adjusted size */
+            height: 50px; /* Adjusted size */
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #d4af37;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: #E5E7EB; /* Main text color for nav links */
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none; /* Removed underline for nav links, as per common design */
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #d4af37; /* Gold on hover */
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 80px; /* Space for sticky header */
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2rem;
+        }
+
+        .article-container {
+            background: rgba(31, 41, 55, 0.6);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(75, 85, 99, 0.4);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .article-header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #d4af37;
+            margin-bottom: 1rem;
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: #9CA3AF;
+            margin-bottom: 2rem;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            margin: 2rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .content-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #d4af37;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #d4af37;
+            padding-left: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        blockquote {
+            border-left: 4px solid #dc2626; /* Red accent for blockquotes */
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #E5E7EB;
+        }
+
+        blockquote cite {
+            display: block;
+            text-align: right;
+            font-size: 0.9rem;
+            color: #9CA3AF;
+            margin-top: 0.5rem;
+        }
+
+        .key-points, .statistics, .historical-context, .tech-connections, .project-2025-stats, .warning-signs, .final-warning {
+            background: rgba(212, 175, 55, 0.1); /* Light gold background */
+            border-left: 4px solid #d4af37;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .key-points h3, .statistics h4, .historical-context h4, .tech-connections h4, .project-2025-stats h4, .warning-signs h4, .final-warning h4 {
+            color: #d4af37;
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        ol {
+            list-style-type: decimal;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Images */
+        .content-image {
+            width: 100%;
+            max-width: 700px; /* Increased max-width for images */
+            height: auto;
+            border-radius: 10px;
+            margin: 1.5rem auto;
+            display: block;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            opacity: 0; /* For fade-in animation */
+            transform: translateY(20px); /* For fade-in animation */
+            transition: all 0.6s ease;
+        }
+
+        .content-image.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .content-image:hover {
+            transform: scale(1.02); /* Subtle zoom on hover */
+            transition: transform 0.3s ease;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            margin-top: 4rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+            color: #9CA3AF;
+            transition: all 0.3s ease;
+            text-decoration: none; /* Removed underline for footer social links */
+        }
+
+        .social-links a:hover {
+            color: #d4af37;
+        }
+
+        .footer p {
+            color: #9CA3AF;
+            font-size: 0.9rem;
+        }
+
+        /* Back to Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #d4af37;
+            color: #0a0a0a;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #back-to-top:hover {
+            background: #e6c866;
+            transform: translateY(-3px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .main-content {
+                padding: 1rem;
+            }
+            .article-header h1 {
+                font-size: 2rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -377,4 +699,3 @@
     </script>
 </body>
 </html>
-
