@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Cuarto Giro: Análisis de Ciclos Históricos y Crisis Institucional | Terapia Liberal</title>
+    <meta name="description" content="Análisis profundo de la teoría del Cuarto Giro de Strauss-Howe aplicada al contexto político y económico actual">
+    <meta name="keywords" content="Trump, Peter Thiel, Jamie Dimon, Palantir, BlackRock, Anduril, CBDC, Tecnocracia, Vigilancia, IA, Estados Unidos, China, Cuarto Giro, Neil Howe, Steve Bannon, Crisis Institucional">
+    <meta name="author" content="Terapia Liberal">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #E5E7EB;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .brand-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #d4af37;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-icon {
+            color: #9CA3AF;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-2px);
+        }
+
+        .social-icon.youtube:hover { color: #dc2626; }
+        .social-icon.patreon:hover { color: #d4af37; }
+        .social-icon.twitter:hover { color: #1DA1F2; }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #d4af37;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #9CA3AF;
+            margin-bottom: 2rem;
+        }
+
+        /* Video Section */
+        .video-section {
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+
+        /* Content Sections */
+        .content-section {
+            margin: 4rem 0;
+            padding: 2rem;
+            background: rgba(26, 26, 26, 0.8);
+            border-radius: 10px;
+            border-left: 4px solid #d4af37;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #d4af37;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Static Charts */
+        .chart-container {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #1a1a1a;
+            border-radius: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .chart-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #d4af37;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* Cycles Chart */
+        .cycles-chart {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            height: 200px;
+            padding: 1rem 0;
+            border-bottom: 2px solid #d4af37;
+            position: relative;
+        }
+
+        .cycle-bar {
+            flex: 1;
+            margin: 0 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .bar {
+            width: 100%;
+            background: linear-gradient(to top, #d4af37, #f4d03f);
+            border-radius: 4px 4px 0 0;
+            transition: all 0.3s ease;
+        }
+
+        .bar.high { height: 80%; background: linear-gradient(to top, #dc2626, #f56565); }
+        .bar.medium { height: 60%; background: linear-gradient(to top, #d4af37, #f4d03f); }
+        .bar.low { height: 40%; background: linear-gradient(to top, #059669, #34d399); }
+
+        .bar-label {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #9CA3AF;
+            transform: rotate(-45deg);
+            white-space: nowrap;
+        }
+
+        /* Timeline Chart */
+        .timeline-chart {
+            position: relative;
+            height: 150px;
+            margin: 1rem 0;
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, #059669, #d4af37, #dc2626);
+            border-radius: 2px;
+        }
+
+        .timeline-point {
+            position: absolute;
+            top: 40%;
+            width: 20px;
+            height: 20px;
+            background: #d4af37;
+            border-radius: 50%;
+            border: 3px solid #0a0a0a;
+        }
+
+        .timeline-point.crisis { background: #dc2626; }
+        .timeline-point.recovery { background: #059669; }
+
+        .timeline-label {
+            position: absolute;
+            top: -30px;
+            font-size: 0.9rem;
+            color: #E5E7EB;
+            white-space: nowrap;
+            transform: translateX(-50%);
+        }
+
+        /* Economic Indicators Grid */
+        .indicators-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .indicator-card {
+            background: rgba(26, 26, 26, 0.8);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            text-align: center;
+        }
+
+        .indicator-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #d4af37;
+        }
+
+        .indicator-label {
+            font-size: 0.9rem;
+            color: #9CA3AF;
+            margin-top: 0.5rem;
+        }
+
+        .indicator-change {
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+        }
+
+        .indicator-change.positive { color: #059669; }
+        .indicator-change.negative { color: #dc2626; }
+
+        /* Links and References */
+        .references-section {
+            background: rgba(20, 20, 20, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+        }
+
+        .reference-link {
+            color: #d4af37;
+            text-decoration: underline;
+            transition: all 0.3s ease;
+        }
+
+        .reference-link:hover {
+            color: #f4d03f;
+            text-decoration: underline;
+        }
+
+        .references-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .reference-card {
+            background: rgba(26, 26, 26, 0.6);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 3px solid #d4af37;
+        }
+
+        /* Twitter Embeds */
+        .twitter-section {
+            margin: 2rem 0;
+        }
+
+        .twitter-embed {
+            background: rgba(26, 26, 26, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-social .social-icon {
+            font-size: 1.8rem;
+        }
+
+        .copyright {
+            color: #9CA3AF;
+            font-size: 0.9rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #d4af37;
+            color: #0a0a0a;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #f4d03f;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2rem; }
+            .header-content { flex-direction: column; gap: 1rem; }
+            .social-icons { gap: 1rem; }
+            main { padding: 1rem; }
+            .video-container iframe { height: 250px; }
+            .indicators-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="https://yt3.ggpht.com/ZzVyDrXt4x8YWoKbISHZzC9CCtkEPCN4GRET1Xxf_wssNyw7mfN-xTbBmpwEJHO0DRQrg0Dgug=s68-c-k-c0x00ffffff-no-rj" alt="Terapia Liberal Logo" class="logo">
+                <span class="brand-title">Terapia Liberal</span>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.youtube.com/@terapialiberal" target="_blank" class="social-icon youtube" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.patreon.com/terapialiberal" target="_blank" class="social-icon patreon" title="Patreon">
+                    <i class="fab fa-patreon"></i>
+                </a>
+                <a href="https://x.com/terapia_liberal" target="_blank" class="social-icon twitter" title="X (Twitter)">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section fade-in">
+            <h1 class="hero-title">El Cuarto Giro</h1>
+            <p class="hero-subtitle">Análisis de Ciclos Históricos y Crisis Institucional en la Era Trump</p>
+        </section>
+
+        <!-- Video Section -->
+        <section class="video-section fade-in">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/Bx6zBh7gunI" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Introducción al Cuarto Giro -->
+        <section class="content-section fade-in">
+            <h2 class="section-title">La Teoría del Cuarto Giro: Marco Conceptual</h2>
+            <div class="section-content">
+                <p>La teoría del <strong>Cuarto Giro</strong> (Fourth Turning), desarrollada por William Strauss y Neil Howe, describe ciclos generacionales de aproximadamente 80-100 años que culminan en crisis transformadoras. Según esta teoría, Estados Unidos se encuentra actualmente en el cuarto y más crítico período de este ciclo, caracterizado por el colapso de instituciones obsoletas y el surgimiento de nuevas estructuras de poder.</p>
+                
+                <p>Steve Bannon, arquitecto estratégico del trumpismo, ha adoptado esta teoría como marco fundamental para entender el momento histórico actual. La administración Trump representa no solo un cambio político, sino una transformación sistémica que redefine los pilares del orden establecido desde la Segunda Guerra Mundial.</p>
+                
+                <div class="chart-container">
+                    <h3 class="chart-title">Ciclos Históricos del Cuarto Giro (1776-2030)</h3>
+                    <div class="cycles-chart">
+                        <div class="cycle-bar">
+                            <div class="bar medium"></div>
+                            <div class="bar-label">1776-1794<br>Revolución</div>
+                        </div>
+                        <div class="cycle-bar">
+                            <div class="bar low"></div>
+                            <div class="bar-label">1860-1865<br>Guerra Civil</div>
+                        </div>
+                        <div class="cycle-bar">
+                            <div class="bar high"></div>
+                            <div class="bar-label">1929-1945<br>Depresión/WWII</div>
+                        </div>
+                        <div class="cycle-bar">
+                            <div class="bar high"></div>
+                            <div class="bar-label">2008-2030<br>Crisis Actual</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capitalismo de Estado vs Libre Mercado -->
+        <section class="content-section fade-in">
+            <h2 class="section-title">El Capitalismo de Estado con Características Americanas</h2>
+            <div class="section-content">
+                <p>La administración Trump ha implementado políticas que desafían fundamentalmente los principios del libre mercado tradicional. La toma de participaciones gubernamentales en empresas tecnológicas como Intel (10%), junto con la exigencia a Nvidia y AMD de ceder el 15% de sus ingresos chinos al gobierno estadounidense, marca una transformación hacia lo que <a href="https://www.wsj.com/economy/the-u-s-marches-toward-state-capitalism-with-american-characteristics-f75cafa8?mod=e2tw" target="_blank" class="reference-link">The Wall Street Journal</a> denomina "capitalismo de Estado con características estadounidenses".</p>
+                
+                <p>Esta estrategia, defendida por figuras como Howard Lutnick, refleja una respuesta directa al modelo chino de integración estado-mercado. La creación de un fondo soberano estadounidense y la <a href="https://www.axios.com/2025/08/25/trump-sovereign-wealth-fund-intel-private-sector?utm_campaign=editorial&utm_medium=organic_social&utm_source=x" target="_blank" class="reference-link">promesa de tomar participaciones en más empresas</a> representa un alejamiento histórico del paradigma neoliberal.</p>
+
+                <div class="indicators-grid">
+                    <div class="indicator-card">
+                        <div class="indicator-value">10%</div>
+                        <div class="indicator-label">Participación Estatal Intel</div>
+                        <div class="indicator-change negative">↑ Primera vez en historia</div>
+                    </div>
+                    <div class="indicator-card">
+                        <div class="indicator-value">15%</div>
+                        <div class="indicator-label">Ingresos China a EEUU</div>
+                        <div class="indicator-change negative">↑ Nvidia/AMD</div>
+                    </div>
+                    <div class="indicator-card">
+                        <div class="indicator-value">$2T+</div>
+                        <div class="indicator-label">Fondo Soberano Propuesto</div>
+                        <div class="indicator-change positive">↑ Nuevo modelo</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vigilancia y Control Tecnológico -->
+        <section class="content-section fade-in">
+            <h2 class="section-title">La Arquitectura de Vigilancia del Nuevo Orden</h2>
+            <div class="section-content">
+                <p>El nombramiento de <strong>Jim O'Neill</strong>, ex director de la Fundación Thiel y miembro del círculo interno de Peter Thiel, como director de los CDC marca la consolidación del ecosistema Palantir en las instituciones de salud pública. Esta designación coincide con el lanzamiento del <a href="https://apnews.com/article/trump-ai-rfk-jr-health-tech-fa73703bd1fd557c787ef0b590e151f1" target="_blank" class="reference-link">nuevo sistema privado de seguimiento de salud</a> con participación de Big Tech.</p>
+                
+                <p>Paralelo a esto, el Departamento de Seguridad Nacional ha adquirido <a href="https://x.com/disclosetv/status/1955287366119104791" target="_blank" class="reference-link">tecnología avanzada de escaneo biométrico de iris</a> que permite identificar individuos "en segundos desde prácticamente cualquier lugar". La propuesta de Melania Trump para prevenir tiroteos mediante vigilancia masiva completa este ecosistema de control.</p>
+
+                <div class="chart-container">
+                    <h3 class="chart-title">Cronología de Implementación del Sistema de Vigilancia</h3>
+                    <div class="timeline-chart">
+                        <div class="timeline-line"></div>
+                        <div class="timeline-point recovery" style="left: 10%;">
+                            <div class="timeline-label">Ene 2025<br>Trump asume</div>
+                        </div>
+                        <div class="timeline-point" style="left: 30%;">
+                            <div class="timeline-label">Feb 2025<br>Biométricos ICE</div>
+                        </div>
+                        <div class="timeline-point" style="left: 50%;">
+                            <div class="timeline-label">Mar 2025<br>O'Neill CDC</div>
+                        </div>
+                        <div class="timeline-point" style="left: 70%;">
+                            <div class="timeline-label">Abr 2025<br>Sistema Salud</div>
+                        </div>
+                        <div class="timeline-point crisis" style="left: 90%;">
+                            <div class="timeline-label">2026<br>Implementación</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- La Burbuja de la IA y Crisis Económica -->
+        <section class="content-section fade-in">
+            <h2 class="section-title">La Burbuja de IA y Señales de Colapso Sistémico</h2>
+            <div class="section-content">
+                <p>El mercado estadounidense ha alcanzado <a href="https://x.com/DD_Geopolitics/status/1960088119296029178" target="_blank" class="reference-link">su valoración más cara de la historia</a>, superando tanto la burbuja Dot Com (2000) como la previa a la Gran Depresión (1929). Un indicador particularmente alarmante es que <a href="https://x.com/Malone_Wealth/status/1961281400063316310" target="_blank" class="reference-link">0 de las 200 principales operaciones de insiders</a> de la semana pasada fueron órdenes de compra.</p>
+                
+                <p>Simultáneamente, los <a href="https://www.disclose.tv/id/rpdx8vlai2/" target="_blank" class="reference-link">centros de IA en Texas han consumido 463 millones de galones de agua</a>, mientras se pide a los residentes reducir el consumo. Este patrón refleja cómo <a href="https://www.economist.com/finance-and-economics/2025/08/18/how-americas-ai-boom-is-squeezing-the-rest-of-the-economy" target="_blank" class="reference-link">el boom de IA está exprimiendo al resto de la economía</a>.</p>
+
+                <div class="chart-container">
+                    <h3 class="chart-title">Indicadores de Burbuja Histórica</h3>
+                    <div class="cycles-chart">
+                        <div class="cycle-bar">
+                            <div class="bar medium"></div>
+                            <div class="bar-label">1929<br>Pre-Depresión</div>
+                        </div>
+                        <div class="cycle-bar">
+                            <div class="bar high"></div>
+                            <div class="bar-label">2000<br>Dot Com</div>
+                        </div>
+                        <div class="cycle-bar">
+                            <div class="bar" style="height: 95%; background: linear-gradient(to top, #dc2626, #f56565);"></div>
+                            <div class="bar-label">2025<br>IA Bubble</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Referencias y Fuentes Adicionales -->
+        <section class="references-section fade-in">
+            <h2 class="section-title">Fuentes y Referencias Adicionales</h2>
+            <div class="references-grid">
+                <div class="reference-card">
+                    <h4>Capitalismo de Estado</h4>
+                    <ul>
+                        <li><a href="https://www.wsj.com/economy/the-u-s-marches-toward-state-capitalism-with-american-characteristics-f75cafa8?mod=e2tw" target="_blank" class="reference-link">WSJ: The U.S. Marches Toward State Capitalism</a></li>
+                        <li><a href="https://www.axios.com/2025/08/25/trump-sovereign-wealth-fund-intel-private-sector" target="_blank" class="reference-link">Axios: Trump adviser says government will take stakes</a></li>
+                        <li><a href="https://www.nbcnews.com/business/business-news/intel-agrees-us-stake-in-company-how-much-what-to-know-rcna226667" target="_blank" class="reference-link">NBC: U.S. takes 10% stake in Intel</a></li>
+                    </ul>
+                </div>
+                <div class="reference-card">
+                    <h4>Teoría del Cuarto Giro</h4>
+                    <ul>
+                        <li><a href="https://es.weforum.org/stories/2017/03/la-teoria-de-ciclos-historicos-the-fourth-turning-indica-que-estamos-en-un-momento-similar-al-de-la-ii-guerra-mundial/" target="_blank" class="reference-link">WEF: La teoría de ciclos históricos</a></li>
+                        <li><a href="https://www.zerohedge.com/ai/ai-accelerating-fourth-turnings-institutional-meltdown" target="_blank" class="reference-link">ZeroHedge: AI Accelerating Institutional Meltdown</a></li>
+                        <li><a href="https://vocal.media/futurism/in-2030-western-values-will-have-been-tested-to-the-breaking-point" target="_blank" class="reference-link">Vocal: Western Values Tested to Breaking Point</a></li>
+                    </ul>
+                </div>
+                <div class="reference-card">
+                    <h4>Vigilancia y Control</h4>
+                    <ul>
+                        <li><a href="https://thepeoplesvoice.tv/palantir-ex-employee-warns-wef-linked-company-launching-american-social-credit-score-system-worse-than-china/" target="_blank" class="reference-link">Palantir Ex-Employee Warns of Social Credit System</a></li>
+                        <li><a href="https://apnews.com/article/trump-ai-rfk-jr-health-tech-fa73703bd1fd557c787ef0b590e151f1" target="_blank" class="reference-link">AP: Trump announces new private health tracking system</a></li>
+                        <li><a href="https://www.forbes.com/sites/richardnieva/2025/08/14/inside-googles-plan-to-use-ai-to-survey-americans-on-their-political-views/" target="_blank" class="reference-link">Forbes: Google's Plan To Survey Political Views</a></li>
+                    </ul>
+                </div>
+                <div class="reference-card">
+                    <h4>Crisis Económica</h4>
+                    <ul>
+                        <li><a href="https://www.economist.com/finance-and-economics/2025/08/18/how-americas-ai-boom-is-squeezing-the-rest-of-the-economy" target="_blank" class="reference-link">The Economist: AI boom squeezing economy</a></li>
+                        <li><a href="https://cryptoslate.com/tokenized-assets-near-300-billion-as-wall-street-quietly-floods-on-chain/" target="_blank" class="reference-link">CryptoSlate: Tokenized assets near $300 billion</a></li>
+                        <li><a href="https://www.ambito.com/economia/burbuja-la-vista-el-demoledor-informe-ia-que-activo-ventas-masivas-tecnologicas-wall-street-n6180879" target="_blank" class="reference-link">Ámbito: Burbuja a la vista en IA</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="https://www.youtube.com/@terapialiberal" target="_blank" class="social-icon youtube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.patreon.com/terapialiberal" target="_blank" class="social-icon patreon">
+                    <i class="fab fa-patreon"></i>
+                </a>
+                <a href="https://x.com/terapia_liberal" target="_blank" class="social-icon twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Terapia Liberal. Análisis de actualidad, economía, política y filosofía liberal.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced chart hover effects
+        document.querySelectorAll('.bar').forEach(bar => {
+            bar.addEventListener('mouseenter', function() {
+                this.style.transform = 'scaleY(1.05)';
+                this.style.filter = 'brightness(1.2)';
+            });
+            
+            bar.addEventListener('mouseleave', function() {
+                this.style.transform = 'scaleY(1)';
+                this.style.filter = 'brightness(1)';
+            });
+        });
+
+        // Initialize animations on load
+        window.addEventListener('load', () => {
+            // Trigger initial animations
+            setTimeout(() => {
+                document.querySelectorAll('.fade-in').forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+                    if (isVisible) {
+                        el.classList.add('visible');
+                    }
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>
