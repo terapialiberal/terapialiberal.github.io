@@ -23,12 +23,28 @@
     <title>🚨 Caos Programado: El Camino hacia una Crisis Total - Análisis Terapia Liberal</title>
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,700;1,700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
+        :root {
+            --background-color: #0a0a0a;
+            --text-color: #E5E7EB;
+            --accent-color: #d4af37;
+            --secondary-text-color: #9CA3AF;
+            --border-color: #1f2937;
+            --quote-background: rgba(212, 175, 55, 0.1);
+            --key-points-background: rgba(220, 38, 38, 0.1);
+            --key-points-border: #dc2626;
+            --key-points-text: #dc2626;
+            --font-family-headings: 'Roboto Condensed', sans-serif;
+            --font-family-body: 'Roboto', sans-serif;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -36,76 +52,80 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background-color: #0a0a0a;
-            color: #E5E7EB;
+            font-family: var(--font-family-body);
+            background-color: var(--background-color);
+            color: var(--text-color);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* Header */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #1f2937;
-            padding: 1rem 0;
-        }
-
-        .header-container {
-            max-width: 1200px;
+        .container {
+            max-width: 800px;
             margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             padding: 0 2rem;
         }
 
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            margin-bottom: 2rem;
         }
 
-        .logo-section img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .logo-text {
-            font-size: 1.5rem;
+            font-family: var(--font-family-headings);
+            font-size: 2rem;
             font-weight: 700;
-            color: #d4af37;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
         }
 
         .social-icons a {
-            color: #9CA3AF;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            text-decoration: underline;
-            text-decoration-color: #d4af37;
+            color: var(--secondary-text-color);
+            font-size: 1.5rem;
+            margin-left: 1rem;
+            transition: color 0.3s ease;
         }
 
-        .social-icons a:hover.youtube { color: #dc2626; }
-        .social-icons a:hover.patreon { color: #d4af37; }
-        .social-icons a:hover.twitter { color: #1DA1F2; }
-
-        /* Main Content */
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
+        .social-icons a:hover {
+            color: var(--accent-color);
         }
 
-        /* Video Section */
+        .article-header {
+            text-align: left;
+            margin-bottom: 3rem;
+        }
+
+        .article-title {
+            font-family: var(--font-family-headings);
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+
+        .article-subtitle {
+            font-size: 1.5rem;
+            color: var(--secondary-text-color);
+            margin-bottom: 2rem;
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: var(--secondary-text-color);
+        }
+        
+        .article-meta span {
+            margin-right: 1rem;
+        }
+
         .video-section {
             margin-bottom: 3rem;
         }
@@ -113,11 +133,8 @@
         .video-container {
             position: relative;
             width: 100%;
-            height: 0;
             padding-bottom: 56.25%;
-            background: #1f2937;
-            border-radius: 12px;
-            overflow: hidden;
+            background: #111;
         }
 
         .video-container iframe {
@@ -126,711 +143,388 @@
             left: 0;
             width: 100%;
             height: 100%;
-            border: none;
+            border: 0;
         }
 
-        /* Article Header */
-        .article-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .article-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #d4af37;
-            margin-bottom: 1rem;
-        }
-
-        .article-subtitle {
-            font-size: 1.2rem;
-            color: #9CA3AF;
-            margin-bottom: 2rem;
-        }
-
-        .article-meta {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            color: #6b7280;
-            font-size: 0.9rem;
-        }
-
-        /* Content Sections */
         .content-section {
             margin-bottom: 3rem;
-            padding: 2rem;
-            background: rgba(31, 41, 55, 0.3);
-            border-radius: 12px;
-            border-left: 4px solid #d4af37;
         }
 
         .section-title {
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: #d4af37;
+            font-family: var(--font-family-headings);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
             margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .section-content {
-            color: #E5E7EB;
-            font-size: 1.1rem;
-            line-height: 1.8;
+            text-transform: uppercase;
         }
 
         .section-content p {
             margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
         .section-content strong {
-            color: #d4af37;
-            font-weight: 600;
+            color: var(--accent-color);
+            font-weight: 700;
         }
 
-        /* Images */
         .content-image {
             width: 100%;
-            max-width: 600px;
             height: auto;
-            border-radius: 8px;
-            margin: 2rem auto;
-            display: block;
-            transition: transform 0.3s ease;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        .content-image:hover {
-            transform: scale(1.02);
-        }
-
-        .content-image.fade-in {
-            opacity: 1;
-            transform: translateY(0);
+            margin: 2rem 0;
         }
 
         .image-caption {
-            text-align: center;
+            text-align: right;
             font-size: 0.9rem;
-            color: #9CA3AF;
-            margin-top: 0.5rem;
+            color: var(--secondary-text-color);
+            margin-top: -1.5rem;
+            margin-bottom: 2rem;
             font-style: italic;
         }
 
-        /* Links */
         a {
-            color: #d4af37;
-            text-decoration: underline;
-            text-decoration-color: #d4af37;
-            transition: color 0.3s ease;
+            color: var(--accent-color);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-color);
         }
 
         a:hover {
-            color: #f4d03f;
+            color: var(--text-color);
+            background-color: var(--accent-color);
         }
 
-        /* Lists */
         ul, ol {
-            margin-left: 2rem;
+            margin-left: 1.5rem;
             margin-bottom: 1.5rem;
         }
 
         li {
             margin-bottom: 0.5rem;
-            color: #E5E7EB;
         }
 
-        /* Quotes */
         .quote-box {
-            background: rgba(212, 175, 55, 0.1);
-            border-left: 4px solid #d4af37;
-            padding: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1.5rem;
             margin: 2rem 0;
-            border-radius: 0 8px 8px 0;
             font-style: italic;
+            font-size: 1.2rem;
             color: #f3f4f6;
+            background-color: var(--quote-background);
         }
 
-        /* Key Points Box */
         .key-points {
-            background: rgba(220, 38, 38, 0.1);
-            border: 1px solid #dc2626;
+            border: 1px solid var(--key-points-border);
             padding: 2rem;
-            border-radius: 8px;
             margin: 2rem 0;
+            background-color: var(--key-points-background);
         }
 
         .key-points h3 {
-            color: #dc2626;
+            font-family: var(--font-family-headings);
+            color: var(--key-points-text);
             margin-bottom: 1rem;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
+            text-transform: uppercase;
         }
 
-        /* Sources Section */
         .sources-section {
-            background: rgba(31, 41, 55, 0.5);
-            padding: 2rem;
-            border-radius: 12px;
-            margin-top: 3rem;
+            margin-top: 4rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
         }
 
         .sources-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #d4af37;
+            font-family: var(--font-family-headings);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-color);
             margin-bottom: 1.5rem;
+            text-transform: uppercase;
         }
 
         .sources-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
         }
 
-        .source-item {
-            padding: 1rem;
-            background: rgba(55, 65, 81, 0.3);
-            border-radius: 8px;
-            transition: transform 0.3s ease;
+        .source-item h3 {
+            font-family: var(--font-family-headings);
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
         }
 
-        .source-item:hover {
-            transform: translateY(-2px);
-        }
-
-        .source-item a {
-            text-decoration: underline;
-            text-decoration-color: #d4af37;
-        }
-
-        /* Footer */
         footer {
-            background: rgba(0, 0, 0, 0.9);
             padding: 3rem 0;
             margin-top: 4rem;
-            border-top: 1px solid #1f2937;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
             text-align: center;
-            padding: 0 2rem;
-        }
-
-        .footer-social {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-social a {
-            color: #9CA3AF;
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-            text-decoration: underline;
-            text-decoration-color: #d4af37;
-        }
-
-        .footer-social a:hover.youtube { color: #dc2626; }
-        .footer-social a:hover.patreon { color: #d4af37; }
-        .footer-social a:hover.twitter { color: #1DA1F2; }
-
-        .footer-text {
             color: #6b7280;
-            font-size: 0.9rem;
-        }
-
-        /* Back to top button */
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: #d4af37;
-            color: #0a0a0a;
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            cursor: pointer;
-            opacity: 0;
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-        }
-
-        .back-to-top:hover {
-            background: #f4d03f;
-            transform: translateY(-2px);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                gap: 1rem;
-                padding: 0 1rem;
-            }
-
-            main {
-                padding: 1rem;
-            }
-
-            .article-title {
-                font-size: 2rem;
-            }
-
-            .article-meta {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-
-            .content-section {
-                padding: 1.5rem;
-            }
-
-            .section-title {
-                font-size: 1.5rem;
-            }
-
-            .sources-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Twitter Tweet Embed Styles */
-        .twitter-tweet {
-            margin: 2rem auto !important;
-            max-width: 550px !important;
-        }
-
-        /* Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .animate-on-scroll.in-view {
-            opacity: 1;
-            transform: translateY(0);
+            border-top: 1px solid var(--border-color);
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo-section">
-                <img src="https://yt3.ggpht.com/ZzVyDrXt4x8YWoKbISHZzC9CCtkEPCN4GRET1Xxf_wssNyw7mfN-xTbBmpwEJHO0DRQrg0Dgug=s68-c-k-c0x00ffffff-no-rj" alt="Terapia Liberal Logo">
+    <div class="container">
+        <header>
+            <div class="header-container">
                 <div class="logo-text">Terapia Liberal</div>
-            </div>
-            <div class="social-icons">
-                <a href="https://www.youtube.com/@terapialiberal" target="_blank" class="youtube" title="YouTube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://www.patreon.com/terapialiberal" target="_blank" class="patreon" title="Patreon">
-                    <i class="fab fa-patreon"></i>
-                </a>
-                <a href="https://x.com/terapia_liberal" target="_blank" class="twitter" title="X (Twitter)">
-                    <i class="fab fa-x-twitter"></i>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <div class="video-section animate-on-scroll">
-            <div class="video-container">
-                <iframe 
-                    src="https://www.youtube.com/embed/ZeZN8skPVZg" 
-                    title="🚨Caos Programado? El Camino hacia una Crisis Total."
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-
-        <div class="article-header animate-on-scroll">
-            <h1 class="article-title">🚨 Caos Programado: El Camino hacia una Crisis Total</h1>
-            <p class="article-subtitle">Un análisis profundo del plan tecnocrático que se despliega ante nuestros ojos</p>
-            <div class="article-meta">
-                <span><i class="far fa-calendar"></i> 10 de octubre de 2025</span>
-                <span><i class="far fa-clock"></i> 2 horas 30 minutos</span>
-                <span><i class="far fa-eye"></i> 6,119 visualizaciones</span>
-                <span><i class="far fa-thumbs-up"></i> 946 likes</span>
-            </div>
-        </div>
-
-        <section class="content-section animate-on-scroll">
-            <h2 class="section-title">
-                <i class="fas fa-exclamation-triangle"></i>
-                El Contexto: Trump y la Reestructuración del Poder
-            </h2>
-            <div class="section-content">
-                <p>En este análisis exhaustivo, <strong>Nicolás Martínez Lage</strong> nos presenta una hipótesis inquietante: lo que percibimos como caos político en Estados Unidos podría ser en realidad un plan meticulosamente orquestado para la implementación de un modelo tecnocrático.</p>
-                
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Peter_Thiel_by_Gage_Skidmore.jpg" alt="Peter Thiel, figura central del análisis" class="content-image">
-                <p class="image-caption">Peter Thiel, el tecnócrata detrás del movimiento según el análisis</p>
-
-                <p>El punto de partida es la reciente declaración de <strong>Donald Trump</strong> ante los principales militares estadounidenses, donde habló de una "invasión interna" y del rol que tendrán las fuerzas armadas. Como señala Nicolás: <em>"Ustedes van a jugar un rol más que trascendental en esto"</em>, dirigiéndose directamente a los comandantes militares.</p>
-
-                <div class="key-points">
-                    <h3>Elementos Clave del Plan:</h3>
-                    <ul>
-                        <li><strong>Uso de ciudades como "campo de entrenamiento"</strong> para el ejército</li>
-                        <li><strong>Implementación del plan RAGE</strong> de Curtis Yarvin para reestructurar el poder ejecutivo</li>
-                        <li><strong>Prueba de los límites constitucionales</strong> del poder presidencial</li>
-                        <li><strong>El rol de la Corte Suprema</strong> en legitimar estas acciones</li>
-                    </ul>
-                </div>
-
-                <p>Las ciudades mencionadas por Trump no son casuales: <strong>Chicago, San Francisco, Los Ángeles, Nueva York</strong>. Todas son ciudades demócratas, pero más importante aún, son centros neurálgicos del poder financiero y logístico estadounidense.</p>
-            </div>
-        </section>
-
-        <section class="content-section animate-on-scroll">
-            <h2 class="section-title">
-                <i class="fas fa-eye"></i>
-                La Red de Vigilancia: Palantir y el Estado Panóptico
-            </h2>
-            <div class="section-content">
-                <p>Uno de los aspectos más perturbadores del análisis es la expansión del aparato de vigilancia masiva a través de <strong>Palantir</strong>, la empresa de Peter Thiel que ahora tiene contrato exclusivo con ICE.</p>
-
-                <img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4360x2967+0+0/resize/1100/quality/50/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Ff3%2Fdc%2F9e556eb24a5b9b0d29c0a8e2677f%2Fgettyimages-2212776704.jpg" alt="Tecnología de vigilancia Palantir" class="content-image">
-                <p class="image-caption">La tecnología de Palantir expandiéndose por todo el aparato gubernamental</p>
-
-                <div class="quote-box">
-                    "Lo que puede hacer una empresa privada no tiene la obligación de rendir las cuentas que tiene otros organismos del Estado. La interconexión entre el aparato de inteligencia y las empresas tecnológicas funciona precisamente de esa forma."
-                </div>
-
-                <p>El plan incluye:</p>
-                <ul>
-                    <li><strong>Vigilancia 24/7 de redes sociales</strong> (X, Facebook, TikTok)</li>
-                    <li><strong>Uso de bases de datos comerciales</strong> como LexisNexis y Thomson Reuters</li>
-                    <li><strong>Acceso a registros de propiedad, facturas telefónicas y servicios públicos</strong></li>
-                    <li><strong>Monitoreo de la deep web</strong> y sitios extranjeros</li>
-                </ul>
-
-                <p>Como advierte Nicolás: <em>"La ingenuidad de pensar que esto se va a quedar en una cuestión migratoria... se están abarcando prácticamente todo. Todo."</em></p>
-            </div>
-        </section>
-
-        <section class="content-section animate-on-scroll">
-            <h2 class="section-title">
-                <i class="fas fa-chess"></i>
-                La Estrategia de Tensión: Lecciones de la Operación Gladio
-            </h2>
-            <div class="section-content">
-                <p>Nicolás introduce el concepto de <strong>"estrategia de tensión"</strong>, una técnica desarrollada durante la Operación Gladio de la OTAN en la Guerra Fría. Esta estrategia busca mantener a las poblaciones divididas y en constante conflicto para evitar que encuentren puntos en común.</p>
-
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Italian_Military_Secret_Service_%28SIFAR%29_report_on_Operation_Gladio.pdf/page1-807px-Italian_Military_Secret_Service_%28SIFAR%29_report_on_Operation_Gladio.pdf.jpg" alt="Documentos oficiales de la Operación Gladio" class="content-image">
-                <p class="image-caption">Documentos desclasificados de la Operación Gladio</p>
-
-                <p>El manual de contrainsurgencia revelado en tribunales europeos es explícito:</p>
-
-                <div class="quote-box">
-                    "La inteligencia del ejército de los Estados Unidos debe tratar de penetrar en la insurgencia por medio de agentes en misión especial con la tarea de formar grupos de acción especial entre los elementos más radicales... para lanzar acciones violentas o no violentas de acuerdo con la naturaleza del caso."
-                </div>
-
-                <p>Esto nos lleva a una pregunta incómoda: <strong>¿Es Antifa una creación o infiltración de inteligencia?</strong></p>
-
-                <p>Las características de Antifa son llamativamente similares al manual Gladio:</p>
-                <ul>
-                    <li><strong>Estructura descentralizada</strong> sin líderes identificables</li>
-                    <li><strong>Uniforme que oculta identidades</strong> (ropa negra, pasamontañas)</li>
-                    <li><strong>Aparición coincidente con la administración Trump</strong></li>
-                    <li><strong>Desaparición durante la administración Biden</strong></li>
-                    <li><strong>Enfoque en combatir a opositores del establishment</strong></li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="content-section animate-on-scroll">
-            <h2 class="section-title">
-                <i class="fas fa-gavel"></i>
-                El Camino hacia la Ley de Insurrección
-            </h2>
-            <div class="section-content">
-                <p>Un elemento crucial del análisis es cómo se está preparando el terreno para invocar la <strong>Ley de Insurrección</strong>, que permitiría el despliegue de tropas en suelo estadounidense, anulando la ley Posse Comitatus de 1878.</p>
-
-                <img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3000x1954+0+0/resize/1100/quality/50/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F2e%2Fc1%2Fe064d85946ed9bd102c3b31e2c10%2Fgettyimages-2239607101.jpg" alt="Despliegue de la Guardia Nacional en Chicago" class="content-image">
-                <p class="image-caption">Tropas federales desplegadas en Chicago como parte de las operaciones de ICE</p>
-
-                <p>El patrón es predecible:</p>
-                <ol>
-                    <li><strong>Crear resistencia local</strong> a las políticas federales</li>
-                    <li><strong>Judicializar los conflictos</strong> llevándolos a la Corte Suprema</li>
-                    <li><strong>Obtener fallos de emergencia</strong> que amplían el poder ejecutivo</li>
-                    <li><strong>Usar la resistencia como justificación</strong> para medidas más extremas</li>
-                </ol>
-
-                <p>Como documenta Reuters, la Corte Suprema ha respaldado a Trump en <strong>21 de 23 casos</strong> mediante fallos de emergencia, creando un precedente peligroso.</p>
-
-                <div class="key-points">
-                    <h3>El Plan Rex 84:</h3>
-                    <p>Nicolás conecta todo esto con <strong>Rex 84</strong>, el plan desarrollado por Oliver North en los años 80 para:</p>
-                    <ul>
-                        <li>Detención masiva en caso de "guerra civil"</li>
-                        <li>Uso de instalaciones de FEMA para arrestos</li>
-                        <li>Aplicación de ley marcial</li>
-                        <li>Suspensión de garantías constitucionales</li>
-                    </ul>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@terapialiberal" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.patreon.com/terapialiberal" target="_blank" title="Patreon"><i class="fab fa-patreon"></i></a>
+                    <a href="https://x.com/terapia_liberal" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
                 </div>
             </div>
-        </section>
+        </header>
 
-        <section class="content-section animate-on-scroll">
-            <h2 class="section-title">
-                <i class="fas fa-theater-masks"></i>
-                El Caso Charlie Kirk: ¿Operación de Falsa Bandera?
-            </h2>
-            <div class="section-content">
-                <p>Uno de los aspectos más controvertidos del análisis es la investigación sobre el asesinato de <strong>Charlie Kirk</strong>. Nicolás presenta evidencia de anomalías en la versión oficial que sugieren una operación más compleja.</p>
-
-                <img src="https://i.abcnewsfe.com/a/90f4a43e-964b-47cf-9e84-cb9163ed1b3e/charlie-kirk-injured-gty-jt-250911_1757621458296_hpEmbed_13x11.jpg" alt="Análisis forense del incidente Charlie Kirk" class="content-image">
-                <p class="image-caption">Análisis de las anomalías en el incidente Charlie Kirk</p>
-
-                <p>Los elementos cuestionables incluyen:</p>
-                <ul>
-                    <li><strong>Sincronización sospechosa del equipo de seguridad</strong></li>
-                    <li><strong>Uso de tecnología de vigilancia avanzada</strong> (lentes Meta, relojes inteligentes)</li>
-                    <li><strong>Eliminación de evidencia de la escena</strong></li>
-                    <li><strong>Conexiones del equipo de seguridad con agencias gubernamentales</strong></li>
-                </ul>
-
-                <p>El resultado político fue inmediato: <strong>justificación para mayor vigilancia</strong>, declaración de <strong>terrorismo doméstico</strong>, y llamados para <strong>legalizar el uso de drones</strong> en eventos públicos.</p>
-
-                <div class="quote-box">
-                    "Problema, reacción, solución. Legalicemos la vigilancia al estilo tecnocrático chino."
-                </div>
-            </div>
-        </section>
-
-        <section class="content-section animate-on-scroll">
-            <h2 class="section-title">
-                <i class="fas fa-users-cog"></i>
-                La Elite Tecnocrática: Dialog y el Nuevo Orden
-            </h2>
-            <div class="section-content">
-                <p>Nicolás revela la existencia de <strong>Dialog</strong>, una sociedad secreta fundada por Peter Thiel hace 20 años, que está estableciendo un campus permanente en Virginia, cerca de la CIA.</p>
-
-                <img src="https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/ECAE/production/_96309506_hi039400483.jpg" alt="Reuniones secretas de la elite global" class="content-image">
-                <p class="image-caption">Las reuniones secretas que dan forma al futuro</p>
-
-                <p>Los miembros de Dialog incluyen:</p>
-                <ul>
-                    <li><strong>Elon Musk</strong></li>
-                    <li><strong>Scott Besent</strong> (Secretario del Tesoro, ex-pupilo de Soros)</li>
-                    <li><strong>Larry Summers</strong> (vinculado a los papeles de Epstein)</li>
-                    <li><strong>Jared Kushner</strong> (yerno de Trump)</li>
-                    <li><strong>Tulsi Gabbard</strong> (Directora de Inteligencia Nacional)</li>
-                    <li><strong>Ted Cruz</strong></li>
-                    <li><strong>Richard Haas</strong> (Council on Foreign Relations)</li>
-                </ul>
-
-                <p>Como observa Nicolás: <em>"Esta decisión indica la idea de estar mucho tiempo acá, más allá de Donald Trump, la toma del poder de este grupo."</em></p>
-
-                <p>Dialog representa la versión tecnológica de Bilderberg, operando en secreto para dar forma a las políticas globales sin escrutinio público.</p>
-            </div>
-        </section>
-
-        <section class="content-section animate-on-scroll">
-            <h2 class="section-title">
-                <i class="fas fa-lightbulb"></i>
-                Conclusiones: El Estado Profundo en Acción
-            </h2>
-            <div class="section-content">
-                <p>El análisis de Nicolás nos lleva a una conclusión perturbadora: <strong>no existe un "estado profundo" separado del estado oficial</strong>. Lo que observamos es la evolución natural del poder hacia formas más sofisticadas de control.</p>
-
-                <div class="quote-box">
-                    "¿Es una falsa bandera si te dicen lo que van a hacer realmente?"
+        <main>
+            <article>
+                <div class="article-header">
+                    <h1 class="article-title">🚨 Caos Programado: El Camino hacia una Crisis Total</h1>
+                    <p class="article-subtitle">Un análisis profundo del plan tecnocrático que se despliega ante nuestros ojos</p>
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar"></i> 10 de octubre de 2025</span>
+                        <span><i class="far fa-clock"></i> 2 horas 30 minutos</span>
+                    </div>
                 </div>
 
-                <p>Los elementos del plan tecnocrático están todos a la vista:</p>
-                <ul>
-                    <li><strong>Vigilancia masiva legalizada</strong> a través de empresas privadas</li>
-                    <li><strong>Erosión de la separación de poderes</strong></li>
-                    <li><strong>Normalización de la intervención militar interna</strong></li>
-                    <li><strong>Uso de crisis manufacturadas</strong> para acelerar cambios</li>
-                    <li><strong>Control de la narrativa</strong> a través de plataformas digitales</li>
-                </ul>
-
-                <p>La pregunta final es inquietante: <strong>¿Estamos siendo testigos de la transición controlada hacia un modelo tecnocrático autoritario?</strong></p>
-
-                <p>Como advierte Nicolás al final de su análisis: <em>"Están ejecutando este plan de transformación adelante nuestro, literalmente."</em></p>
-
-                <img src="https://www.hoover.org/sites/default/files/content/research/2022-11/UK_Thiel2022.jpg" alt="El futuro tecnocrático que se avecina" class="content-image">
-                <p class="image-caption">El arquitecto de la nueva era: Peter Thiel y su visión tecnocrática</p>
-
-                <p>La única defensa contra este plan es la <strong>conciencia informada</strong> y la <strong>organización popular</strong> que trascienda las divisiones artificiales que nos imponen. Como dice Nicolás: <em>"Las minorías organizadas superan a las mayorías desorganizadas."</em></p>
-            </div>
-        </section>
-
-        <div class="sources-section">
-            <h2 class="sources-title">Fuentes y Referencias Adicionales</h2>
-            <div class="sources-grid">
-                <div class="source-item">
-                    <h3>Medios Mainstream</h3>
-                    <ul>
-                        <li><a href="https://www.axios.com" target="_blank">Axios - Análisis político</a></li>
-                        <li><a href="https://www.reuters.com" target="_blank">Reuters - Noticias internacionales</a></li>
-                        <li><a href="https://www.cnn.com" target="_blank">CNN - Ley de Insurrección</a></li>
-                        <li><a href="https://www.npr.org" target="_blank">NPR - Tecnología Palantir</a></li>
-                    </ul>
+                <div class="video-section">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/ZeZN8skPVZg" title="🚨Caos Programado? El Camino hacia una Crisis Total." allowfullscreen></iframe>
+                    </div>
                 </div>
-                <div class="source-item">
-                    <h3>Fuentes Alternativas</h3>
-                    <ul>
-                        <li><a href="https://covertactionmagazine.com" target="_blank">Covert Action Magazine</a></li>
-                        <li><a href="https://wikispooks.com" target="_blank">WikiSpooks - Operación Gladio</a></li>
-                        <li><a href="https://www.redacted.inc" target="_blank">Redacted - Análisis geopolítico</a></li>
-                    </ul>
+
+                <section class="content-section">
+                    <h2 class="section-title">El Contexto: Trump y la Reestructuración del Poder</h2>
+                    <div class="section-content">
+                        <p>En este análisis exhaustivo, <strong>Nicolás Martínez Lage</strong> nos presenta una hipótesis inquietante: lo que percibimos como caos político en Estados Unidos podría ser en realidad un plan meticulosamente orquestado para la implementación de un modelo tecnocrático.</p>
+                        
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Peter_Thiel_by_Gage_Skidmore.jpg" alt="Peter Thiel, figura central del análisis" class="content-image">
+                        <p class="image-caption">Peter Thiel, el tecnócrata detrás del movimiento según el análisis</p>
+
+                        <p>El punto de partida es la reciente declaración de <strong>Donald Trump</strong> ante los principales militares estadounidenses, donde habló de una "invasión interna" y del rol que tendrán las fuerzas armadas. Como señala Nicolás: <em>"Ustedes van a jugar un rol más que trascendental en esto"</em>, dirigiéndose directamente a los comandantes militares.</p>
+
+                        <div class="key-points">
+                            <h3>Elementos Clave del Plan:</h3>
+                            <ul>
+                                <li>Uso de ciudades como "campo de entrenamiento" para el ejército</li>
+                                <li>Implementación del plan RAGE de Curtis Yarvin para reestructurar el poder ejecutivo</li>
+                                <li>Prueba de los límites constitucionales del poder presidencial</li>
+                                <li>El rol de la Corte Suprema en legitimar estas acciones</li>
+                            </ul>
+                        </div>
+
+                        <p>Las ciudades mencionadas por Trump no son casuales: <strong>Chicago, San Francisco, Los Ángeles, Nueva York</strong>. Todas son ciudades demócratas, pero más importante aún, son centros neurálgicos del poder financiero y logístico estadounidense.</p>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-title">La Red de Vigilancia: Palantir y el Estado Panóptico</h2>
+                    <div class="section-content">
+                        <p>Uno de los aspectos más perturbadores del análisis es la expansión del aparato de vigilancia masiva a través de <strong>Palantir</strong>, la empresa de Peter Thiel que ahora tiene contrato exclusivo con ICE.</p>
+
+                        <img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4360x2967+0+0/resize/1100/quality/50/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Ff3%2Fdc%2F9e556eb24a5b9b0d29c0a8e2677f%2Fgettyimages-2212776704.jpg" alt="Tecnología de vigilancia Palantir" class="content-image">
+                        <p class="image-caption">La tecnología de Palantir expandiéndose por todo el aparato gubernamental</p>
+
+                        <div class="quote-box">
+                            "Lo que puede hacer una empresa privada no tiene la obligación de rendir las cuentas que tiene otros organismos del Estado. La interconexión entre el aparato de inteligencia y las empresas tecnológicas funciona precisamente de esa forma."
+                        </div>
+
+                        <p>El plan incluye:</p>
+                        <ul>
+                            <li><strong>Vigilancia 24/7 de redes sociales</strong> (X, Facebook, TikTok)</li>
+                            <li><strong>Uso de bases de datos comerciales</strong> como LexisNexis y Thomson Reuters</li>
+                            <li><strong>Acceso a registros de propiedad, facturas telefónicas y servicios públicos</strong></li>
+                            <li><strong>Monitoreo de la deep web</strong> y sitios extranjeros</li>
+                        </ul>
+
+                        <p>Como advierte Nicolás: <em>"La ingenuidad de pensar que esto se va a quedar en una cuestión migratoria... se están abarcando prácticamente todo. Todo."</em></p>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-title">La Estrategia de Tensión: Lecciones de la Operación Gladio</h2>
+                    <div class="section-content">
+                        <p>Nicolás introduce el concepto de <strong>"estrategia de tensión"</strong>, una técnica desarrollada durante la Operación Gladio de la OTAN en la Guerra Fría. Esta estrategia busca mantener a las poblaciones divididas y en constante conflicto para evitar que encuentren puntos en común.</p>
+
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Italian_Military_Secret_Service_%28SIFAR%29_report_on_Operation_Gladio.pdf/page1-807px-Italian_Military_Secret_Service_%28SIFAR%29_report_on_Operation_Gladio.pdf.jpg" alt="Documentos oficiales de la Operación Gladio" class="content-image">
+                        <p class="image-caption">Documentos desclasificados de la Operación Gladio</p>
+
+                        <p>El manual de contrainsurgencia revelado en tribunales europeos es explícito:</p>
+
+                        <div class="quote-box">
+                            "La inteligencia del ejército de los Estados Unidos debe tratar de penetrar en la insurgencia por medio de agentes en misión especial con la tarea de formar grupos de acción especial entre los elementos más radicales... para lanzar acciones violentas o no violentas de acuerdo con la naturaleza del caso."
+                        </div>
+
+                        <p>Esto nos lleva a una pregunta incómoda: <strong>¿Es Antifa una creación o infiltración de inteligencia?</strong></p>
+
+                        <p>Las características de Antifa son llamativamente similares al manual Gladio:</p>
+                        <ul>
+                            <li><strong>Estructura descentralizada</strong> sin líderes identificables</li>
+                            <li><strong>Uniforme que oculta identidades</strong> (ropa negra, pasamontañas)</li>
+                            <li><strong>Aparición coincidente con la administración Trump</strong></li>
+                            <li><strong>Desaparición durante la administración Biden</strong></li>
+                            <li><strong>Enfoque en combatir a opositores del establishment</strong></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-title">El Camino hacia la Ley de Insurrección</h2>
+                    <div class="section-content">
+                        <p>Un elemento crucial del análisis es cómo se está preparando el terreno para invocar la <strong>Ley de Insurrección</strong>, que permitiría el despliegue de tropas en suelo estadounidense, anulando la ley Posse Comitatus de 1878.</p>
+
+                        <img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3000x1954+0+0/resize/1100/quality/50/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F2e%2Fc1%2Fe064d85946ed9bd102c3b31e2c10%2Fgettyimages-2239607101.jpg" alt="Despliegue de la Guardia Nacional en Chicago" class="content-image">
+                        <p class="image-caption">Tropas federales desplegadas en Chicago como parte de las operaciones de ICE</p>
+
+                        <p>El patrón es predecible:</p>
+                        <ol>
+                            <li><strong>Crear resistencia local</strong> a las políticas federales</li>
+                            <li><strong>Judicializar los conflictos</strong> llevándolos a la Corte Suprema</li>
+                            <li><strong>Obtener fallos de emergencia</strong> que amplían el poder ejecutivo</li>
+                            <li><strong>Usar la resistencia como justificación</strong> para medidas más extremas</li>
+                        </ol>
+
+                        <p>Como documenta Reuters, la Corte Suprema ha respaldado a Trump en <strong>21 de 23 casos</strong> mediante fallos de emergencia, creando un precedente peligroso.</p>
+
+                        <div class="key-points">
+                            <h3>El Plan Rex 84:</h3>
+                            <p>Nicolás conecta todo esto con <strong>Rex 84</strong>, el plan desarrollado por Oliver North en los años 80 para:</p>
+                            <ul>
+                                <li>Detención masiva en caso de "guerra civil"</li>
+                                <li>Uso de instalaciones de FEMA para arrestos</li>
+                                <li>Aplicación de ley marcial</li>
+                                <li>Suspensión de garantías constitucionales</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-title">El Caso Charlie Kirk: ¿Operación de Falsa Bandera?</h2>
+                    <div class="section-content">
+                        <p>Uno de los aspectos más controvertidos del análisis es la investigación sobre el asesinato de <strong>Charlie Kirk</strong>. Nicolás presenta evidencia de anomalías en la versión oficial que sugieren una operación más compleja.</p>
+
+                        <img src="https://i.abcnewsfe.com/a/90f4a43e-964b-47cf-9e84-cb9163ed1b3e/charlie-kirk-injured-gty-jt-250911_1757621458296_hpEmbed_13x11.jpg" alt="Análisis forense del incidente Charlie Kirk" class="content-image">
+                        <p class="image-caption">Análisis de las anomalías en el incidente Charlie Kirk</p>
+
+                        <p>Los elementos cuestionables incluyen:</p>
+                        <ul>
+                            <li><strong>Sincronización sospechosa del equipo de seguridad</strong></li>
+                            <li><strong>Uso de tecnología de vigilancia avanzada</strong> (lentes Meta, relojes inteligentes)</li>
+                            <li><strong>Eliminación de evidencia de la escena</strong></li>
+                            <li><strong>Conexiones del equipo de seguridad con agencias gubernamentales</strong></li>
+                        </ul>
+
+                        <p>El resultado político fue inmediato: <strong>justificación para mayor vigilancia</strong>, declaración de <strong>terrorismo doméstico</strong>, y llamados para <strong>legalizar el uso de drones</strong> en eventos públicos.</p>
+
+                        <div class="quote-box">
+                            "Problema, reacción, solución. Legalicemos la vigilancia al estilo tecnocrático chino."
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-title">La Elite Tecnocrática: Dialog y el Nuevo Orden</h2>
+                    <div class="section-content">
+                        <p>Nicolás revela la existencia de <strong>Dialog</strong>, una sociedad secreta fundada por Peter Thiel hace 20 años, que está estableciendo un campus permanente en Virginia, cerca de la CIA.</p>
+
+                        <img src="https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/ECAE/production/_96309506_hi039400483.jpg" alt="Reuniones secretas de la elite global" class="content-image">
+                        <p class="image-caption">Las reuniones secretas que dan forma al futuro</p>
+
+                        <p>Los miembros de Dialog incluyen:</p>
+                        <ul>
+                            <li><strong>Elon Musk</strong></li>
+                            <li><strong>Scott Besent</strong> (Secretario del Tesoro, ex-pupilo de Soros)</li>
+                            <li><strong>Larry Summers</strong> (vinculado a los papeles de Epstein)</li>
+                            <li><strong>Jared Kushner</strong> (yerno de Trump)</li>
+                            <li><strong>Tulsi Gabbard</strong> (Directora de Inteligencia Nacional)</li>
+                            <li><strong>Ted Cruz</strong></li>
+                            <li><strong>Richard Haas</strong> (Council on Foreign Relations)</li>
+                        </ul>
+
+                        <p>Como observa Nicolás: <em>"Esta decisión indica la idea de estar mucho tiempo acá, más allá de Donald Trump, la toma del poder de este grupo."</em></p>
+
+                        <p>Dialog representa la versión tecnológica de Bilderberg, operando en secreto para dar forma a las políticas globales sin escrutinio público.</p>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-title">Conclusiones: El Estado Profundo en Acción</h2>
+                    <div class="section-content">
+                        <p>El análisis de Nicolás nos lleva a una conclusión perturbadora: <strong>no existe un "estado profundo" separado del estado oficial</strong>. Lo que observamos es la evolución natural del poder hacia formas más sofisticadas de control.</p>
+
+                        <div class="quote-box">
+                            "¿Es una falsa bandera si te dicen lo que van a hacer realmente?"
+                        </div>
+
+                        <p>Los elementos del plan tecnocrático están todos a la vista:</p>
+                        <ul>
+                            <li><strong>Vigilancia masiva legalizada</strong> a través de empresas privadas</li>
+                            <li><strong>Erosión de la separación de poderes</strong></li>
+                            <li><strong>Normalización de la intervención militar interna</strong></li>
+                            <li><strong>Uso de crisis manufacturadas</strong> para acelerar cambios</li>
+                            <li><strong>Control de la narrativa</strong> a través de plataformas digitales</li>
+                        </ul>
+
+                        <p>La pregunta final es inquietante: <strong>¿Estamos siendo testigos de la transición controlada hacia un modelo tecnocrático autoritario?</strong></p>
+
+                        <p>Como advierte Nicolás al final de su análisis: <em>"Están ejecutando este plan de transformación adelante nuestro, literalmente."</em></p>
+
+                        <img src="https://www.hoover.org/sites/default/files/content/research/2022-11/UK_Thiel2022.jpg" alt="El futuro tecnocrático que se avecina" class="content-image">
+                        <p class="image-caption">El arquitecto de la nueva era: Peter Thiel y su visión tecnocrática</p>
+
+                        <p>La única defensa contra este plan es la <strong>conciencia informada</strong> y la <strong>organización popular</strong> que trascienda las divisiones artificiales que nos imponen. Como dice Nicolás: <em>"Las minorías organizadas superan a las mayorías desorganizadas."</em></p>
+                    </div>
+                </section>
+
+                <div class="sources-section">
+                    <h2 class="sources-title">Fuentes y Referencias</h2>
+                    <div class="sources-grid">
+                        <div class="source-item">
+                            <h3>Medios Mainstream</h3>
+                            <ul>
+                                <li><a href="https://www.axios.com" target="_blank">Axios</a></li>
+                                <li><a href="https://www.reuters.com" target="_blank">Reuters</a></li>
+                                <li><a href="https://www.cnn.com" target="_blank">CNN</a></li>
+                                <li><a href="https://www.npr.org" target="_blank">NPR</a></li>
+                            </ul>
+                        </div>
+                        <div class="source-item">
+                            <h3>Fuentes Alternativas</h3>
+                            <ul>
+                                <li><a href="https://covertactionmagazine.com" target="_blank">Covert Action Magazine</a></li>
+                                <li><a href="https://wikispooks.com" target="_blank">WikiSpooks</a></li>
+                                <li><a href="https://www.redacted.inc" target="_blank">Redacted</a></li>
+                            </ul>
+                        </div>
+                        <div class="source-item">
+                            <h3>Documentos</h3>
+                            <ul>
+                                <li><a href="#">Manual de Contrainsurgencia</a></li>
+                                <li><a href="#">Plan Rex 84</a></li>
+                                <li><a href="#">Fallos Corte Suprema</a></li>
+                            </ul>
+                        </div>
+                        <div class="source-item">
+                            <h3>Investigación</h3>
+                            <ul>
+                                <li><a href="https://substackcdn.com" target="_blank">Substack</a></li>
+                                <li><a href="#">Investigadores ciudadanos</a></li>
+                                <li><a href="https://www.youtube.com/@terapialiberal" target="_blank">Terapia Liberal</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="source-item">
-                    <h3>Documentos Oficiales</h3>
-                    <ul>
-                        <li><a href="#" target="_blank">Manual de Contrainsurgencia - Gladio</a></li>
-                        <li><a href="#" target="_blank">Plan Rex 84 - Oliver North</a></li>
-                        <li><a href="#" target="_blank">Fallos Corte Suprema 2025</a></li>
-                    </ul>
-                </div>
-                <div class="source-item">
-                    <h3>Investigación Independiente</h3>
-                    <ul>
-                        <li><a href="https://substackcdn.com" target="_blank">Análisis Substack</a></li>
-                        <li><a href="#" target="_blank">Investigadores ciudadanos</a></li>
-                        <li><a href="https://www.youtube.com/@terapialiberal" target="_blank">Terapia Liberal - Análisis completos</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </main>
+            </article>
+        </main>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-social">
-                <a href="https://www.youtube.com/@terapialiberal" target="_blank" class="youtube" title="YouTube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://www.patreon.com/terapialiberal" target="_blank" class="patreon" title="Patreon">
-                    <i class="fab fa-patreon"></i>
-                </a>
-                <a href="https://x.com/terapia_liberal" target="_blank" class="twitter" title="X (Twitter)">
-                    <i class="fab fa-x-twitter"></i>
-                </a>
-            </div>
-            <p class="footer-text">
-                © 2025 Terapia Liberal - Análisis de actualidad, economía, política y filosofía liberal
-                <br>
-                <strong>Nicolás Martínez Lage</strong> - Abogado, divulgador libertario y analista político
-            </p>
-        </div>
-    </footer>
-
-    <button class="back-to-top" onclick="scrollToTop()">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- Twitter Widget Script -->
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-    <script>
-        // Smooth scrolling
-        document.documentElement.style.scrollBehavior = 'smooth';
-
-        // Back to top functionality
-        window.addEventListener('scroll', function() {
-            const backToTop = document.querySelector('.back-to-top');
-            if (window.pageYOffset > 300) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
-        });
-
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('in-view');
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
-            elementsToAnimate.forEach(el => {
-                observer.observe(el);
-            });
-
-            // Image fade-in animation
-            const images = document.querySelectorAll('.content-image');
-            const imageObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('fade-in');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            images.forEach(img => {
-                imageObserver.observe(img);
-            });
-        });
-
-        // Enhanced scroll effects
-        let ticking = false;
-
-        function updateScrollEffects() {
-            const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('.content-image');
-            
-            parallaxElements.forEach(element => {
-                const rate = scrolled * -0.2;
-                element.style.transform = `translateY(${rate}px)`;
-            });
-            
-            ticking = false;
-        }
-
-        window.addEventListener('scroll', function() {
-            if (!ticking) {
-                requestAnimationFrame(updateScrollEffects);
-                ticking = true;
-            }
-        });
-    </script>
+        <footer>
+            <p>&copy; 2025 Terapia Liberal. Todos los derechos reservados.</p>
+        </footer>
+    </div>
 </body>
 </html>
