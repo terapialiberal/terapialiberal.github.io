@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expediente Epstein: El Pulpo y la Tecnocracia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card {
+            background-color: rgba(31, 31, 31, 0.5);
+            border: 1px solid rgba(128, 128, 128, 0.3);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            padding: 24px;
+        }
+        .nav-btn {
+            background-color: transparent;
+            border: 1px solid #d4af37;
+            color: #d4af37;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-align: left;
+            transition: all 300ms ease-in-out;
+            width: 100%;
+        }
+        .nav-btn:hover {
+            background-color: #d4af37;
+            color: #0a0a0a;
+            transform: scale(1.03);
+        }
+        .nav-btn.active {
+            background-color: #d4af37;
+            color: #0a0a0a;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+        .tag {
+            background-color: rgba(42, 42, 42, 0.7);
+            border: 1px solid rgba(128, 128, 128, 0.3);
+            color: #9ca3af;
+            border-radius: 8px;
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .tag-intel {
+            color: #dc2626;
+            border-color: rgba(220, 38, 38, 0.4);
+        }
+        .tag-finance {
+            color: #d4af37;
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+        .tag-science {
+            color: #3b82f6;
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <!-- Chosen Palette: Terapia Liberal (Negros, Dorado #d4af37, Rojo #dc2626) -->
+    <!-- Application Structure Plan: Diseñada como una 'Mesa de Investigación' interactiva. La estructura abandona un formato lineal por un modelo 'hub-and-spoke' (centro y radios), óptimo para explorar información de redes. El layout usa un grid principal: [Panel Izquierdo: Pilares Temáticos] y [Panel Derecho: Detalles y Análisis Dinámicos]. El usuario hace clic en un pilar (ej: 'Inteligencia', 'Finanzas', 'Ciencia') en el panel izquierdo. Esta acción es la interacción primaria, disparando una función JS para actualizar el panel derecho, mostrando las sub-conexiones específicas (ej: Carbyne, Wexner, MIT) y el texto de análisis detallado. Esto modela el concepto de 'El Pulpo' del usuario y se eligió por su usabilidad para revelar capas complejas de la red bajo demanda. -->
+    <!-- Visualization & Content Choices: 
+        - Info: Red de Epstein (intel, finanzas, ciencia). 
+        - Goal: Organizar y Explorar Relaciones. 
+        - Viz/Method: Diagrama interactivo usando HTML/CSS/Tailwind (botones como nodos de categoría, listas dinámicas como sub-nodos). Un panel de texto HTML dinámico muestra el análisis. NO se usa SVG, Mermaid ni Canvas.
+        - Interaction: El usuario hace clic en un botón de pilar temático. Una función JS (showPillar) actualiza el contenido de los paneles de análisis y conexiones vía innerHTML.
+        - Justification: Este 'dashboard' basado en HTML es el método más robusto y claro para representar esta red cualitativa sin usar librerías prohibidas (SVG/Mermaid) o charts cuantitativos inapropiados. Respalda la estructura de 'Mesa de Investigación'.
+        - Library: Vanilla JS, Tailwind CSS. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="bg-gradient-to-b from-[#0a0a0a] to-[#1a1a1a] text-[#e5e7eb] min-h-screen">
+
+    <header class="py-6 px-4 sm:px-8 border-b border-[#2a2a2a] bg-[#0a0a0a]/80 backdrop-blur-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <img src="https://yt3.ggpht.com/ZzVyDrXt4x8YWoKbISHZzC9CCtkEPCN4GRET1Xxf_wssNyw7mfN-xTbBmpwEJHO0DRQrg0Dgug=s68-c-k-c0x00ffffff-no-rj" alt="Logo Terapia Liberal" class="w-12 h-12 rounded-full border-2 border-[#d4af37]">
+                <h1 class="text-2xl font-bold text-[#d4af37] tracking-tight">Terapia Liberal</h1>
+            </div>
+            <span class="hidden md:block text-sm text-[#9ca3af] uppercase tracking-wider">Análisis Independiente</span>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-4 sm:p-8 mt-8">
+
+        <section id="intro" class="mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Expediente Epstein: El Pulpo y la Tecnocracia</h2>
+            <p class="text-lg text-[#9ca3af] max-w-4xl">
+                Jeffrey Epstein no era simplemente un financiero. Era un <strong class="text-[#d4af37]">nodo operativo</strong> en una red de inteligencia y transferencia de tecnología diseñada para facilitar el advenimiento del modelo tecnocrático global.
+            </p>
+            <p class="text-lg text-[#9ca3af] max-w-4xl mt-2">
+                Su función era doble: <strong class="text-[#dc2626]">chantaje (kompromat)</strong> para control político y <strong class="text-[#d4af37]">financiación estratégica</strong> para la agenda transhumanista y de vigilancia.
+            </p>
+        </section>
+
+        <section id="dashboard">
+            <div class="card">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    
+                    <div class="md:col-span-1">
+                        <h3 class="text-xl font-semibold text-white mb-4">Mesa de Investigación</h3>
+                        <p class="text-sm text-[#9ca3af] mb-6">
+                            Seleccione un pilar de la red para explorar las conexiones, los actores clave y el análisis de Terapia Liberal.
+                        </p>
+                        <div class="space-y-4">
+                            <button id="btn-intel" class="nav-btn group" onclick="showPillar('intel')">
+                                <span class="flex justify-between items-center">
+                                    <span>Pilar 1: Inteligencia y Chantaje</span>
+                                    <span class="text-xl opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                                </span>
+                                <span class="text-xs font-normal text-[#d4af37]/80 group-hover:text-black block mt-1">"EL PULPO 2.0"</span>
+                            </button>
+                            <button id="btn-finance" class="nav-btn group" onclick="showPillar('finance')">
+                                <span class="flex justify-between items-center">
+                                    <span>Pilar 2: Finanzas y Élites</span>
+                                    <span class="text-xl opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                                </span>
+                                <span class="text-xs font-normal text-[#d4af37]/80 group-hover:text-black block mt-1">"EL CAPITAL"</span>
+                            </button>
+                            <button id="btn-science" class="nav-btn group" onclick="showPillar('science')">
+                                <span class="flex justify-between items-center">
+                                    <span>Pilar 3: Ciencia y Tecnocracia</span>
+                                    <span class="text-xl opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                                </span>
+                                <span class="text-xs font-normal text-[#d4af37]/80 group-hover:text-black block mt-1">"EL PROYECTO"</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        
+                        <div id="analysis-panel" class="card bg-[#0a0a0a]/50 border-[#2a2a2a]">
+                            <h4 class="text-lg font-semibold text-white mb-3" id="analysis-title"></h4>
+                            <div class="space-y-4 text-sm text-[#e5e7eb]" id="analysis-content">
+                            </div>
+                        </div>
+
+                        <div id="connections-panel" class="card bg-[#0a0a0a]/50 border-[#2a2a2a]">
+                            <h4 class="text-lg font-semibold text-white mb-3" id="connections-title"></h4>
+                            <div class="space-y-3" id="connections-content">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-8 mt-16 border-t border-[#2a2a2a] bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <p class="text-sm text-[#9ca3af] mb-4 md:mb-0">© 2025 Terapia Liberal. Análisis independiente para mentes críticas.</p>
+            <div class="flex space-x-6">
+                <a href="https://www.youtube.com/@terapialiberal" target="_blank" rel="noopener noreferrer" class="text-[#9ca3af] hover:text-[#dc2626] transition-colors duration-300">
+                    YouTube
+                </a>
+                <a href="https://www.patreon.com/terapialiberal" target="_blank" rel="noopener noreferrer" class="text-[#9ca3af] hover:text-[#d4af37] transition-colors duration-300">
+                    Patreon
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const analysisData = {
+            intel: {
+                title: "Análisis: La Red de Chantaje",
+                content: `
+                    <p>Retomando la tesis de Danny Casolaro sobre "El Pulpo", vemos una fusión de crimen, inteligencia estatal y finanzas. La red de Epstein es una versión moderna.</p>
+                    <p>La conexión clave es Ghislaine y Robert Maxwell (Mossad/MI6), pero se expande a una estructura de 'honeypots' (kompromat) diseñada para el control político y corporativo. Esto no es solo sexual, es control de información.</p>
+                    <p>La red histórica de Roy Cohn, mentor de Trump y abogado de la mafia, es el modelo original de chantaje que Epstein y Maxwell perfeccionaron para la era digital.</p>
+                `,
+                connectionsTitle: "Conexiones de Inteligencia",
+                connections: [
+                    { name: "Ghislaine & Robert Maxwell", tag: "intel", desc: "Conexión directa con Mossad y MI6." },
+                    { name: "Carbyne / Ehud Barak", tag: "intel", desc: "Startup de vigilancia (Unit 8200) financiada por Epstein." },
+                    { name: "Roy Cohn", tag: "intel", desc: "La red histórica de chantaje y poder." },
+                    { name: "Agencias (CIA, MI6, Mossad)", tag: "intel", desc: "Operaciones de inteligencia superpuestas." },
+                    { name: "Wexner / Mena", tag: "intel", desc: "Conexión con operaciones de la CIA (Mena, Arkansas)." }
+                ]
+            },
+            finance: {
+                title: "Análisis: El Flujo del Capital",
+                content: `
+                    <p>El capital que financia la operación y lava la imagen de la agenda a través de la 'filantropía'. Les Wexner (L Brands) fue el mentor y la fuente principal del financiamiento de Epstein, transfiriéndole miles de millones.</p>
+                    <p>El 'Mega Group', fundado por Wexner y Bronfman, actúa como una alianza de oligarcas que opera por encima de lealtades nacionales, financiando agendas políticas y de inteligencia.</p>
+                    <p>Correos filtrados confirman lazos directos con la banca dinástica (Ariane de Rothschild). El interés en Bitcoin/MIT sugiere un intento de cooptar las criptomonedas para un futuro sistema de CBDC (Moneda Digital de Banco Central).</p>
+                `,
+                connectionsTitle: "Conexiones Financieras",
+                connections: [
+                    { name: "Les Wexner / L Brands", tag: "finance", desc: "La fuente de la fortuna y mentor." },
+                    { name: "Mega Group (Bronfman, etc.)", tag: "finance", desc: "Alianza de oligarcas para influencia global." },
+                    { name: "Ariane de Rothschild", tag: "finance", desc: "Lazo con la banca dinástica europea." },
+                    { name: "Bitcoin / MIT DCI", tag: "finance", desc: "Financiación temprana para cooptar la tecnología." },
+                    { name: "JPMorgan / BlackRock", tag: "finance", desc: "Vínculos bancarios y de gestión de activos." }
+                ]
+            },
+            science: {
+                title: "Análisis: El Proyecto Tecnocrático",
+                content: `
+                    <p>El interés real de Epstein: la eugenesia y el transhumanismo. Buscaba 'sembrar' la raza humana y financiar la ciencia para crear castas biológicas (Eugenics 2.0).</p>
+                    <p>Canalizó fondos al MIT Media Lab (Joi Ito) y Harvard para legitimar investigaciones límite en CRISPR (edición genética) e IA, conectando con figuras como Bill Gates.</p>
+                    <p>Siguiendo la tesis de Antony Sutton (Wall Street financió a los enemigos), vemos capital y ciencia occidental fluyendo hacia China. China es el laboratorio de pruebas para el modelo de control tecnocrático (IA, vigilancia, crédito social) que se busca exportar globalmente.</p>
+                `,
+                connectionsTitle: "Conexiones Científicas y Tecnocráticas",
+                connections: [
+                    { name: "MIT Media Lab / Joi Ito", tag: "science", desc: "Lavado de dinero para ciencia de élite." },
+                    { name: "CRISPR / Eugenesia", tag: "science", desc: "Interés en la edición genética y el transhumanismo." },
+                    { name: "Bill Gates", tag: "science", desc: "Conexiones post-condena y financiación conjunta." },
+                    { name: "Modelo Chino (Tesis Sutton)", tag: "science", desc: "Transferencia de tecnología para control social." },
+                    { name: "Peter Thiel / Elon Musk", tag: "science", desc: "La ideología tecnocrática de Silicon Valley." }
+                ]
+            }
+        };
+
+        const analysisTitleEl = document.getElementById('analysis-title');
+        const analysisContentEl = document.getElementById('analysis-content');
+        const connectionsTitleEl = document.getElementById('connections-title');
+        const connectionsContentEl = document.getElementById('connections-content');
+        
+        const buttons = {
+            intel: document.getElementById('btn-intel'),
+            finance: document.getElementById('btn-finance'),
+            science: document.getElementById('btn-science')
+        };
+
+        function showPillar(pillar) {
+            Object.values(buttons).forEach(btn => btn.classList.remove('active'));
+            buttons[pillar].classList.add('active');
+
+            const data = analysisData[pillar];
+
+            analysisTitleEl.textContent = data.title;
+            analysisContentEl.innerHTML = data.content;
+            analysisTitleEl.classList.add('fade-in');
+            analysisContentEl.classList.add('fade-in');
+
+            connectionsTitleEl.textContent = data.connectionsTitle;
+            let connectionsHtml = data.connections.map(conn => `
+                <div class="card bg-[#1f1f1f]/60 p-4 border border-[#2a2a2a]">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="font-semibold text-white">${conn.name}</span>
+                        <span class="tag tag-${conn.tag}">${conn.tag.toUpperCase()}</span>
+                    </div>
+                    <p class="text-xs text-[#9ca3af]">${conn.desc}</p>
+                </div>
+            `).join('');
+            connectionsContentEl.innerHTML = connectionsHtml;
+            connectionsTitleEl.classList.add('fade-in');
+            connectionsContentEl.classList.add('fade-in');
+
+            setTimeout(() => {
+                analysisTitleEl.classList.remove('fade-in');
+                analysisContentEl.classList.remove('fade-in');
+                connectionsTitleEl.classList.remove('fade-in');
+                connectionsContentEl.classList.remove('fade-in');
+            }, 500);
+        }
+
+        window.onload = () => {
+            showPillar('intel');
+        };
+    </script>
+
+</body>
+</html>
