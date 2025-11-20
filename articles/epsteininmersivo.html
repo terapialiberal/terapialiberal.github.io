@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expediente Epstein V2 - Terapia Liberal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- 
+      Chosen Palette: Terapia Liberal (Negro #0a0a0a, Dorado #d4af37, Rojo #dc2626)
+      Structure: Dashboard SPA de 3 columnas (Navegación/Filtros, Visualización Central, Dossier de Detalles).
+      Viz Choice: Chart.js Scatter Plot con coordenadas fijas para mantener la estructura narrativa visual (Intel a la izq, Finanzas arriba, Ciencia abajo).
+      CONFIRMATION: NO SVG images used. NO Mermaid JS used. All drawn via Canvas API or CSS/HTML.
+    -->
+
+    <style>
+        :root {
+            --tl-gold: #d4af37;
+            --tl-red: #dc2626;
+            --tl-black: #0a0a0a;
+            --tl-dark-gray: #1a1a1a;
+            --tl-panel: rgba(26, 26, 26, 0.85);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--tl-black);
+            color: #e5e7eb;
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+                linear-gradient(to bottom, #050505, #121212);
+            background-attachment: fixed;
+            overflow: hidden; /* App-like feel */
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--tl-gold); }
+
+        /* Utilities */
+        .tl-text-gold { color: var(--tl-gold); }
+        .tl-text-red { color: var(--tl-red); }
+        .tl-border-gold { border-color: var(--tl-gold); }
+        
+        .glass-panel {
+            background: var(--tl-panel);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .node-list-item {
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+        .node-list-item:hover {
+            background: rgba(255,255,255,0.05);
+            border-left-color: #666;
+        }
+        .node-list-item.active {
+            background: linear-gradient(90deg, rgba(212,175,55,0.15), transparent);
+            border-left-color: var(--tl-gold);
+        }
+
+        .animate-fade-in { animation: fadeIn 0.5s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Chart Container specifics */
+        .chart-wrapper {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="h-screen flex flex-col">
+
+    <!-- HEADER -->
+    <header class="h-16 border-b border-white/10 bg-black/90 flex items-center justify-between px-6 shrink-0 z-50">
+        <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-yellow-600 to-red-900 flex items-center justify-center shadow-[0_0_10px_#d4af37]">
+                <span class="font-bold text-black text-xs">TL</span>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold tracking-tight text-white"><span class="tl-text-gold">TERAPIA</span> LIBERAL</h1>
+                <p class="text-[10px] uppercase tracking-widest text-gray-500">Unidad de Investigación: Deep State & Tecnocracia</p>
+            </div>
+        </div>
+        <div class="hidden md:flex items-center gap-4 text-xs font-medium text-gray-400">
+            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#dc2626]"></span> INTELIGENCIA</div>
+            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#10b981]"></span> FINANZAS</div>
+            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#3b82f6]"></span> CIENCIA</div>
+            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#a855f7]"></span> IDEOLOGÍA</div>
+        </div>
+    </header>
+
+    <!-- MAIN LAYOUT -->
+    <main class="flex-1 flex overflow-hidden">
+        
+        <!-- LEFT SIDEBAR: CONTROLS & LIST -->
+        <aside class="w-80 bg-[#0f0f0f] border-r border-white/10 flex flex-col shrink-0 z-20 transform transition-transform duration-300 absolute md:relative h-full" id="sidebar">
+            
+            <!-- Search & Filter -->
+            <div class="p-4 border-b border-white/10 space-y-4">
+                <div class="relative">
+                    <i class="fas fa-search absolute left-3 top-3 text-gray-500 text-sm"></i>
+                    <input type="text" id="searchInput" placeholder="Buscar nodo (ej. Wexner, MIT)..." 
+                           class="w-full bg-[#1a1a1a] border border-[#333] rounded-lg py-2 pl-9 pr-3 text-sm text-white focus:outline-none focus:border-[#d4af37] transition-colors">
+                </div>
+                
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="filterNodes('all')" class="filter-btn active px-2 py-1 text-xs rounded border border-white/10 bg-white/5 hover:bg-white/10 text-gray-300">Todos</button>
+                    <button onclick="filterNodes('intel')" class="filter-btn px-2 py-1 text-xs rounded border border-[#dc2626]/30 hover:bg-[#dc2626]/10 text-[#dc2626]">Inteligencia</button>
+                    <button onclick="filterNodes('finance')" class="filter-btn px-2 py-1 text-xs rounded border border-[#10b981]/30 hover:bg-[#10b981]/10 text-[#10b981]">Finanzas</button>
+                    <button onclick="filterNodes('science')" class="filter-btn px-2 py-1 text-xs rounded border border-[#3b82f6]/30 hover:bg-[#3b82f6]/10 text-[#3b82f6]">Ciencia</button>
+                </div>
+            </div>
+
+            <!-- Node List -->
+            <div class="flex-1 overflow-y-auto" id="nodeList">
+                <!-- Populated via JS -->
+            </div>
+
+            <!-- Sidebar Footer -->
+            <div class="p-3 border-t border-white/10 text-[10px] text-gray-500 text-center">
+                Datos compilados de fuentes abiertas y filtraciones.
+            </div>
+        </aside>
+
+        <!-- CENTER: VISUALIZATION -->
+        <section class="flex-1 relative bg-[#050505] flex flex-col">
+            
+            <!-- Mobile Toggle -->
+            <button class="md:hidden absolute top-4 left-4 z-30 text-white bg-black/50 p-2 rounded" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Canvas Wrapper -->
+            <div class="chart-wrapper cursor-crosshair">
+                <canvas id="networkCanvas"></canvas>
+            </div>
+
+            <!-- Floating Overlay Legend -->
+            <div class="absolute bottom-4 left-4 pointer-events-none">
+                <div class="bg-black/80 backdrop-blur border border-white/10 p-3 rounded-lg max-w-xs">
+                    <h4 class="text-[#d4af37] font-bold text-xs uppercase mb-1">Mapa de Relaciones</h4>
+                    <p class="text-gray-400 text-[10px] leading-tight">
+                        Las líneas representan flujo de capital (verde), operaciones de inteligencia (rojo) o influencia ideológica (gris). El tamaño del nodo indica la centralidad en la red.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- RIGHT SIDEBAR: DOSSIER (DETAILS) -->
+        <aside class="w-96 bg-[#0f0f0f] border-l border-white/10 flex flex-col shrink-0 z-20 absolute right-0 h-full transform transition-transform duration-300 translate-x-full md:translate-x-0" id="detailsPanel">
+            
+            <div class="h-full overflow-y-auto p-6 custom-scrollbar">
+                <div id="emptyState" class="h-full flex flex-col items-center justify-center text-gray-600 text-center">
+                    <i class="fas fa-project-diagram text-4xl mb-4 opacity-50"></i>
+                    <p class="text-sm">Selecciona un nodo en el mapa o la lista para abrir su expediente.</p>
+                </div>
+
+                <div id="contentState" class="hidden animate-fade-in pb-10">
+                    <!-- Dynamic Header -->
+                    <div class="mb-6 border-b border-white/10 pb-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <span id="detailCategory" class="text-[10px] font-bold px-2 py-1 rounded bg-gray-800 uppercase tracking-wider text-white">CATEGORÍA</span>
+                            <button class="md:hidden text-gray-400" onclick="closeDetails()"><i class="fas fa-times"></i></button>
+                        </div>
+                        <h2 id="detailTitle" class="text-2xl font-bold text-white mb-1">Nombre del Nodo</h2>
+                        <p id="detailSubtitle" class="text-sm text-[#d4af37] italic font-serif">Subtítulo descriptivo</p>
+                    </div>
+
+                    <!-- Main Content Sections -->
+                    <div class="space-y-6">
+                        
+                        <div class="glass-panel p-4 rounded-lg border-l-2 border-[#d4af37]">
+                            <h3 class="text-xs font-bold text-gray-400 uppercase mb-2"><i class="fas fa-id-card mr-2"></i>Perfil Operativo</h3>
+                            <p id="detailProfile" class="text-sm text-gray-300 leading-relaxed">Descripción principal...</p>
+                        </div>
+
+                        <div class="glass-panel p-4 rounded-lg">
+                            <h3 class="text-xs font-bold text-gray-400 uppercase mb-2"><i class="fas fa-link mr-2"></i>Vínculo Crítico</h3>
+                            <p id="detailLink" class="text-sm text-gray-300 leading-relaxed">Conexión específica...</p>
+                        </div>
+
+                        <div class="p-4 rounded-lg bg-[#dc2626]/5 border border-[#dc2626]/20">
+                            <h3 class="text-xs font-bold text-[#dc2626] uppercase mb-2"><i class="fas fa-search-dollar mr-2"></i>Análisis Terapia Liberal</h3>
+                            <p id="detailAnalysis" class="text-sm text-gray-300 leading-relaxed">Análisis profundo...</p>
+                        </div>
+
+                        <!-- Connection Tags -->
+                        <div>
+                            <h3 class="text-xs font-bold text-gray-500 uppercase mb-2">Palabras Clave</h3>
+                            <div id="detailTags" class="flex flex-wrap gap-2">
+                                <!-- Tags injected here -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </main>
+
+    <script>
+        /* --- DATA STRUCTURE --- */
+        const CATEGORIES = {
+            center: { color: '#d4af37', label: 'Nodo Central' },
+            intel: { color: '#dc2626', label: 'Inteligencia / Blackmail' },
+            finance: { color: '#10b981', label: 'Finanzas / Mega Group' },
+            science: { color: '#3b82f6', label: 'Ciencia / Transhumanismo' },
+            ideology: { color: '#a855f7', label: 'Ideología / Geopolítica' },
+            tech: { color: '#06b6d4', label: 'Big Tech / Vigilancia' }
+        };
+
+        // COORDINATE SYSTEM: Center (0,0). X: -60 to 60. Y: -50 to 50.
+        // Intel: Top Left (-X, -Y). Finance: Top Right (X, -Y). Science: Bottom Left (-X, Y). Ideology: Bottom Right (X, Y).
+        
+        const DATABASE = {
+            // --- CENTRAL ---
+            'epstein': { id: 'epstein', label: 'Jeffrey Epstein', x: 0, y: 0, cat: 'center', size: 20, 
+                subtitle: "El Nodo Conector",
+                profile: "Financiero caído en desgracia que operaba como intermediario entre el capital global, las agencias de inteligencia y la élite científica. No era el jefe, sino el facilitador operativo.",
+                link: "Su rol consistía en adquirir 'Kompromat' (chantaje) para el Mossad/CIA y canalizar dinero de oligarcas hacia proyectos de ingeniería social (eugenesia).",
+                analysis: "Epstein representa la privatización de las operaciones de inteligencia. Su red no murió con él; la infraestructura tecnológica (Carbyne) y financiera sigue activa.",
+                tags: ['Kompromat', 'Mossad', 'Tráfico', 'Financiación']
+            },
+
+            // --- INTEL & BLACKMAIL (The Octopus) ---
+            'ghislaine': { id: 'ghislaine', label: 'Ghislaine Maxwell', x: -15, y: -10, cat: 'intel', size: 12,
+                subtitle: "La Controladora",
+                profile: "Hija del magnate y espía Robert Maxwell. Pareja y socia principal de Epstein. Gestionaba la logística de las operaciones de chantaje.",
+                link: "Heredó los contactos de inteligencia de su padre (Mossad/MI6) y los integró en la operación de Epstein.",
+                analysis: "Ella es el vínculo real con el poder duro. Sin ella, Epstein era solo un gestor de dinero. Ella aportó la protección estatal.",
+                tags: ['MI6', 'Submarino', 'TerraMar']
+            },
+            'maxwell_robert': { id: 'maxwell_robert', label: 'Robert Maxwell', x: -25, y: -20, cat: 'intel', size: 10,
+                subtitle: "El Superespía",
+                profile: "Magnate de medios británico y agente triple (Mossad, KGB, MI6). Murió misteriosamente en su yate. Padre de Ghislaine.",
+                link: "Introdujo a su hija en el mundo del espionaje. Vendió el software PROMIS con puertas traseras a gobiernos de todo el mundo.",
+                analysis: "El caso Epstein es la continuación directa de las operaciones de Maxwell: usar tecnología y medios para chantajear líderes mundiales.",
+                tags: ['PROMIS', 'Mossad', 'KGB']
+            },
+            'mossad': { id: 'mossad', label: 'Mossad', x: -40, y: -30, cat: 'intel', size: 10,
+                subtitle: "Inteligencia Israelí",
+                profile: "Agencia de inteligencia exterior de Israel. Numerosos informes (ej. Ari Ben-Menashe) identifican a Epstein y Maxwell como activos.",
+                link: "Uso de Epstein para obtener influencia sobre políticos estadounidenses (ej. Clinton, Trump) mediante trampas sexuales.",
+                analysis: "La operación Epstein debe verse como una operación de influencia extranjera en suelo estadounidense tolerada por la CIA.",
+                tags: ['Israel', 'Espionaje', 'Kompromat']
+            },
+            'cia': { id: 'cia', label: 'CIA', x: -35, y: -10, cat: 'intel', size: 10,
+                subtitle: "Agencia Central de Inteligencia",
+                profile: "La relación es simbiótica. Acosta (Fiscal) dijo: 'Me dijeron que Epstein pertenecía a la inteligencia'.",
+                link: "Protección legal durante años. Uso de aeropuertos logísticos compartidos con operaciones encubiertas (ver Mena, AR).",
+                analysis: "Epstein probablemente era un activo compartido o un contratista independiente útil para múltiples agencias (inmunidad sistémica).",
+                tags: ['Deep State', 'Acosta', 'Inmunidad']
+            },
+            'mena': { id: 'mena', label: 'Mena, Arkansas', x: -50, y: -5, cat: 'intel', size: 8,
+                subtitle: "El Nexo Clinton/CIA",
+                profile: "Aeropuerto famoso en los 80 por tráfico de armas/drogas (Irán-Contra) bajo la gobernatura de Bill Clinton.",
+                link: "Epstein tenía aviones registrados con números de cola que coincidían con empresas fachada de la CIA que operaban en contextos similares.",
+                analysis: "Conecta la red de corrupción de los 80 (The Octopus de Casolaro) con la era moderna de Epstein.",
+                tags: ['Clinton', 'Narcotráfico', 'Armas']
+            },
+            'promis': { id: 'promis', label: 'Software PROMIS', x: -30, y: -30, cat: 'intel', size: 8,
+                subtitle: "La Puerta Trasera Original",
+                profile: "Software de rastreo robado por el Departamento de Justicia y modificado con backdoors por Rafi Eitan (agente del Mossad y socio de Maxwell).",
+                link: "Es el antecesor espiritual de sistemas como Carbyne. Robert Maxwell lo vendió globalmente para espiar a otros países.",
+                analysis: "La tecnología siempre ha sido el vector. Antes PROMIS, hoy Carbyne/Pegasus. El objetivo es la vigilancia total.",
+                tags: ['Vigilancia', 'Rafi Eitan', 'Casolaro']
+            },
+            'carbyne': { id: 'carbyne', label: 'Carbyne911', x: -10, y: -40, cat: 'tech', size: 12,
+                subtitle: "Vigilancia en Tiempo Real",
+                profile: "Start-up de gestión de llamadas 911. Permite a los operadores acceder a la cámara y micrófono del usuario sin instalar apps.",
+                link: "Financiada por Epstein y Peter Thiel. Presidida por Ehud Barak (ex PM Israel). Fundada por oficiales de la Unit 8200.",
+                analysis: "Es el Caballo de Troya perfecto. Bajo la excusa de seguridad pública, entrega acceso biométrico y de ubicación a inteligencia extranjera.",
+                tags: ['Unit 8200', 'Ehud Barak', 'Peter Thiel']
+            },
+            'unit8200': { id: 'unit8200', label: 'Unit 8200', x: -20, y: -45, cat: 'intel', size: 8,
+                subtitle: "La NSA de Israel",
+                profile: "Unidad de élite de ciberinteligencia de las IDF. Incubadora de empresas como NSO Group (Pegasus) y Carbyne.",
+                link: "El flujo de talento va de la 8200 a las empresas privadas financiadas por la red Epstein/Wexner.",
+                analysis: "La privatización de la ciberguerra. Las herramientas desarrolladas aquí terminan usándose contra disidentes y poblaciones civiles.",
+                tags: ['Ciberarmas', 'IDF', 'Tech']
+            },
+            'ehud_barak': { id: 'ehud_barak', label: 'Ehud Barak', x: -5, y: -35, cat: 'intel', size: 8,
+                subtitle: "Ex Primer Ministro Israel",
+                profile: "Militar más condecorado de Israel. Visitante frecuente de Epstein en NY e Isla.",
+                link: "Epstein invirtió millones en sus empresas (Carbyne). Barak le dio legitimidad política y protección.",
+                analysis: "Demuestra que Epstein operaba al más alto nivel estatal, no solo como un 'pedófilo rico'.",
+                tags: ['Política', 'Israel', 'Carbyne']
+            },
+
+            // --- FINANCE & MEGA GROUP ---
+            'wexner': { id: 'wexner', label: 'Les Wexner', x: 20, y: -20, cat: 'finance', size: 12,
+                subtitle: "El Mecenas (L Brands)",
+                profile: "Dueño de Victoria's Secret. El único cliente 'conocido' de Epstein. Le dio poder notarial total sobre su fortuna en los 90.",
+                link: "Transfirió mansiones, aviones y millones a Epstein sin justificación comercial. Fundador del Mega Group.",
+                analysis: "Wexner es la billetera. Es probable que Epstein fuera su 'handler' o que Wexner usara a Epstein para lavar dinero de operaciones negras.",
+                tags: ['Mega Group', 'Victorias Secret', 'Ohio']
+            },
+            'mega_group': { id: 'mega_group', label: 'Mega Group', x: 35, y: -25, cat: 'finance', size: 10,
+                subtitle: "El Club de Oligarcas",
+                profile: "Fundado en 1991 por Wexner y Bronfman. Club privado de multimillonarios pro-Israelí enfocados en 'filantropía' y seguridad.",
+                link: "Epstein operaba en la periferia de este grupo, sirviendo a sus miembros. Maxwell tenía lazos directos con los Bronfman.",
+                analysis: "Un estado dentro del estado. Coordina financiación política y estratégica por encima de los intereses nacionales de EE.UU.",
+                tags: ['Bronfman', 'Lobby', 'Sionismo']
+            },
+            'bronfman': { id: 'bronfman', label: 'Familia Bronfman', x: 40, y: -15, cat: 'finance', size: 8,
+                subtitle: "Seagrams / NXIVM",
+                profile: "Dinastía del whisky (origen contrabando). Clare y Sara Bronfman financiaron el culto sexual NXIVM (similar a Epstein).",
+                link: "Padres fundadores del Mega Group junto a Wexner. Conexiones históricas con Roy Cohn.",
+                analysis: "Patrón recurrente: Dinero Bronfman financiando cultos de control mental y chantaje sexual (NXIVM/Epstein).",
+                tags: ['NXIVM', 'Cultos', 'Dinero Viejo']
+            },
+            'rothschild': { id: 'rothschild', label: 'Ariane de Rothschild', x: 30, y: -5, cat: 'finance', size: 10,
+                subtitle: "Edmond de Rothschild Group",
+                profile: "Directora de banca privada suiza. Se reunió con Epstein múltiples veces, negociando contratos por $25M.",
+                link: "Legitimación bancaria suprema. Epstein actuaba como broker para la familia bancaria más influyente.",
+                analysis: "Rompe el mito de Epstein como 'paria'. La banca dinástica europea lo usaba activamente para mover capital.",
+                tags: ['Banca Suiza', 'Nobleza Negra', 'Europa']
+            },
+            'blackrock': { id: 'blackrock', label: 'BlackRock', x: 45, y: -5, cat: 'finance', size: 8,
+                subtitle: "El Dueño del Mundo",
+                profile: "Gestora de fondos más grande del mundo. Larry Fink aparece en agendas, aunque niega cercanía.",
+                link: "Epstein buscaba influir en las decisiones de inversión ESG y mercados de carbono.",
+                analysis: "Representa la fusión del capital corporativo con la agenda política (Woke Capital/ESG) que Epstein promovía.",
+                tags: ['ESG', 'Larry Fink', 'Capital']
+            },
+            'leon_black': { id: 'leon_black', label: 'Leon Black', x: 25, y: -10, cat: 'finance', size: 8,
+                subtitle: "Apollo Global Management",
+                profile: "Pagó $158 millones a Epstein por 'asesoría fiscal' (cifra absurda para servicios legales).",
+                link: "Conexión directa con el dinero de Wall Street. Obligado a renunciar tras el escándalo.",
+                analysis: "Los pagos masivos sugieren lavado de dinero o pago de extorsión a gran escala.",
+                tags: ['Apollo', 'Wall Street', 'Pagos']
+            },
+            'jpmorgan': { id: 'jpmorgan', label: 'JP Morgan / Jes Staley', x: 15, y: -5, cat: 'finance', size: 8,
+                subtitle: "Banca Institucional",
+                profile: "Jes Staley (CEO Barclays, ex-JPM) intercambió 1200 emails con Epstein, incluyendo frases crípticas sobre 'Blancanieves'.",
+                link: "El banco mantuvo a Epstein como cliente 15 años pese a las alertas rojas de cumplimiento.",
+                analysis: "El sistema bancario protegió a Epstein porque era un nodo vital para mover fondos de clientes VIP 'intocables'.",
+                tags: ['Jes Staley', 'Compliance', 'Banca']
+            },
+
+            // --- SCIENCE & TRANSHUMANISM ---
+            'mit': { id: 'mit', label: 'MIT Media Lab', x: -20, y: 20, cat: 'science', size: 12,
+                subtitle: "La Fábrica de Futuro",
+                profile: "Laboratorio de investigación de élite. Recibió donaciones anónimas de Epstein dirigidas por Joi Ito.",
+                link: "Epstein financiaba proyectos específicos sobre cibernética e IA. Visitaba el campus con 'esclavas'.",
+                analysis: "Epstein usaba el MIT para 'lavar' su reputación criminal mediante la filantropía científica.",
+                tags: ['Joi Ito', 'Aaron Swartz', 'Academia']
+            },
+            'joi_ito': { id: 'joi_ito', label: 'Joi Ito', x: -10, y: 25, cat: 'science', size: 8,
+                subtitle: "Ex Director MIT Media Lab",
+                profile: "Renunció tras revelarse que ocultaba el origen del dinero de Epstein.",
+                link: "Facilitador clave. Conectó a Epstein con la élite tech de Silicon Valley.",
+                analysis: "Ejemplo de cómo la academia se prostituye por fondos para investigación tecnológica.",
+                tags: ['Corrupción', 'Silicon Valley']
+            },
+            'gates': { id: 'gates', label: 'Bill Gates', x: -30, y: 15, cat: 'science', size: 10,
+                subtitle: "Filantropía Global",
+                profile: "Se reunió con Epstein numerosas veces *después* de su primera condena. Viajó en el Lolita Express.",
+                link: "Discutieron fondos filantrópicos colosales y proyectos de salud global. Melinda Gates citó a Epstein como causa de divorcio.",
+                analysis: "Gates buscaba la red de contactos de Epstein para el Nobel de la Paz. Comparten visión tecnocrática y eugenésica.",
+                tags: ['Salud', 'Vacunas', 'Microsoft']
+            },
+            'crispr': { id: 'crispr', label: 'CRISPR / Eugenesia', x: -5, y: 30, cat: 'science', size: 10,
+                subtitle: "Edición Genética",
+                profile: "Epstein estaba obsesionado con la eugenesia. Quería usar su rancho en Nuevo México para 'sembrar' la raza humana con su ADN.",
+                link: "Financió a científicos como George Church (Harvard) pioneros en genética.",
+                analysis: "El objetivo final no es dinero, es la evolución dirigida. Crear una casta biológica superior (Transhumanismo).",
+                tags: ['George Church', 'Harvard', 'ADN']
+            },
+            'minsky': { id: 'minsky', label: 'Marvin Minsky', x: -25, y: 25, cat: 'science', size: 8,
+                subtitle: "Padre de la IA",
+                profile: "Acusado por una víctima de Epstein de abuso sexual en la isla.",
+                link: "Organizó conferencias sobre IA en la isla de Epstein. Legitimó intelectualmente el proyecto.",
+                analysis: "La IA y el abuso de menores convergen en la falta de empatía humana de la élite tecnocrática.",
+                tags: ['Inteligencia Artificial', 'Abuso']
+            },
+            'edge': { id: 'edge', label: 'Edge Foundation', x: -15, y: 35, cat: 'science', size: 8,
+                subtitle: "El Club de los Intelectuales",
+                profile: "Dirigido por John Brockman. Reunía a la élite científica (Dawkins, Pinker, etc.) en cenas pagadas por Epstein.",
+                link: "Brockman era el agente literario que introdujo a Epstein en el círculo científico.",
+                analysis: "Epstein 'compró' a la comunidad científica para satisfacer su ego y promover el Darwinismo Social.",
+                tags: ['John Brockman', 'Cultura', 'Ciencia']
+            },
+
+            // --- IDEOLOGY & TECH (Purple/Cyan) ---
+            'technocracy': { id: 'technocracy', label: 'Tecnocracia', x: 20, y: 25, cat: 'ideology', size: 12,
+                subtitle: "El Gobierno de los Expertos",
+                profile: "Sistema de gestión social basado en datos, no en democracia. El sueño de Epstein y sus socios.",
+                link: "Conexión ideológica con el Trilateral Commission y el CFR.",
+                analysis: "Epstein es un síntoma de una élite que cree que las reglas morales no se aplican a los 'arquitectos' de la sociedad.",
+                tags: ['Brzezinski', 'Control', 'Futuro']
+            },
+            'thiel': { id: 'thiel', label: 'Peter Thiel', x: 10, y: 30, cat: 'tech', size: 10,
+                subtitle: "Palantir / Founders Fund",
+                profile: "Inversor libertario. Cofinanció Carbyne con Epstein. Creador de Palantir (software de vigilancia de la CIA/NSA).",
+                link: "Interés compartido en extensión de la vida (sangre joven/parabiosis) y vigilancia estatal.",
+                analysis: "Representa el ala 'Dark Enlightenment' (Ilustración Oscura) de Silicon Valley.",
+                tags: ['Palantir', 'Vigilancia', 'Sangre']
+            },
+            'musk': { id: 'musk', label: 'Elon Musk', x: 5, y: 40, cat: 'tech', size: 8,
+                subtitle: "SpaceX / Neuralink",
+                profile: "Presentado a Epstein por su hermano Kimbal. Epstein aseguró haber asesorado a Tesla durante la crisis de 2018 (Musk lo niega).",
+                link: "Interés convergente en colonización espacial y transhumanismo (Neuralink).",
+                analysis: "Aunque Musk ahora critique la cultura 'woke', es parte integral del complejo industrial-tecnológico que Epstein fomentaba.",
+                tags: ['Marte', 'Cibernética']
+            },
+            'china': { id: 'china', label: 'Modelo Chino (CCP)', x: 30, y: 35, cat: 'ideology', size: 10,
+                subtitle: "El Laboratorio de Control",
+                profile: "El PCC aplica el control social total. Élites occidentales (Gates, BlackRock) admiran su eficiencia.",
+                link: "Transferencia de tecnología genética y de IA desde occidente (financiada por estos grupos) hacia China.",
+                analysis: "Tesis Sutton: Occidente construye a su propio enemigo para justificar el control global. China es el modelo beta.",
+                tags: ['Crédito Social', 'Sutton', 'Transferencia']
+            },
+            'wef': { id: 'wef', label: 'WEF (Davos)', x: 40, y: 30, cat: 'ideology', size: 8,
+                subtitle: "Foro Económico Mundial",
+                profile: "Organización que promueve el 'Gran Reinicio'. Muchos asociados de Epstein son miembros o ponentes.",
+                link: "La agenda 2030 y el transhumanismo del WEF coinciden 100% con los intereses de inversión de la red Epstein.",
+                analysis: "El brazo de relaciones públicas de la oligarquía global.",
+                tags: ['Schwab', 'Globalismo', 'Agenda 2030']
+            },
+            'bitcoin_mit': { id: 'bitcoin_mit', label: 'Bitcoin & MIT DCI', x: -5, y: 15, cat: 'finance', size: 8,
+                subtitle: "Digital Currency Initiative",
+                profile: "Epstein financió nodos y desarrollo de Bitcoin en el MIT. No por anarquismo, sino por control.",
+                link: "Gensler (SEC) y Joi Ito. Interés en monitorear o cooptar el ledger.",
+                analysis: "El objetivo es pasar de Cripto libre a CBDC (Moneda Digital de Banco Central) programable.",
+                tags: ['Cripto', 'CBDC', 'Gensler']
+            }
+        };
+
+        // LINKS: Source -> Target | Type: 'money' (green), 'intel' (red), 'social' (gray)
+        const LINKS = [
+            { s: 'epstein', t: 'ghislaine', type: 'intel' },
+            { s: 'ghislaine', t: 'maxwell_robert', type: 'intel' },
+            { s: 'maxwell_robert', t: 'mossad', type: 'intel' },
+            { s: 'maxwell_robert', t: 'promis', type: 'intel' },
+            { s: 'maxwell_robert', t: 'mi6', type: 'intel' }, // Implicit in node data
+            { s: 'ghislaine', t: 'mossad', type: 'intel' },
+            { s: 'epstein', t: 'mossad', type: 'intel' },
+            { s: 'epstein', t: 'cia', type: 'intel' },
+            { s: 'cia', t: 'mena', type: 'intel' },
+            { s: 'epstein', t: 'mena', type: 'intel' },
+            
+            { s: 'epstein', t: 'wexner', type: 'money' },
+            { s: 'wexner', t: 'mega_group', type: 'social' },
+            { s: 'mega_group', t: 'bronfman', type: 'social' },
+            { s: 'bronfman', t: 'maxwell_robert', type: 'social' },
+            
+            { s: 'epstein', t: 'carbyne', type: 'money' },
+            { s: 'carbyne', t: 'unit8200', type: 'intel' },
+            { s: 'carbyne', t: 'ehud_barak', type: 'social' },
+            { s: 'carbyne', t: 'thiel', type: 'money' },
+            { s: 'ehud_barak', t: 'mossad', type: 'intel' },
+            
+            { s: 'epstein', t: 'rothschild', type: 'money' },
+            { s: 'epstein', t: 'blackrock', type: 'money' },
+            { s: 'epstein', t: 'leon_black', type: 'money' },
+            { s: 'epstein', t: 'jpmorgan', type: 'money' },
+            
+            { s: 'epstein', t: 'mit', type: 'money' },
+            { s: 'mit', t: 'joi_ito', type: 'social' },
+            { s: 'mit', t: 'minsky', type: 'social' },
+            { s: 'epstein', t: 'gates', type: 'money' },
+            { s: 'gates', t: 'mit', type: 'money' },
+            { s: 'epstein', t: 'crispr', type: 'money' },
+            { s: 'epstein', t: 'edge', type: 'social' },
+            { s: 'epstein', t: 'bitcoin_mit', type: 'money' },
+            
+            { s: 'epstein', t: 'technocracy', type: 'social' },
+            { s: 'technocracy', t: 'china', type: 'social' },
+            { s: 'technocracy', t: 'wef', type: 'social' },
+            { s: 'blackrock', t: 'china', type: 'money' },
+            { s: 'gates', t: 'china', type: 'money' },
+            { s: 'thiel', t: 'musk', type: 'social' },
+            { s: 'musk', t: 'technocracy', type: 'social' }
+        ];
+
+        /* --- APP LOGIC --- */
+        let chartInstance = null;
+        let activeFilter = 'all';
+        let selectedNode = null;
+
+        function init() {
+            renderNodeList();
+            initChart();
+            
+            // Search Listener
+            document.getElementById('searchInput').addEventListener('input', (e) => {
+                renderNodeList(e.target.value);
+            });
+
+            // Sidebar Toggle for Mobile
+            window.toggleSidebar = () => {
+                const sb = document.getElementById('sidebar');
+                sb.classList.toggle('-translate-x-full');
+                sb.classList.toggle('absolute'); // Fix for layout overlap
+            };
+        }
+
+        function renderNodeList(search = '') {
+            const container = document.getElementById('nodeList');
+            container.innerHTML = '';
+            
+            const nodes = Object.values(DATABASE).filter(n => {
+                const matchesSearch = n.label.toLowerCase().includes(search.toLowerCase());
+                const matchesFilter = activeFilter === 'all' || n.cat === activeFilter;
+                return matchesSearch && matchesFilter;
+            }).sort((a, b) => a.label.localeCompare(b.label));
+
+            if (nodes.length === 0) {
+                container.innerHTML = '<div class="p-4 text-gray-500 text-xs text-center">No se encontraron nodos.</div>';
+                return;
+            }
+
+            nodes.forEach(node => {
+                const el = document.createElement('div');
+                el.className = `node-list-item p-3 cursor-pointer border-b border-white/5 flex items-center justify-between ${selectedNode === node.id ? 'active' : ''}`;
+                el.onclick = () => selectNode(node.id);
+                el.innerHTML = `
+                    <div>
+                        <div class="text-xs font-bold text-gray-200">${node.label}</div>
+                        <div class="text-[10px] text-gray-500 truncate w-40">${node.subtitle}</div>
+                    </div>
+                    <div class="w-2 h-2 rounded-full" style="background-color: ${CATEGORIES[node.cat].color}"></div>
+                `;
+                container.appendChild(el);
+            });
+        }
+
+        function filterNodes(cat) {
+            activeFilter = cat;
+            // Update Buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-white/10', 'border-white', 'opacity-100');
+                btn.classList.add('opacity-50');
+            });
+            event.target.classList.remove('opacity-50');
+            event.target.classList.add('bg-white/10', 'opacity-100');
+            
+            renderNodeList(document.getElementById('searchInput').value);
+            highlightGraphFilter(cat);
+        }
+
+        function initChart() {
+            const ctx = document.getElementById('networkCanvas').getContext('2d');
+            
+            // Custom Plugin for connections
+            const linePlugin = {
+                id: 'connections',
+                beforeDatasetsDraw: (chart) => {
+                    const { ctx, scales: { x, y } } = chart;
+                    const dataset = chart.data.datasets[0].data;
+                    
+                    // Map IDs to coordinates
+                    const nodeMap = {};
+                    dataset.forEach(d => nodeMap[d.id] = { x: x.getPixelForValue(d.x), y: y.getPixelForValue(d.y) });
+
+                    ctx.save();
+                    LINKS.forEach(link => {
+                        const start = nodeMap[link.s];
+                        const end = nodeMap[link.t];
+                        
+                        if (!start || !end) return;
+
+                        // Filter Logic: If specific filter active, only show links between visible nodes
+                        const sNode = DATABASE[link.s];
+                        const tNode = DATABASE[link.t];
+                        const isDimmed = activeFilter !== 'all' && (sNode.cat !== activeFilter && tNode.cat !== activeFilter);
+
+                        ctx.beginPath();
+                        ctx.lineWidth = isDimmed ? 0.5 : (selectedNode && (link.s === selectedNode || link.t === selectedNode) ? 2 : 1);
+                        
+                        // Color Logic
+                        let stroke = '#333';
+                        if (!isDimmed) {
+                            if (link.type === 'money') stroke = 'rgba(16, 185, 129, 0.4)'; // Green
+                            if (link.type === 'intel') stroke = 'rgba(220, 38, 38, 0.4)'; // Red
+                            if (selectedNode && (link.s === selectedNode || link.t === selectedNode)) stroke = '#d4af37';
+                        } else {
+                            stroke = '#1a1a1a';
+                        }
+
+                        ctx.strokeStyle = stroke;
+                        ctx.moveTo(start.x, start.y);
+                        ctx.lineTo(end.x, end.y);
+                        ctx.stroke();
+                    });
+                    ctx.restore();
+                }
+            };
+
+            chartInstance = new Chart(ctx, {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        data: Object.values(DATABASE),
+                        pointBackgroundColor: (ctx) => {
+                            const cat = ctx.raw?.cat;
+                            return CATEGORIES[cat] ? CATEGORIES[cat].color : '#fff';
+                        },
+                        pointRadius: (ctx) => ctx.raw?.size || 5,
+                        pointHoverRadius: (ctx) => (ctx.raw?.size || 5) + 5,
+                        pointBorderColor: '#0a0a0a',
+                        pointBorderWidth: 2,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: { duration: 1000, easing: 'easeOutQuart' },
+                    layout: { padding: 20 },
+                    scales: {
+                        x: { display: false, min: -60, max: 60 },
+                        y: { display: false, min: -60, max: 60 }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: 'rgba(10, 10, 10, 0.9)',
+                            titleColor: '#d4af37',
+                            borderColor: '#333',
+                            borderWidth: 1,
+                            callbacks: {
+                                label: (ctx) => ctx.raw.subtitle
+                            }
+                        }
+                    },
+                    onClick: (e, elements) => {
+                        if (elements.length > 0) {
+                            const node = elements[0].element.$context.raw;
+                            selectNode(node.id);
+                        } else {
+                            closeDetails();
+                        }
+                    },
+                    onHover: (e, elements) => {
+                        e.native.target.style.cursor = elements.length ? 'pointer' : 'crosshair';
+                    }
+                },
+                plugins: [linePlugin]
+            });
+        }
+
+        function selectNode(id) {
+            selectedNode = id;
+            const data = DATABASE[id];
+            
+            // 1. Update UI List
+            renderNodeList(document.getElementById('searchInput').value); // Re-render to show active state
+            
+            // 2. Open Details Panel
+            const panel = document.getElementById('detailsPanel');
+            const empty = document.getElementById('emptyState');
+            const content = document.getElementById('contentState');
+            
+            panel.classList.remove('translate-x-full'); // Open for mobile/desktop
+            empty.classList.add('hidden');
+            content.classList.remove('hidden');
+            
+            // 3. Inject Data
+            document.getElementById('detailCategory').innerText = CATEGORIES[data.cat].label;
+            document.getElementById('detailCategory').style.color = CATEGORIES[data.cat].color;
+            document.getElementById('detailTitle').innerText = data.label;
+            document.getElementById('detailSubtitle').innerText = data.subtitle;
+            document.getElementById('detailProfile').innerText = data.profile;
+            document.getElementById('detailLink').innerText = data.link;
+            document.getElementById('detailAnalysis').innerText = data.analysis;
+            
+            const tagsContainer = document.getElementById('detailTags');
+            tagsContainer.innerHTML = '';
+            data.tags.forEach(tag => {
+                const span = document.createElement('span');
+                span.className = 'text-[10px] uppercase px-2 py-1 rounded border border-white/10 text-gray-400 bg-white/5';
+                span.innerText = `#${tag}`;
+                tagsContainer.appendChild(span);
+            });
+
+            // 4. Update Chart focus
+            chartInstance.update();
+        }
+
+        function closeDetails() {
+            selectedNode = null;
+            document.getElementById('detailsPanel').classList.add('translate-x-full'); // Hide on mobile mainly
+            renderNodeList();
+            chartInstance.update();
+        }
+
+        function highlightGraphFilter(cat) {
+            if (!chartInstance) return;
+            
+            const dataset = chartInstance.data.datasets[0];
+            dataset.pointBackgroundColor = (ctx) => {
+                const node = ctx.raw;
+                if (cat === 'all' || node.cat === cat) {
+                    return CATEGORIES[node.cat].color;
+                }
+                return '#333'; // Dimmed color
+            };
+            dataset.pointRadius = (ctx) => {
+                const node = ctx.raw;
+                if (cat !== 'all' && node.cat !== cat) return 3; // Shrink dimmed
+                return node.size;
+            };
+            
+            chartInstance.update();
+        }
+
+        // Start
+        init();
+
+    </script>
+</body>
+</html>
