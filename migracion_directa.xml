@@ -1,68 +1,20 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:ns0="http://purl.org/rss/1.0/modules/content/" version="2.0" ns0:encoding="UTF-8">
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/" xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:admin="http://wordpress.org/export/1.2/admin/" version="2.0">
   <channel>
-    <title>Terapia Liberal Migration</title>
+    <title>Terapia Liberal</title>
     <link>https://terapialiberal.github.io/</link>
-    <description>Migración de contenido a Substack</description>
-    <ns1:wxr_version xmlns:ns1="http://wordpress.org/export/1.2/">1.2</ns1:wxr_version>
+    <description>Pensamiento Crítico y Geopolítica</description>
+    <language>es</language>
+    <wp:wxr_version>1.2</wp:wxr_version>
+    <wp:base_site_url>https://terapialiberal.github.io/</wp:base_site_url>
+    <wp:base_blog_url>https://terapialiberal.github.io/</wp:base_blog_url>
     <item>
-      <title>Admin</title>
-      <ns0:encoded><![CDATA[<!-- Main Content -->
-<div class="container mx-auto" id="main-content">
-<h1 class="text-4xl md:text-5xl font-bold mb-8 text-center gold-text">Panel de Administración</h1>
-<div class="section-bg p-6 md:p-8 rounded-lg mb-8">
-<h2 class="text-2xl font-bold mb-6 gold-text">Detalles del Nuevo Artículo</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-<div>
-<label class="block text-gray-300 text-sm font-bold mb-2" for="title">Título del Artículo</label>
-<input id="title" placeholder="Ej: El Gran Reinicio y la Agenda 2030" type="text"/>
-</div>
-<div>
-<label class="block text-gray-300 text-sm font-bold mb-2" for="video_id">ID del Video de YouTube (Opcional)</label>
-<input id="video_id" placeholder="Ej: dQw4w9WgXcQ (solo el ID)" type="text"/>
-</div>
-</div>
-<div class="mb-6">
-<label class="block text-gray-300 text-sm font-bold mb-2" for="description">Descripción (para la tarjeta del index)</label>
-<textarea id="description" placeholder="Una breve descripción que aparecerá en la página principal." rows="3"></textarea>
-</div>
-<div class="mb-6">
-<label class="block text-gray-300 text-sm font-bold mb-2" for="article_html">Contenido HTML del Artículo (de genspark)</label>
-<textarea id="article_html" placeholder="Pega aquí el HTML completo del artículo generado." rows="10"></textarea>
-</div>
-<button class="btn-primary w-full text-xl" onclick="generateFiles()">
-                Generar Códigos
-            </button>
-</div>
-<!-- Outputs Section -->
-<div class="hidden" id="outputs">
-<h2 class="text-3xl font-bold mb-6 text-center gold-text">Códigos Generados</h2>
-<div class="output-box mb-6">
-<h3 class="text-xl font-bold mb-3 gold-text">1. HTML para el Nuevo Artículo</h3>
-<p class="text-gray-400 text-sm mb-3">Copia este código y guárdalo en un nuevo archivo dentro de la carpeta `articles/`. Nómbralo usando el título, por ejemplo: `el-gran-reinicio.html`.</p>
-<textarea class="mb-3" id="output_article_html" readonly=""></textarea>
-<button class="btn-secondary w-full" onclick="copyToClipboard('output_article_html')">
-<i class="fas fa-copy mr-2"></i> Copiar HTML del Artículo
-                </button>
-</div>
-<div class="output-box">
-<h3 class="text-xl font-bold mb-3 gold-text">2. HTML Actualizado para `index.html`</h3>
-<p class="text-gray-400 text-sm mb-3">Copia TODO este código y reemplaza el contenido completo de tu archivo `index.html` en la raíz del proyecto.</p>
-<textarea class="mb-3" id="output_index_html" readonly=""></textarea>
-<button class="btn-secondary w-full" onclick="copyToClipboard('output_index_html')">
-<i class="fas fa-copy mr-2"></i> Copiar HTML de Index
-                </button>
-</div>
-</div>
-</div>]]></ns0:encoded>
-      <ns2:post_date xmlns:ns2="http://wordpress.org/export/1.2/">2026-02-26 14:25:09</ns2:post_date>
-      <ns3:status xmlns:ns3="http://wordpress.org/export/1.2/">publish</ns3:status>
-      <ns4:post_type xmlns:ns4="http://wordpress.org/export/1.2/">post</ns4:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/a/d/m/i/n/h/t/m/l/</guid>
-    </item>
-    <item>
-      <title>Analisis Charlie Kirk 2025</title>
-      <ns0:encoded><![CDATA[<!-- Video Section -->
+      <title>El Asesinato de Charlie Kirk y el Fracturamiento del Discurso Político Estadounidense</title>
+      <link>https://terapialiberal.github.io/articles/analisis_charlie_kirk_2025.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/analisis_charlie_kirk_2025.html</guid>
+      <description>Análisis profundo del asesinato de Charlie Kirk en septiembre de 2025, examinando las operaciones psicológicas, manipulación mediática y factores económicos que llevaron a este magnicidio. Exploración de las implicaciones para la libertad de expresión y la estabilidad democrática en Estados Unidos.</description>
+      <content:encoded><![CDATA[<!-- Video Section -->
 <section class="video-section">
 <div class="video-container">
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" src="https://youtube.com/embed/GMTSm7ycs8E?feature=share" title="Análisis: Charlie Kirk - Violencia Política y Libertad de Expresión">
@@ -340,19 +292,27 @@
 <li><a href="https://www.cnn.com/2025/09/15/politics/kirk-murder-cox-trump-johnson-analysis" target="_blank">CNN: Consecuencias fatales del asesinato</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Reprisals_against_commentators_on_the_Charlie_Kirk_assassination" target="_blank">Wikipedia: Represalias contra comentaristas</a></li>
 </ul>
-</section>]]></ns0:encoded>
-      <ns5:post_date xmlns:ns5="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns5:post_date>
-      <ns6:status xmlns:ns6="http://wordpress.org/export/1.2/">publish</ns6:status>
-      <ns7:post_type xmlns:ns7="http://wordpress.org/export/1.2/">post</ns7:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/a/n/a/l/i/s/i/s/_/c/h/a/r/l/i/e/_/k/i/r/k/_/2/0/2/5/h/t/m/l/</guid>
+</section>]]></content:encoded>
+      <wp:post_id>1001</wp:post_id>
+      <wp:post_date>2025-10-24 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2025-10-24 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>analisis_charlie_kirk_2025</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>Analisis Great Reset Deuda Mundial</title>
-      <ns0:encoded><![CDATA[<!-- Header -->
-
-<!-- Main Content -->
-<main>
-<!-- Video Section -->
+      <title>El Gran Reseteo de la Deuda Mundial: Análisis Profundo de la Crisis Económica Global</title>
+      <link>https://terapialiberal.github.io/articles/analisis_great_reset_deuda_mundial.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/analisis_great_reset_deuda_mundial.html</guid>
+      <description>Un análisis detallado sobre la crisis de deuda global, el Great Reset y las implicaciones económicas y geopolíticas del sistema financiero mundial actual, basado en el video de Terapia Liberal y fuentes académicas.</description>
+      <content:encoded><![CDATA[<!-- Video Section -->
 <section class="video-section">
 <div class="video-container">
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" class="video-embed" src="https://www.youtube.com/embed/a9gcaF--yfk?start=3&amp;rel=0&amp;modestbranding=1&amp;showinfo=0" title="Análisis: El Gran Reseteo de la Deuda Mundial">
@@ -572,29 +532,27 @@
 </ul>
 <p><strong>Imágenes Utilizadas:</strong> Todas las imágenes son de dominio público o bajo licencia de uso justo, obtenidas de fuentes oficiales como The Atlantic Council, Harvard, Reuters, Associated Press, y otras instituciones académicas y mediáticas reconocidas.</p>
 </div>
-</section>
-</main>
-<!-- Back to Top Button -->
-<button class="back-to-top" id="backToTop" title="Volver arriba">
-<i class="fas fa-arrow-up"></i>
-</button>
-<!-- Footer -->
-
-<!-- Twitter Widgets Script -->
-
-<!-- JavaScript -->]]></ns0:encoded>
-      <ns8:post_date xmlns:ns8="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns8:post_date>
-      <ns9:status xmlns:ns9="http://wordpress.org/export/1.2/">publish</ns9:status>
-      <ns10:post_type xmlns:ns10="http://wordpress.org/export/1.2/">post</ns10:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/a/n/a/l/i/s/i/s/_/g/r/e/a/t/_/r/e/s/e/t/_/d/e/u/d/a/_/m/u/n/d/i/a/l/h/t/m/l/</guid>
+</section>]]></content:encoded>
+      <wp:post_id>1002</wp:post_id>
+      <wp:post_date>2025-10-24 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2025-10-24 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>analisis_great_reset_deuda_mundial</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>Analisis Supremacia Ia Geopolitica</title>
-      <ns0:encoded><![CDATA[<!-- Header -->
-
-<!-- Main Content -->
-<main>
-<!-- Article Header -->
+      <title>🚨 La Lucha por la Supremacía del Mañana es HOY: Geopolítica de la IA</title>
+      <link>https://terapialiberal.github.io/articles/analisis_supremacia_ia_geopolitica.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/analisis_supremacia_ia_geopolitica.html</guid>
+      <description>Análisis exhaustivo de cómo la carrera por la inteligencia artificial está redefiniendo el poder global. JPMorgan advierte, China controla tierras raras, y Londres es el verdadero centro del poder. La guerra comercial es una cortina de humo para el mayor robo de riqueza de la historia.</description>
+      <content:encoded><![CDATA[<!-- Article Header -->
 <div class="article-header">
 <h1>🚨 La Lucha por la Supremacía del Mañana es HOY</h1>
 <div class="article-meta">
@@ -927,26 +885,27 @@
 <div class="source-domain">CryptoSlate</div>
 </div>
 </div>
-</section>
-</main>
-<!-- Footer -->
-
-<!-- Back to Top Button -->
-<button aria-label="Volver arriba" id="backToTop">
-<i class="fas fa-arrow-up"></i>
-</button>
-<!-- Twitter Widgets Script -->
-
-<!-- Main JavaScript -->]]></ns0:encoded>
-      <ns11:post_date xmlns:ns11="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns11:post_date>
-      <ns12:status xmlns:ns12="http://wordpress.org/export/1.2/">publish</ns12:status>
-      <ns13:post_type xmlns:ns13="http://wordpress.org/export/1.2/">post</ns13:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/a/n/a/l/i/s/i/s/_/s/u/p/r/e/m/a/c/i/a/_/i/a/_/g/e/o/p/o/l/i/t/i/c/a/h/t/m/l/</guid>
+</section>]]></content:encoded>
+      <wp:post_id>1003</wp:post_id>
+      <wp:post_date>2025-10-15 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2025-10-15 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>analisis_supremacia_ia_geopolitica</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>Analisis Tecnocracia Digital</title>
-      <ns0:encoded><![CDATA[<main>
-<section class="video-section">
+      <title>El Avance de la Tecnocracia Digital: Análisis del ID Digital de Starmer</title>
+      <link>https://terapialiberal.github.io/articles/analisis_tecnocracia_digital.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/analisis_tecnocracia_digital.html</guid>
+      <description>Análisis profundo del sistema de identificación digital obligatorio anunciado por Keir Starmer y su conexión con la red global de vigilancia technocrática. Incluye el rechazo de Palantir, la coordinación de 17 países y las implicaciones para la libertad individual.</description>
+      <content:encoded><![CDATA[<section class="video-section">
 <h1 style="font-size: 2.5rem; color: var(--primary-gold); margin-bottom: 2rem;">
                 El Avance de la Tecnocracia Digital: Análisis del ID Digital de Starmer
             </h1>
@@ -1064,20 +1023,28 @@
 <div class="source-description">Investigación de AP sobre transferencia tecnológica</div>
 </div>
 </div>
-</section>
-</main>
-
-<div class="back-to-top" id="backToTop">
-<i class="fas fa-arrow-up"></i>
-</div>]]></ns0:encoded>
-      <ns14:post_date xmlns:ns14="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns14:post_date>
-      <ns15:status xmlns:ns15="http://wordpress.org/export/1.2/">publish</ns15:status>
-      <ns16:post_type xmlns:ns16="http://wordpress.org/export/1.2/">post</ns16:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/a/n/a/l/i/s/i/s/_/t/e/c/n/o/c/r/a/c/i/a/_/d/i/g/i/t/a/l/h/t/m/l/</guid>
+</section>]]></content:encoded>
+      <wp:post_id>1004</wp:post_id>
+      <wp:post_date>2025-10-08 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2025-10-08 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>analisis_tecnocracia_digital</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>Caos-Programado-Crisis-Total</title>
-      <ns0:encoded><![CDATA[<div class="article-header">
+      <title>🚨 Caos Programado: El Camino hacia una Crisis Total</title>
+      <link>https://terapialiberal.github.io/articles/caos-programado-crisis-total.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/caos-programado-crisis-total.html</guid>
+      <description>Análisis profundo del plan tecnocrático detrás del caos aparente en Estados Unidos. Exploramos las conexiones entre Peter Thiel, Palantir, la Operación Gladio y el futuro de la democracia americana.</description>
+      <content:encoded><![CDATA[<article>
+<div class="article-header">
 <h1 class="article-title">🚨 Caos Programado: El Camino hacia una Crisis Total</h1>
 <p class="article-subtitle">Un análisis profundo del plan tecnocrático que se despliega ante nuestros ojos</p>
 <div class="article-meta">
@@ -1273,19 +1240,28 @@
 </ul>
 </div>
 </div>
-</div>]]></ns0:encoded>
-      <ns17:post_date xmlns:ns17="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns17:post_date>
-      <ns18:status xmlns:ns18="http://wordpress.org/export/1.2/">publish</ns18:status>
-      <ns19:post_type xmlns:ns19="http://wordpress.org/export/1.2/">post</ns19:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/c/a/o/s/-/p/r/o/g/r/a/m/a/d/o/-/c/r/i/s/i/s/-/t/o/t/a/l/h/t/m/l/</guid>
+</div>
+</article>]]></content:encoded>
+      <wp:post_id>1005</wp:post_id>
+      <wp:post_date>2025-10-10 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2025-10-10 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>caos-programado-crisis-total</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>Cometa Atlas Ritual Elites Analisis</title>
-      <ns0:encoded><![CDATA[<!-- Header -->
-
-<!-- Main Content -->
-<main>
-<!-- Video Section -->
+      <title>🚨 Cometa 3I/ATLAS: ¿Ritual de Élites, Operación Psicológica o Amenaza Real?</title>
+      <link>https://terapialiberal.github.io/articles/cometa_atlas_ritual_elites_analisis.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/cometa_atlas_ritual_elites_analisis.html</guid>
+      <description>Investigación profunda sobre las conexiones entre el cometa interestelar ATLAS, Peter Thiel, Palantir.</description>
+      <content:encoded><![CDATA[<!-- Video Section -->
 <section class="video-section">
 <div class="video-wrapper">
 <iframe allowfullscreen="" src="https://www.youtube.com/embed/0KJOpBufUc4"></iframe>
@@ -1669,28 +1645,27 @@
 <blockquote class="twitter-tweet" data-theme="dark">
 <p dir="ltr" lang="en">What the hell is 3i Atlas? I sat down with Avi Loeb to get the details <a href="https://t.co/tLKGQSHcSN">https://t.co/tLKGQSHcSN</a> <a href="https://t.co/gCcbdyJ6uw">pic.twitter.com/gCcbdyJ6uw</a></p>— Joe Rogan (@joerogan) <a href="https://twitter.com/joerogan/status/1983222579562193263">October 28, 2025</a>
 </blockquote>
-</section>
-</main>
-<!-- Footer -->
-
-<!-- Back to Top Button -->
-<button id="back-to-top" title="Volver arriba">
-<i class="fas fa-arrow-up"></i>
-</button>
-<!-- Twitter Widgets Script -->
-
-<!-- Main JavaScript -->]]></ns0:encoded>
-      <ns20:post_date xmlns:ns20="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns20:post_date>
-      <ns21:status xmlns:ns21="http://wordpress.org/export/1.2/">publish</ns21:status>
-      <ns22:post_type xmlns:ns22="http://wordpress.org/export/1.2/">post</ns22:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/c/o/m/e/t/a/_/a/t/l/a/s/_/r/i/t/u/a/l/_/e/l/i/t/e/s/_/a/n/a/l/i/s/i/s/h/t/m/l/</guid>
+</section>]]></content:encoded>
+      <wp:post_id>1006</wp:post_id>
+      <wp:post_date>2025-10-29 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2025-10-29 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>cometa_atlas_ritual_elites_analisis</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>Cuarto-Giro</title>
-      <ns0:encoded><![CDATA[<!-- Header -->
-
-<main>
-<!-- Hero Section -->
+      <title>El Cuarto Giro: Análisis de Ciclos Históricos y Crisis Institucional</title>
+      <link>https://terapialiberal.github.io/articles/cuarto-giro.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/cuarto-giro.html</guid>
+      <description>Análisis profundo de la teoría del Cuarto Giro de Strauss-Howe aplicada al contexto político y económico actual, explorando la crisis institucional y las transformaciones sistémicas en curso.</description>
+      <content:encoded><![CDATA[<!-- Hero Section -->
 <section class="hero-section fade-in">
 <h1 class="hero-title">El Cuarto Giro</h1>
 <p class="hero-subtitle">Análisis de Ciclos Históricos y Crisis Institucional en la Era Trump</p>
@@ -1846,26 +1821,27 @@
 </ul>
 </div>
 </div>
-</section>
-</main>
-<!-- Footer -->
-
-<!-- Back to Top Button -->
-<button class="back-to-top" id="backToTop" onclick="scrollToTop()">
-<i class="fas fa-arrow-up"></i>
-</button>]]></ns0:encoded>
-      <ns23:post_date xmlns:ns23="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns23:post_date>
-      <ns24:status xmlns:ns24="http://wordpress.org/export/1.2/">publish</ns24:status>
-      <ns25:post_type xmlns:ns25="http://wordpress.org/export/1.2/">post</ns25:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/c/u/a/r/t/o/-/g/i/r/o/h/t/m/l/</guid>
+</section>]]></content:encoded>
+      <wp:post_id>1007</wp:post_id>
+      <wp:post_date>2025-08-31 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2025-08-31 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>cuarto-giro</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>Divideyconquista</title>
-      <ns0:encoded><![CDATA[<!-- Header -->
-
-<!-- Main Content -->
-<main>
-<!-- Video Section -->
+      <title>La División del Mundo en Bloques: El Nuevo Orden Geopolítico</title>
+      <link>https://terapialiberal.github.io/articles/divideyconquista.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/divideyconquista.html</guid>
+      <description>Análisis profundo de cómo se está ejecutando en tiempo real la división del mundo en bloques económicos y geopolíticos, la reestructuración del sistema de gobernanza mundial, y la lucha por el control del Heartland euroasiático. Examina la Iniciativa de Gobernanza Global de Xi Jinping, la estrategia de múltiples bandas de Trump, la guerra por la energía y las materias primas, y el emergente tecnato global.</description>
+      <content:encoded><![CDATA[<!-- Video Section -->
 <section class="video-section">
 <div class="video-container">
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/3nfqpb2RLNU" title="Geopolítica Actual - Análisis">
@@ -2080,26 +2056,27 @@
 </div>
 </div>
 </div>
-</section>
-</main>
-<!-- Back to Top Button -->
-<div class="back-to-top" onclick="scrollToTop()">
-<i class="fas fa-chevron-up"></i>
-</div>
-<!-- Footer -->
-
-<!-- Twitter Widgets Script -->
-
-<!-- JavaScript -->]]></ns0:encoded>
-      <ns26:post_date xmlns:ns26="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns26:post_date>
-      <ns27:status xmlns:ns27="http://wordpress.org/export/1.2/">publish</ns27:status>
-      <ns28:post_type xmlns:ns28="http://wordpress.org/export/1.2/">post</ns28:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/d/i/v/i/d/e/y/c/o/n/q/u/i/s/t/a/h/t/m/l/</guid>
+</section>]]></content:encoded>
+      <wp:post_id>1008</wp:post_id>
+      <wp:post_date>2025-10-01 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2025-10-01 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>divideyconquista</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>Dueños-Maga</title>
-      <ns0:encoded><![CDATA[<main>
-<!-- Video Principal -->
+      <title>INVESTIGACION: LOS DUEÑOS DE MAGA Y...EL FUTURO?</title>
+      <link>https://terapialiberal.github.io/articles/dueños-maga.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/dueños-maga.html</guid>
+      <description>Una investigación sobre los dueños de MAGA y las proyecciones futuras.</description>
+      <content:encoded><![CDATA[<!-- Video Principal -->
 <section class="video-section">
 <h1 class="article-title">
                 INVESTIGACIÓN: Los Dueños de MAGA y...¿El Futuro?
@@ -2298,28 +2275,27 @@
 <p><a href="https://www.mind-war.com/p/catholic-coup-jd-vance-paypal-mafia" target="_blank">Catholic Coup: JD Vance, PayPal Mafia, Opus Dei &amp; Knights of Malta</a></p>
 </div>
 </div>
-</section>
-</main>
-
-<button id="backToTop" title="Volver arriba">
-<i class="fas fa-arrow-up"></i>
-</button>
-<!-- JavaScript -->
-
-
-<!-- Twitter Widgets -->]]></ns0:encoded>
-      <ns29:post_date xmlns:ns29="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns29:post_date>
-      <ns30:status xmlns:ns30="http://wordpress.org/export/1.2/">publish</ns30:status>
-      <ns31:post_type xmlns:ns31="http://wordpress.org/export/1.2/">post</ns31:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/d/u/e/ñ/o/s/-/m/a/g/a/h/t/m/l/</guid>
+</section>]]></content:encoded>
+      <wp:post_id>1009</wp:post_id>
+      <wp:post_date>2025-08-07 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2025-08-07 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>dueños-maga</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>El-Gran-Tablero</title>
-      <ns0:encoded><![CDATA[<!-- Header -->
-
-<!-- Main Content -->
-<main class="pt-24">
-<!-- Hero Section -->
+      <title>El Gran Tablero Geopolítico - Brzezinski marca el Rumbo Multipolar</title>
+      <link>https://terapialiberal.github.io/articles/el-gran-tablero.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/el-gran-tablero.html</guid>
+      <description>Análisis profundo de la estrategia geopolítica de Zbigniew Brzezinski y su influencia en el orden mundial actual. Desde las ideas de "El Gran Tablero" hasta la formación de la coalición China-Rusia-Irán.</description>
+      <content:encoded><![CDATA[<!-- Hero Section -->
 <section class="py-20 text-center" data-tags="video, introduccion, geopolitica, brzezinski, multipolar">
 <div class="container mx-auto px-6">
 <div class="max-w-4xl mx-auto">
@@ -2651,17 +2627,27 @@
 </div>
 </div>
 </div>
-</section>
-</main>
-<!-- Footer -->]]></ns0:encoded>
-      <ns32:post_date xmlns:ns32="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns32:post_date>
-      <ns33:status xmlns:ns33="http://wordpress.org/export/1.2/">publish</ns33:status>
-      <ns34:post_type xmlns:ns34="http://wordpress.org/export/1.2/">post</ns34:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/e/l/-/g/r/a/n/-/t/a/b/l/e/r/o/h/t/m/l/</guid>
+</section>]]></content:encoded>
+      <wp:post_id>1010</wp:post_id>
+      <wp:post_date>2025-07-05 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2025-07-05 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>el-gran-tablero</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>El-Mundo-Se-Fractura-Recursos-Tecnologicos</title>
-      <ns0:encoded><![CDATA[<!-- Video Section -->
+      <title>El MUNDO se FRACTURA: La Batalla SECRETA por los Recursos Tecnológicos</title>
+      <link>https://terapialiberal.github.io/articles/el-mundo-se-fractura-recursos-tecnologicos.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/el-mundo-se-fractura-recursos-tecnologicos.html</guid>
+      <description>Análisis profundo de la guerra económica por minerales críticos y semiconductores que está redibujando el mapa del poder mundial. Geopolítica, recursos tecnológicos y los verdaderos beneficiarios del conflicto.</description>
+      <content:encoded><![CDATA[<!-- Video Section -->
 <section class="video-section">
 <div class="video-container">
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/mQX6Ef5QwMk?start=2&amp;autoplay=0&amp;controls=1&amp;rel=0&amp;modestbranding=1"></iframe>
@@ -2792,19 +2778,27 @@
 <li><a href="https://centredelas.org/actualitat/el-negocio-de-la-guerra-el-neoliberalismo-militar/?lang=es" rel="noopener noreferrer" target="_blank">El negocio de la guerra - Centre Delàs</a></li>
 <li><a href="https://vientosur.info/mas-destructivo-y-mas-rentable-el-emplazamiento-de-trump-al-sistema-militar-industrial-de-estados-unidos/" rel="noopener noreferrer" target="_blank">El emplazamiento de Trump al sistema militar-industrial - Viento Sur</a></li>
 </ul>
-</section>]]></ns0:encoded>
-      <ns35:post_date xmlns:ns35="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns35:post_date>
-      <ns36:status xmlns:ns36="http://wordpress.org/export/1.2/">publish</ns36:status>
-      <ns37:post_type xmlns:ns37="http://wordpress.org/export/1.2/">post</ns37:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/e/l/-/m/u/n/d/o/-/s/e/-/f/r/a/c/t/u/r/a/-/r/e/c/u/r/s/o/s/-/t/e/c/n/o/l/o/g/i/c/o/s/h/t/m/l/</guid>
+</section>]]></content:encoded>
+      <wp:post_id>1011</wp:post_id>
+      <wp:post_date>2025-11-07 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2025-11-07 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>el-mundo-se-fractura-recursos-tecnologicos</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
       <title>Epsteininmersivo</title>
-      <ns0:encoded><![CDATA[<!-- HEADER -->
-
-<!-- MAIN LAYOUT -->
-<main class="flex-1 flex overflow-hidden">
-<!-- LEFT SIDEBAR: CONTROLS & LIST -->
+      <link>https://terapialiberal.github.io/articles/epsteininmersivo.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/epsteininmersivo.html</guid>
+      <description></description>
+      <content:encoded><![CDATA[<!-- LEFT SIDEBAR: CONTROLS & LIST -->
 <aside class="w-80 bg-[#0f0f0f] border-r border-white/10 flex flex-col shrink-0 z-20 transform transition-transform duration-300 absolute md:relative h-full" id="sidebar">
 <!-- Search & Filter -->
 <div class="p-4 border-b border-white/10 space-y-4">
@@ -2889,271 +2883,62 @@
 </div>
 </div>
 </div>
-</aside>
-</main>]]></ns0:encoded>
-      <ns38:post_date xmlns:ns38="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns38:post_date>
-      <ns39:status xmlns:ns39="http://wordpress.org/export/1.2/">publish</ns39:status>
-      <ns40:post_type xmlns:ns40="http://wordpress.org/export/1.2/">post</ns40:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/e/p/s/t/e/i/n/i/n/m/e/r/s/i/v/o/h/t/m/l/</guid>
+</aside>]]></content:encoded>
+      <wp:post_id>1012</wp:post_id>
+      <wp:post_date>2026-02-26 14:58:28</wp:post_date>
+      <wp:post_date_gmt>2026-02-26 14:58:28</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>epsteininmersivo</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>Gaza-Venezuela-Arquitectos-Ww3</title>
-      <ns0:encoded><![CDATA[<!-- Header -->
-
-<!-- Main Content -->
-<div class="container">
-<h1>🔍 GAZA S.A. y VENEZUELA INC.: Así Operan los Arquitectos de la WW3</h1>
-<div class="video-container">
-<iframe allowfullscreen="" src="https://www.youtube.com/embed/9wl8kjn7pV0"></iframe>
+      <title>GAZA S.A. y VENEZUELA INC.: Así Operan los Arquitectos de la WW3</title>
+      <link>https://terapialiberal.github.io/articles/gaza-venezuela-arquitectos-ww3.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/gaza-venezuela-arquitectos-ww3.html</guid>
+      <description>Investigación profunda sobre cómo Jared Kushner, Tony Blair y megainversores globales transforman conflictos geopolíticos en oportunidades de negocio multimillonarias. Project Sunrise, IMEC, y el patrón que se repite en Gaza, Venezuela y Ucrania.</description>
+      <content:encoded><![CDATA[<div class="logo-section">
+<img alt="Terapia Liberal Logo" class="logo-img" src="https://yt3.ggpht.com/ZzVyDrXt4x8YWoKbISHZzC9CCtkEPCN4GRET1Xxf_wssNyw7mfN-xTbBmpwEJHO0DRQrg0Dgug=s68-c-k-c0x00ffffff-no-rj"/>
+<span class="brand-name">TERAPIA LIBERAL</span>
 </div>
-<div class="intro">
-<p><strong>¿Qué sucede cuando los conflictos geopolíticos se transforman en oportunidades de inversión?</strong> Este análisis desentraña la compleja red de intereses que conecta la destrucción de Gaza con megaproyectos de reconstrucción valuados en más de <strong>$112 mil millones</strong>, la intervención en Venezuela para controlar sus reservas petroleras, y un patrón que se repite en Ucrania, Irak y más allá.</p>
-<p>Desde las oficinas de <a href="https://en.wikipedia.org/wiki/Affinity_Partners" rel="noopener noreferrer" target="_blank">Affinity Partners</a> hasta los pasillos de la Casa Blanca, pasando por los fondos soberanos del Golfo, descubriremos cómo <strong>Jared Kushner</strong>, <strong>Tony Blair</strong> y una élite de megainversores diseñan el futuro de regiones devastadas por la guerra. No se trata de teorías conspirativas, sino de documentos oficiales, inversiones rastreables y planes públicamente revelados.</p>
-</div>
-<h2>I. Los Números del Horror: Gaza Bajo el Microscopio</h2>
-<img alt="Mapa de Gaza Strip mostrando el territorio palestino" class="content-image" src="https://sspark.genspark.ai/cfimages?u1=Na9HlRYmdhdA7%2BQ%2BxWdQ%2F87x8AiTI8QY8LTqNlmCOQIlN8FJ%2BPBCfjp3Jhe9UbVqDDhbbGLQuWpPgXpmuo5pu9Xw2PqYn54UDTJzjVtM%2BUWHre1QgaXn1T2083rjgRYLVx4tWnCWwybcEGcE4vVtjiEYVWw8vmu1FJY%3D&amp;u2=UPNKE2Sq7TQ8Gzyj&amp;width=2560"/>
-<p>Comencemos con datos que la mayoría de los medios prefieren ignorar. Según <a href="https://www.un.org/unispal/document/press-briefing-francesca-albanese-16sep25/" rel="noopener noreferrer" target="_blank">Francesca Albanese, Relatora Especial de la ONU</a> para los territorios palestinos ocupados, el número oficial de muertos en Gaza — aproximadamente 45,000 según el Ministerio de Salud de Gaza — podría ser apenas la punta del iceberg.</p>
-<div class="highlight-box">
-<p>"Algunos académicos y científicos estiman que el número real de muertos en Gaza podría alcanzar <strong>680,000 personas</strong>. Si se confirma, 380,000 de ellos serían bebés menores de cinco años." — <strong>Francesca Albanese</strong>, septiembre 2025</p>
-</div>
-<p>Esta cifra escalofriante incluye no solo las víctimas directas de bombardeos, sino también las <strong>muertes indirectas</strong> causadas por:</p>
-<ul>
-<li><strong>Colapso del sistema sanitario:</strong> Más del 80% de los hospitales destruidos o inoperativos</li>
-<li><strong>Crisis alimentaria:</strong> Hambruna generalizada con acceso limitado a agua potable</li>
-<li><strong>Enfermedades:</strong> Brotes de cólera, hepatitis y otras enfermedades prevenibles</li>
-<li><strong>Fallecimientos bajo escombros:</strong> Miles de cuerpos aún enterrados, sin contabilizar</li>
-</ul>
-<p>Mientras los medios debaten cifras, emerge una narrativa paralela: la de la <strong>reconstrucción como oportunidad de negocio</strong>. Y aquí es donde nuestro análisis toma un giro inquietante.</p>
-<h3>El Contexto Histórico: De los Acuerdos de Abraham al 7 de Octubre</h3>
-<img alt="Mapa de los Acuerdos de Abraham mostrando países árabes normalizando relaciones con Israel" class="content-image" src="https://sspark.genspark.ai/cfimages?u1=GyO%2FTGOSjD4IwjRKpNjMmVIww%2FLjYwP9fVbwyQJ92izHBpInO0hDK%2FEcXoTs2QWG2sPHww7ERwFaVZjS%2F616XL8BZNYEwjfzfh0qp8RMpmmQFQiyJFv3EPIAZ%2BBxrMCXvYQBARyFHpqxV7VkzKvMiKCWFL6w&amp;u2=n7oEMDHoGIHJZ7rr&amp;width=2560"/>
-<p>Los <a href="https://en.wikipedia.org/wiki/Abraham_Accords" rel="noopener noreferrer" target="_blank">Acuerdos de Abraham</a> de 2020, negociados por Jared Kushner durante la administración Trump, establecieron la normalización diplomática entre Israel y varios estados árabes: Emiratos Árabes Unidos, Bahréin, Sudán y Marruecos. Pero estos acuerdos fueron mucho más que diplomacia.</p>
-<p>Representaron una <strong>realineación geopolítica masiva</strong> con tres objetivos estratégicos:</p>
-<ol>
-<li><strong>Aislamiento de Irán:</strong> Crear un bloque anti-iraní en Medio Oriente</li>
-<li><strong>Integración económica:</strong> Facilitar inversiones del Golfo en tecnología israelí</li>
-<li><strong>Infraestructura regional:</strong> Preparar el terreno para megaproyectos de conectividad</li>
-</ol>
-<p>Según <a href="https://www.timesofisrael.com/for-years-netanyahu-propped-up-hamas-now-its-blown-up-in-our-faces/" rel="noopener noreferrer" target="_blank">reportes del Times of Israel</a>, el propio Netanyahu permitió durante años que Qatar transfiriera fondos a Hamas, debilitando a la Autoridad Palestina y bloqueando cualquier solución de dos estados. La estrategia era clara: mantener a los palestinos divididos mientras se consolidaban los acuerdos con el Golfo.</p>
-<div class="highlight-box">
-<p>"Durante años, Netanyahu apuntaló a Hamas. Ahora nos ha estallado en la cara. Deliberadamente permitió transferencias de dinero desde Qatar para mantener a Hamas lo suficientemente fuerte como para evitar un estado palestino unificado." — <strong>Análisis Times of Israel</strong>, octubre 2023</p>
-</div>
-<h2>II. Project Sunrise: El Plan de $112 Mil Millones para Gaza</h2>
-<img alt="Benjamin Netanyahu retrato oficial" class="content-image" src="https://sspark.genspark.ai/cfimages?u1=OIwwRGtVXp2xFuhZKczOZircfr5hDn1LEBuM9TsvrGBxtklajogshdkLPTuJpMWULyJMKN3gBcsW%2B6YxK%2FpzxCWo1Q1wng5LO1qquSKuouHa32LmzBdNfaUVeIVT%2BcTJJgMo&amp;u2=Gv2yzeQ5C%2Bdckhal&amp;width=2560"/>
-<p>En diciembre de 2025, <a href="https://www.wsj.com/world/middle-east/u-s-pitches-project-sunrise-plan-to-turn-gaza-into-high-tech-metropolis-ebbd96ae" rel="noopener noreferrer" target="_blank">The Wall Street Journal reveló</a> la existencia de un documento explosivo: <strong>Project Sunrise</strong>, un plan de reconstrucción de Gaza valuado en <strong>$112 mil millones</strong> a implementarse durante 10 años.</p>
-<h3>Los Arquitectos del Plan</h3>
-<p>El plan fue diseñado por un equipo que incluye:</p>
-<ul>
-<li><strong>Jared Kushner:</strong> CEO de Affinity Partners, fondo de inversión con $2 mil millones del Fondo de Inversión Pública de Arabia Saudita</li>
-<li><strong>Steve Witkoff:</strong> Enviado especial de Trump para Medio Oriente, magnate inmobiliario</li>
-<li><strong>Tony Blair:</strong> Ex Primer Ministro británico, propuesto para liderar la "Autoridad Internacional de Transición de Gaza" (GITA)</li>
-</ul>
-<img alt="Jared Kushner retrato oficial" class="content-image" src="https://sspark.genspark.ai/cfimages?u1=sEMsHpw%2FlvTKU9IUSn%2FIPEXmv5qSIpoMcOT3dbXo%2FGba2iyl8VVVOy97BRJ2zc6Sg5NuH1%2F%2B25LR3GbMAUT45DOKFWBE9IJzJC6zG07w1GJozZLHhHT6K2HzL3OGG6qT&amp;u2=NaSN37JpL4LAUrG7&amp;width=2560"/>
-<h3>Componentes del Project Sunrise</h3>
-<p>Según documentos filtrados, el proyecto contempla:</p>
-<ol>
-<li><strong>Infraestructura portuaria:</strong> Desarrollo del puerto de Gaza con capacidad de recibir grandes cargueros</li>
-<li><strong>Ciudad inteligente:</strong> "New Rafah" como capital administrativa con tecnología de punta</li>
-<li><strong>Turismo de lujo:</strong> Hoteles, casinos y resorts en la costa mediterránea</li>
-<li><strong>Zona económica especial:</strong> Incentivos fiscales para atraer empresas tecnológicas</li>
-<li><strong>Aeropuerto internacional:</strong> Conectividad aérea con capitales del Golfo y Europa</li>
-</ol>
-<div class="highlight-box">
-<p>"La propiedad frente al mar de Gaza podría ser muy valiosa... si las personas se mudan y no viven allí." — <strong>Jared Kushner</strong>, marzo 2024, entrevista en Harvard</p>
-</div>
-<p>Esta declaración de Kushner, que causó indignación global, revela la lógica subyacente: <strong>Gaza vacía de palestinos es Gaza disponible para inversión</strong>.</p>
-<h3>El Modelo Kosovo: Tony Blair al Rescate</h3>
-<img alt="Tony Blair retrato oficial" class="content-image" src="https://sspark.genspark.ai/cfimages?u1=iTju7fKmFHnXAb%2FSTcHBsgAjlqlVEneQy1iI2REs51t0FFxsFVHG9FOsL763EQALe4ViLcGcQe6EzFMRNnnx2pJP0EntJ9NAduveRa6Oa20gUwSKzY%2FC&amp;u2=ZHZ%2Fkv3ZRpk85c1o&amp;width=2560"/>
-<p>La propuesta para que <a href="https://www.bbc.co.uk/news/articles/c3drmk95xlzo" rel="noopener noreferrer" target="_blank">Tony Blair lidere GITA</a> no es casual. Blair jugó un rol similar en Kosovo tras la guerra de 1999, supervisando la transición hacia un protectorado internacional. El modelo propone:</p>
-<ul>
-<li><strong>Autoridad suprema:</strong> Mandato de la ONU para ser la "máxima autoridad política y legal" por 5 años</li>
-<li><strong>Control total:</strong> Poderes sobre seguridad, justicia, economía y reconstrucción</li>
-<li><strong>Supervisión internacional:</strong> Coalición de países occidentales y árabes moderados</li>
-</ul>
-<p>El <a href="https://www.tonyblairinstituteforchange.org/" rel="noopener noreferrer" target="_blank">Tony Blair Institute for Global Change</a>, su vehículo institucional, tiene un historial controvertido asesorando a regímenes autoritarios en Kazajistán, Arabia Saudita y Egipto. ¿Su especialidad? Presentar reformas cosméticas mientras se mantienen estructuras de poder intactas.</p>
-<h2>III. El Corredor IMEC: La Pieza Clave del Rompecabezas</h2>
-<img alt="Mapa del Corredor IMEC conectando India, Medio Oriente y Europa" class="content-image" src="https://sspark.genspark.ai/cfimages?u1=NGR7pzV41b88ip0GsG7%2B67Yp0A2UtEAQ5KgzYjnbX5jF5IVBaux%2Fz6DlSjR5syicEzDUHheD6RDvuODqv9QtZgogY7LgH%2BTSX%2Fgi2XEkbMihPQohg%2FaIyVWKC6U%3D&amp;u2=bMJkWX%2FFLHZhqRQo&amp;width=2560"/>
-<p>Para entender completamente lo que está en juego en Gaza, debemos mirar el mapa más amplio. En septiembre de 2023, durante la cumbre del G20 en Nueva Delhi, se anunció el <a href="https://www.imec.international/" rel="noopener noreferrer" target="_blank">Corredor Económico India-Medio Oriente-Europa (IMEC)</a>.</p>
-<h3>¿Qué es IMEC?</h3>
-<p>IMEC es un ambicioso proyecto de infraestructura que pretende crear una ruta comercial alternativa al Canal de Suez, conectando:</p>
-<ol>
-<li><strong>India</strong> → Emiratos Árabes Unidos / Arabia Saudita (vía marítima)</li>
-<li><strong>Golfo Pérsico</strong> → Europa (vía ferrocarril a través de Israel)</li>
-<li>Integración de cables de datos, tuberías de hidrógeno verde y líneas eléctricas</li>
-</ol>
-<p>El corredor ferroviario crítico conectaría el <strong>puerto de Haifa</strong> en Israel con Arabia Saudita, cruzando... exactamente donde está Gaza.</p>
-<h3>El Canal Ben Gurion: Alternativa al Suez</h3>
-<img alt="Mapa propuesto del Canal Ben Gurion como alternativa al Canal de Suez" class="content-image" src="https://sspark.genspark.ai/cfimages?u1=RR4V9ZFCC6I3TMRXgylZsJ3uynOoebHT2Ha1szkZpR2bmUlMMemCEmRHNWq4IznVy1TYfygAk8pgtyqLRnVfIhKVg2rxq00Rhc%2F5PVy0DwGskoUVbMJKUj2nVxzneQn8tLg3WFfC5GJ2GLdq7qBTdIf0uS6xr69vSrE%3D&amp;u2=FfyYXqBX0bAFkWsT&amp;width=2560"/>
-<p>Paralelamente, Israel ha considerado durante décadas el <a href="https://www.eurasiareview.com/17112023-the-ben-gurion-canal-israels-potential-revolutionary-alternative-to-suez-analysis/" rel="noopener noreferrer" target="_blank">Proyecto del Canal Ben Gurion</a>: una vía navegable desde el Golfo de Aqaba (Eilat) hasta el Mediterráneo. Las rutas propuestas... atraviesan o bordean el territorio de Gaza.</p>
-<p>Cuando el <a href="https://www.bbc.com/news/business-56533250" rel="noopener noreferrer" target="_blank">Ever Given bloqueó el Canal de Suez</a> en marzo de 2021, el mundo experimentó un atasco logístico que costó <strong>$9.6 mil millones diarios</strong>. Israel inmediatamente promocionó sus alternativas de infraestructura.</p>
-<div class="highlight-box">
-<p>"El Canal de Suez es el punto de estrangulamiento más crítico del comercio global. Quien controle una alternativa viable tendrá un poder geopolítico inmenso. No es coincidencia que todos los planes de reconstrucción de Gaza incluyan un puerto de aguas profundas y conectividad ferroviaria regional." — Análisis de Terapia Liberal</p>
-</div>
-<h3>El Gas Natural de Gaza: El Elefante en la Habitación</h3>
-<p>Frente a la costa de Gaza yacen los <strong>yacimientos de gas natural Gaza Marine</strong>, descubiertos en 2000, con reservas estimadas de 1 trillón de pies cúbicos de gas natural, valuadas en miles de millones de dólares.</p>
-<p>En junio de 2023, <a href="https://www.reuters.com/business/energy/israel-gives-nod-gaza-marine-gas-development-wants-security-assurances-2023-06-18/" rel="noopener noreferrer" target="_blank">Israel aprobó el desarrollo de Gaza Marine</a>, exigiendo "garantías de seguridad". Cuatro meses después, estalló el conflicto del 7 de octubre.</p>
-<p>Empresas como BP (Reino Unido) y ENI (Italia) recibieron <a href="https://www.middleeastmonitor.com/20231103-israel-awards-licences-to-uks-bp-italys-eni-to-explore-gas-deposits/" rel="noopener noreferrer" target="_blank">licencias para explorar depósitos de gas</a> en la región, incluyendo áreas disputadas.</p>
-<h2>IV. Los Flujos de Dinero: Siguiendo el Rastro</h2>
-<img alt="Mohammed bin Salman, Príncipe Heredero de Arabia Saudita" class="content-image" src="https://sspark.genspark.ai/cfimages?u1=f9xT5b9YcaPGj0pOiSQZ58CyEF9pxIopFCFEnY7PGe9p6U%2BSQxhStfYHFyOEdkzoSmmwr2tDcH6s5xwtXliReTgxYGch9UpetFI6teAQeW2baMw5X1FUnWh21pjd0sATyoi%2FBgR4B3qkNbEpZ2zszs1%2F1C5rV2MzyIA1A0U1RCmsF10IdYC%2FGQ5Kxk9nBwksXlMGZbq9XHe9dTDuHfFSr1jBMKWg6feB%2FupGsSw3H3RWiMJXSAs4whh5gKdXLgu3deKsQVWhR%2FFGSrcDzwHQfB%2FZvxsZ2RbBwYYBWAlk6PcL0PHRn%2BfkKgfEZHCgN2Age6OUDmZezcRGZNG%2FFUe6yp4HZKUIxuhpF71ILqJ1GtrXZCpf348B8vJbgNIAOGKkxI8WD9R4WFSqS9QMCO%2Fq%2BE%2FShdLYXB0T%2B3FWglyDJjVDtvk%2BwnbxqbDK5Vr01gkJSdccumsbhLC92xNgBVRnC6z%2BRozsl5W0DNeWy87tu6jFUf3r0zPZP%2BYdUV846wSGjYDVN7Zc7iPP%2FAhaJ56lNT%2FTmDr%2BiA%3D%3D&amp;u2=Uy66PxwBFCZo%2B6yT&amp;width=2560"/>
-<h3>Affinity Partners: El Vehículo de Inversión de Kushner</h3>
-<p>Seis meses después de dejar la Casa Blanca, Jared Kushner fundó <a href="https://en.wikipedia.org/wiki/Affinity_Partners" rel="noopener noreferrer" target="_blank">Affinity Partners</a>, un fondo de inversión en capital privado. En abril de 2022, <a href="https://www.nytimes.com/2022/04/10/us/jared-kushner-saudi-investment-fund.html" rel="noopener noreferrer" target="_blank">The New York Times reveló</a> que el Fondo de Inversión Pública (PIF) de Arabia Saudita, presidido por el Príncipe Heredero Mohammed bin Salman (MBS), comprometió <strong>$2 mil millones</strong> a Affinity Partners.</p>
-<p>Esto ocurrió a pesar de que los asesores del PIF habían expresado <strong>"serias dudas"</strong> sobre la experiencia de Kushner y recomendaban rechazar la inversión. MBS personalmente anuló esas objeciones.</p>
-<div class="highlight-box">
-<p>"Pasas todo este tiempo trabajando con Arabia Saudita, dejas el cargo y seis meses después recibes $2 mil millones. Es la definición de conflicto de interés y corrupción institucionalizada." — Senadores demócratas estadounidenses, 2022</p>
-</div>
-<h3>La Conexión Adelson: Dinero que Mueve Montañas</h3>
-<p>No podemos hablar de la influencia sobre la política estadounidense hacia Israel sin mencionar a <strong>Sheldon Adelson</strong> (fallecido en 2021) y su viuda <strong>Miriam Adelson</strong>. Los Adelson donaron más de <strong>$600 millones</strong> a causas políticas en la última década, convirtiéndose en los mayores donantes republicanos.</p>
-<p>Según <a href="https://responsiblestatecraft.org/2022/10/07/new-book-highlights-how-campaign-money-influences-us-foreign-policy/" rel="noopener noreferrer" target="_blank">investigaciones</a>, Adelson condicionó su apoyo económico a Trump a políticas específicas:</p>
-<ul>
-<li>Trasladar la embajada estadounidense a Jerusalén ✓ (realizado en 2018)</li>
-<li>Reconocer la soberanía israelí sobre los Altos del Golán ✓ (2019)</li>
-<li>Abandonar el acuerdo nuclear con Irán ✓ (2018)</li>
-<li>Apoyar la anexión de Cisjordania (en proceso)</li>
-</ul>
-<p>Ronald Lauder, presidente del Congreso Judío Mundial, <a href="https://www.timesofisrael.com/liveblog_entry/lauder-says-adelson-was-greatest-influence-the-jewish-people-had-in-the-white-house/" rel="noopener noreferrer" target="_blank">declaró públicamente</a>: "Sheldon Adelson fue la mayor influencia que el pueblo judío tuvo en la Casa Blanca, no solo en tiempos de Trump, sino también de Biden. Era un Departamento de Estado de un solo hombre para Israel."</p>
-<h3>Qatar, Deutsche Bank y la Red Financiera</h3>
-<p>La red de financiamiento de Kushner es aún más compleja:</p>
-<ul>
-<li><strong>Qatar:</strong> Tras el bloqueo impuesto por Arabia Saudita a Qatar en 2017, la familia Kushner enfrentaba problemas financieros con su edificio emblemático en el 666 de la Quinta Avenida. <a href="https://www.vanityfair.com/news/2019/02/qatar-666-5th-ave-jared-kushner" rel="noopener noreferrer" target="_blank">Misteriosamente, Qatar invirtió</a> en el rescate financiero del edificio poco después de que se levantara el bloqueo.</li>
-<li><strong>Deutsche Bank:</strong> Un mes antes de la elección de Trump en 2016, <a href="https://theweek.com/speedreads/708223/jared-kushner-finalized-285-million-bad-boy-loan-deutsche-bank-a-month-before-trumps-election" rel="noopener noreferrer" target="_blank">Kushner finalizó un préstamo "problemático"</a> de $285 millones con Deutsche Bank.</li>
-<li><strong>Inversores rusos:</strong> <a href="https://www.theguardian.com/news/2017/nov/05/russia-funded-facebook-twitter-investments-kushner-investor" rel="noopener noreferrer" target="_blank">The Guardian documentó</a> que inversores rusos financiaron plataformas tecnológicas en las que Kushner también invirtió.</li>
-</ul>
-<h2>V. El Patrón Global: Ucrania, Irak, Libia y Ahora Venezuela</h2>
-<p>Lo que vemos en Gaza no es un fenómeno aislado. Es un <strong>modelo de negocio</strong> que se ha perfeccionado durante décadas:</p>
-<h3>Ucrania: BlackRock y la Reconstrucción</h3>
-<p>En enero de 2026, Steve Witkoff, enviado especial de Trump, <a href="https://www.pbs.org/newshour/world/trumps-middle-east-envoy-says-gaza-rebuilding-timeline-in-israel-hamas-truce-preposterous" rel="noopener noreferrer" target="_blank">declaró públicamente</a> que una vez termine la guerra en Ucrania, los ucranianos "serán entregados a BlackRock y Larry Fink para oportunidades de empleo como parte del plan de posguerra."</p>
-<p>BlackRock, la gestora de activos más grande del mundo con más de $10 billones bajo gestión, ya adquirió <a href="https://www.kavout.com/market-lens/black-rock-s-23-billion-panama-canal-ports-acquisition-sectors-and-stocks-to-watch" rel="noopener noreferrer" target="_blank">puertos del Canal de Panamá</a> por $23 mil millones y posee participaciones en infraestructura crítica global.</p>
-<h3>Venezuela: El Último Botín</h3>
-<p>En enero de 2026, tras un polémico operativo militar en Venezuela que resultó en la captura del presidente Nicolás Maduro, Trump declaró que Estados Unidos "va a administrar el país" hasta que haya una "transición" hacia un liderazgo pro-estadounidense.</p>
-<div class="highlight-box">
-<p>"Corporaciones estadounidenses muy grandes van a explotar su petróleo. Esto no es solo genocidio, es colonialismo descarado del siglo XXI." — Ben Norton, analista geopolítico, enero 2026</p>
-</div>
-<p>Venezuela posee las <strong>mayores reservas probadas de petróleo del mundo</strong> — 303 mil millones de barriles. El oligarca ruso Oleg Deripaska advirtió que si EE.UU. asegura el control de los campos petroleros venezolanos, después de haberse movido también en Guyana, podría terminar supervisando <strong>más de la mitad de las reservas mundiales</strong>, permitiéndole manipular los precios del crudo.</p>
-<p>Significativamente, <a href="https://www.bloomberg.com/news/articles/2024-04-23/venezuela-contrata-a-rothschild-como-asesor-de-deuda-en-default" rel="noopener noreferrer" target="_blank">Venezuela contrató a Rothschild &amp; Co</a> como asesor de su deuda en default en 2024. Nat Rothschild tuiteó: "Bien hecho, Donald J Trump. #venezuelalibre"</p>
-<h3>Marco Rubio: El Arquitecto de la Intervención</h3>
-<p>El Secretario de Estado de Trump, Marco Rubio, ha sido el principal impulsor de la intervención en Venezuela. Curiosamente, Rubio fue uno de los <a href="https://www.theguardian.com/us-news/2015/oct/29/marco-rubio-campaign-funding-sheldon-adelson" rel="noopener noreferrer" target="_blank">principales receptores de donaciones</a> de Sheldon Adelson durante su carrera política.</p>
-<h2>VI. Conexiones Ocultas: Chabad, Rothschild y el Círculo Íntimo</h2>
-<p>Una investigación más profunda revela conexiones que pocas veces se discuten en medios mainstream:</p>
-<h3>Chabad Lubavitch: La Red Espiritual</h3>
-<p>Tanto Jared Kushner como Benjamin Netanyahu tienen <strong>profundos vínculos</strong> con el movimiento Chabad Lubavitch:</p>
-<ul>
-<li>En 2016, <a href="https://www.timesofisrael.com/trumps-daughter-son-in-law-visit-lubavitcher-rebbe/" rel="noopener noreferrer" target="_blank">Kushner e Ivanka Trump visitaron la tumba del Rebe de Lubavitch</a>, Menachem Mendel Schneerson</li>
-<li>La <a href="https://forward.com/news/359482/kushner-foundation-gives-342k-to-chabad-still-surprised-about-jared-and-iva/" rel="noopener noreferrer" target="_blank">Fundación Kushner donó $342,000 a Chabad</a></li>
-<li>Netanyahu <a href="https://www.alestiklal.net/en/article/the-era-of-the-messiah-has-come-what-netanyahu-s-remarks-mean-amid-gaza-war" rel="noopener noreferrer" target="_blank">declaró públicamente</a> que el Rebe le encomendó "acelerar la venida del Mesías"</li>
-<li>Chabad es el <a href="https://www.lubavitch.com/chabad-lubavitch-largest-birthright-israel-provider/" rel="noopener noreferrer" target="_blank">mayor proveedor de Birthright Israel</a>, programa que lleva jóvenes judíos de la diáspora a Israel</li>
-</ul>
-<p>Es importante señalar que Chabad Lubavitch opera globalmente, incluyendo en Rusia, donde Vladimir Putin <a href="https://www.timesofisrael.com/putin-fires-top-official-who-describes-chabad-as-a-supremacist-cult/" rel="noopener noreferrer" target="_blank">despidió a un alto funcionario</a> que describió a Chabad como un "culto supremacista."</p>
-<h3>El Círculo Rothschild</h3>
-<p>Jared Kushner reveló que <a href="https://www.voxnews.al/english/politike/jared-kushner-tregon-si-u-njoh-me-edi-ramen-ne-jahtin-e-rothschild-eve--i92169" rel="noopener noreferrer" target="_blank">conoció al Primer Ministro albanés Edi Rama</a> en el yate de los Rothschild. Tony Blair también tiene <a href="https://paulcudenec.substack.com/p/tony-blair-and-the-rothschilds" rel="noopener noreferrer" target="_blank">conexiones documentadas</a> con la familia Rothschild, incluyendo escándalos relacionados con el oligarca ruso Oleg Deripaska y Nat Rothschild en 2008.</p>
-<p>Rothschild &amp; Co., el banco de inversión, aparece consistentemente como asesor financiero en proyectos de reconstrucción e infraestructura en zonas de conflicto.</p>
-<h2>VII. La Gran Imagen: ¿Hacia Dónde Vamos?</h2>
-<p>Al conectar todos estos puntos, emerge un patrón inquietante:</p>
-<ol>
-<li><strong>Conflicto como Oportunidad:</strong> Las guerras modernas no solo se libran por recursos, sino que se planifican con la reconstrucción ya presupuestada</li>
-<li><strong>Privatización de la Gobernanza:</strong> Instituciones internacionales débiles son reemplazadas por consejos de administración privados</li>
-<li><strong>Integración Vertical:</strong> Las mismas personas que diseñan la política exterior luego lucran con la implementación</li>
-<li><strong>Normalización del Despojo:</strong> El desplazamiento forzado de poblaciones se presenta como "reubicación voluntaria"</li>
-</ol>
-<div class="highlight-box">
-<p>"No estamos ante teorías conspirativas. Estamos ante documentos públicos, inversiones rastreables y declaraciones grabadas. El único 'secreto' es que la mayoría de la gente prefiere no ver el patrón completo. Es más cómodo creer que los conflictos son ideológicos que aceptar que son, fundamentalmente, transacciones comerciales." — Nicolás Martínez Lage</p>
-</div>
-<h3>El Futuro de Gaza</h3>
-<p>Si el Project Sunrise se implementa como está planteado, Gaza en 2036 podría ser:</p>
-<ul>
-<li>Un <strong>hub turístico de lujo</strong> sin palestinos originales</li>
-<li>Un <strong>nodo logístico</strong> del corredor IMEC controlado por empresas multinacionales</li>
-<li>Una <strong>zona económica especial</strong> con mano de obra barata importada</li>
-<li>Un <strong>centro de datos y tecnología</strong> financiado por capital del Golfo</li>
-</ul>
-<p>El plan incluso contempla <strong>monetizar el 70% de la costa</strong> a partir del décimo año para generar retornos de inversión a largo plazo.</p>
-<h3>La Pregunta que Nadie Hace</h3>
-<p>¿Por qué nadie en los medios mainstream conecta estos puntos? La respuesta es incómoda: porque muchos de estos medios reciben financiamiento de las mismas corporaciones e individuos involucrados en estos proyectos.</p>
-<h2>Conclusión: El Imperativo de la Lucidez</h2>
-<p>Este análisis no pretende ofrecer respuestas simples ni soluciones mágicas. Su propósito es <strong>expandir el marco de análisis</strong> más allá de las narrativas simplistas de "buenos vs malos" que dominan el discurso público.</p>
-<p>Los arquitectos de estos proyectos operan con una lógica implacable: la de los balances corporativos, los retornos de inversión y la acumulación de poder. No son monstruos de caricatura; son profesionales altamente capacitados ejecutando lo que consideran estrategias racionales dentro del capitalismo tardío.</p>
-<p>Pero esa racionalidad económica se construye sobre el sufrimiento de millones de personas reales — gazatíes, venezolanos, ucranianos — cuyas vidas son las fichas de un tablero de ajedrez geopolítico.</p>
-<div class="highlight-box">
-<p>"El primer paso hacia la resistencia no es la violencia ni la indignación moral vacía. Es la comprensión. Entender cómo funciona el sistema es la condición necesaria para imaginar alternativas. Y las alternativas existen, pero solo las encontraremos si primero tenemos el coraje de mirar directamente a la oscuridad." — Nicolás Martínez Lage</p>
-</div>
-<p>La pregunta que cada uno debe responder no es si estos hechos son verdaderos — los documentos están ahí, accesibles para quien quiera verificarlos. La pregunta es: <strong>¿qué vamos a hacer con esta información?</strong></p>
-<!-- Sources Section -->
-<div class="sources-section">
-<h2>📚 Fuentes y Referencias</h2>
-<h3>Documentos Oficiales y Reportes Institucionales</h3>
-<ul class="sources-list">
-<li><a href="https://www.un.org/unispal/document/press-briefing-francesca-albanese-16sep25/" rel="noopener noreferrer" target="_blank">Francesca Albanese Press Briefing - UN Special Rapporteur, septiembre 2025</a></li>
-<li><a href="https://www.ohchr.org/en/documents/country-reports/a80492-gaza-genocide-collective-crime-report-special-rapporteur-situation" rel="noopener noreferrer" target="_blank">Gaza Genocide: A Collective Crime - UN Human Rights Council Report A/80/492</a></li>
-<li><a href="https://www.imec.international/" rel="noopener noreferrer" target="_blank">India-Middle East-Europe Economic Corridor (IMEC) - Sitio Oficial</a></li>
-</ul>
-<h3>Investigaciones Periodísticas</h3>
-<ul class="sources-list">
-<li><a href="https://www.wsj.com/world/middle-east/u-s-pitches-project-sunrise-plan-to-turn-gaza-into-high-tech-metropolis-ebbd96ae" rel="noopener noreferrer" target="_blank">U.S. Pitches 'Project Sunrise' Plan to Turn Gaza Into High-Tech Metropolis - Wall Street Journal, diciembre 2025</a></li>
-<li><a href="https://www.nytimes.com/2022/04/10/us/jared-kushner-saudi-investment-fund.html" rel="noopener noreferrer" target="_blank">Before Giving Billions to Jared Kushner, Saudi Investment Fund Had Big Doubts - The New York Times, 2022</a></li>
-<li><a href="https://www.theguardian.com/us-news/2024/mar/19/jared-kushner-gaza-waterfront-property-israel-negev" rel="noopener noreferrer" target="_blank">Jared Kushner says Gaza's 'waterfront property could be very valuable' - The Guardian, marzo 2024</a></li>
-<li><a href="https://www.washingtonpost.com/national-security/2025/08/31/trump-gaza-plan-riviera-relocation/" rel="noopener noreferrer" target="_blank">Gaza postwar plan envisions 'voluntary' relocation of entire population - Washington Post, agosto 2025</a></li>
-<li><a href="https://www.ft.com/content/0b1bc761-c572-4b61-882a-fb4467259dcd" rel="noopener noreferrer" target="_blank">Tony Blair's staff took part in 'Gaza Riviera' project with BCG - Financial Times, julio 2025</a></li>
-</ul>
-<h3>Acuerdos de Abraham e Infraestructura Regional</h3>
-<ul class="sources-list">
-<li><a href="https://en.wikipedia.org/wiki/Abraham_Accords" rel="noopener noreferrer" target="_blank">Abraham Accords - Wikipedia (referencias verificables)</a></li>
-<li><a href="https://www.timesofisrael.com/israel-to-begin-promoting-railway-linking-haifa-seaport-with-saudi-arabia/" rel="noopener noreferrer" target="_blank">Israel to begin promoting railway linking Haifa seaport with Saudi Arabia - Times of Israel</a></li>
-<li><a href="https://www.atlanticcouncil.org/in-depth-research-reports/report/the-india-middle-east-europe-economic-corridor-connectivity-in-an-era-of-geopolitical-uncertainty/" rel="noopener noreferrer" target="_blank">The India-Middle East-Europe Economic Corridor - Atlantic Council, agosto 2025</a></li>
-</ul>
-<h3>Recursos Energéticos y Gas Natural</h3>
-<ul class="sources-list">
-<li><a href="https://www.reuters.com/business/energy/israel-gives-nod-gaza-marine-gas-development-wants-security-assurances-2023-06-18/" rel="noopener noreferrer" target="_blank">Israel gives nod to Gaza Marine gas development - Reuters, junio 2023</a></li>
-<li><a href="https://www.middleeastmonitor.com/20231103-israel-awards-licences-to-uks-bp-italys-eni-to-explore-gas-deposits/" rel="noopener noreferrer" target="_blank">Israel awards licences to UK's BP, Italy's Eni to explore gas deposits - Middle East Monitor, 2023</a></li>
-</ul>
-<h3>Contexto Histórico y Netanyahu</h3>
-<ul class="sources-list">
-<li><a href="https://www.timesofisrael.com/for-years-netanyahu-propped-up-hamas-now-its-blown-up-in-our-faces/" rel="noopener noreferrer" target="_blank">For years, Netanyahu propped up Hamas. Now it's blown up in our faces - Times of Israel, octubre 2023</a></li>
-<li><a href="https://www.nytimes.com/2023/11/30/world/middleeast/israel-hamas-attack-intelligence.html" rel="noopener noreferrer" target="_blank">Israel Knew Hamas's Attack Plan Over a Year Ago - The New York Times, noviembre 2023</a></li>
-<li><a href="https://www.bbc.com/news/world-middle-east-67082047" rel="noopener noreferrer" target="_blank">Egypt warned Israel days before Hamas struck - BBC News, octubre 2023</a></li>
-</ul>
-<h3>Tony Blair y Modelos de Gobernanza</h3>
-<ul class="sources-list">
-<li><a href="https://www.bbc.co.uk/news/articles/c3drmk95xlzo" rel="noopener noreferrer" target="_blank">Tony Blair in discussions to run transitional Gaza authority - BBC News, septiembre 2025</a></li>
-<li><a href="https://www.theguardian.com/world/2025/sep/25/washington-backing-plan-for-tony-blair-to-head-transitional-gaza-authority" rel="noopener noreferrer" target="_blank">Washington backing plan for Tony Blair to head transitional Gaza authority - The Guardian, septiembre 2025</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Gaza_International_Transitional_Authority" rel="noopener noreferrer" target="_blank">Gaza International Transitional Authority (GITA) - Wikipedia</a></li>
-</ul>
-<h3>Flujos Financieros y Donantes</h3>
-<ul class="sources-list">
-<li><a href="https://en.wikipedia.org/wiki/Affinity_Partners" rel="noopener noreferrer" target="_blank">Affinity Partners - Wikipedia (referencias verificables)</a></li>
-<li><a href="https://www.vanityfair.com/news/2019/02/qatar-666-5th-ave-jared-kushner" rel="noopener noreferrer" target="_blank">Qatar Shocked to Learn It Accidentally Bailed Out Jared Kushner - Vanity Fair, 2019</a></li>
-<li><a href="https://responsiblestatecraft.org/2022/10/07/new-book-highlights-how-campaign-money-influences-us-foreign-policy/" rel="noopener noreferrer" target="_blank">Trump tell-all cites Adelson's bankrolled Israel embassy move - Responsible Statecraft, 2022</a></li>
-<li><a href="https://forward.com/news/359482/kushner-foundation-gives-342k-to-chabad-still-surprised-about-jared-and-iva/" rel="noopener noreferrer" target="_blank">Kushner Foundation Gives $342K to Chabad - The Forward</a></li>
-</ul>
-<h3>Venezuela y Patrones Globales</h3>
-<ul class="sources-list">
-<li><a href="https://www.bloomberg.com/news/articles/2024-04-23/venezuela-contrata-a-rothschild-como-asesor-de-deuda-en-default" rel="noopener noreferrer" target="_blank">Venezuela contrata a Rothschild como asesor de deuda - Bloomberg, 2024</a></li>
-<li><a href="https://www.axios.com/2026/01/04/marco-rubio-venezuela-maduro-oil" rel="noopener noreferrer" target="_blank">Rubio faces ghosts of U.S. interventions after spearheading Maduro raid - Axios, enero 2026</a></li>
-<li><a href="https://www.kavout.com/market-lens/black-rock-s-23-billion-panama-canal-ports-acquisition-sectors-and-stocks-to-watch" rel="noopener noreferrer" target="_blank">BlackRock's $23 Billion Panama Canal Ports Acquisition - Kavout</a></li>
-</ul>
-<h3>Canal de Suez y Alternativas</h3>
-<ul class="sources-list">
-<li><a href="https://www.bbc.com/news/business-56533250" rel="noopener noreferrer" target="_blank">Suez blockage is holding up $9.6bn of goods a day - BBC News, marzo 2021</a></li>
-<li><a href="https://www.eurasiareview.com/17112023-the-ben-gurion-canal-israels-potential-revolutionary-alternative-to-suez-analysis/" rel="noopener noreferrer" target="_blank">The Ben Gurion Canal: Israel's Potential Revolutionary Alternative to Suez - Eurasia Review, noviembre 2023</a></li>
-<li><a href="https://es.wikipedia.org/wiki/Proyecto_del_Canal_Ben_Guri%C3%B3n" rel="noopener noreferrer" target="_blank">Proyecto del Canal Ben Gurión - Wikipedia en español</a></li>
-</ul>
-<h3>Videos y Tweets de Referencia</h3>
-<ul class="sources-list">
-<li><a href="https://x.com/sahouraxo/status/1968772985227010398" rel="noopener noreferrer" target="_blank">Tweet de Sarah sobre declaraciones de Francesca Albanese</a></li>
-<li><a href="https://x.com/terapia_liberal/status/2000954895432593564" rel="noopener noreferrer" target="_blank">Tweet Terapia Liberal: Jared Revela el Plan</a></li>
-<li><a href="https://x.com/TheCradleMedia/status/2001254739586019540" rel="noopener noreferrer" target="_blank">Video Trump admite venta de derechos sobre Altos del Golán</a></li>
-</ul>
-</div>
-</div>
-<!-- Back to Top Button -->
-<div class="back-to-top" id="backToTop">↑</div>
-<!-- Footer -->]]></ns0:encoded>
-      <ns41:post_date xmlns:ns41="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns41:post_date>
-      <ns42:status xmlns:ns42="http://wordpress.org/export/1.2/">publish</ns42:status>
-      <ns43:post_type xmlns:ns43="http://wordpress.org/export/1.2/">post</ns43:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/g/a/z/a/-/v/e/n/e/z/u/e/l/a/-/a/r/q/u/i/t/e/c/t/o/s/-/w/w/3/h/t/m/l/</guid>
+<div class="social-icons">
+<a class="social-icon youtube" href="https://www.youtube.com/@terapialiberal" rel="noopener noreferrer" target="_blank" title="YouTube">▶️</a>
+<a class="social-icon patreon" href="https://www.patreon.com/terapialiberal" rel="noopener noreferrer" target="_blank" title="Patreon">🅿️</a>
+<a class="social-icon twitter" href="https://x.com/terapia_liberal" rel="noopener noreferrer" target="_blank" title="X (Twitter)">✖️</a>
+</div>]]></content:encoded>
+      <wp:post_id>1013</wp:post_id>
+      <wp:post_date>2026-01-08 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2026-01-08 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>gaza-venezuela-arquitectos-ww3</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>Jeffrey</title>
-      <ns0:encoded><![CDATA[<!-- Header -->
+      <title>Jeffrey: NADA ES LO QUE PARECE - Análisis de la Red Global de Control</title>
+      <link>https://terapialiberal.github.io/articles/jeffrey.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/jeffrey.html</guid>
+      <description>Jeffrey Epstein no era un criminal aislado sino el fixer estratégico de una red global que conecta Wall Street, el MIT, Bitcoin Core, operaciones PROMIS, Safari Club, Mega Group y vigilancia digital. Un análisis profundo de 2:44 horas sobre las conexiones reales de Epstein con élites financieras, operaciones de inteligencia, y el sistema de control global que opera desde JFK hasta el 11-S.</description>
+      <content:encoded><![CDATA[<!-- Header -->
+<header class="header">
+<div class="logo-section">
+<img alt="Terapia Liberal Logo" class="logo" src="https://yt3.ggpht.com/ZzVyDrXt4x8YWoKbISHZzC9CCtkEPCN4GRET1Xxf_wssNyw7mfN-xTbBmpwEJHO0DRQrg0Dgug=s68-c-k-c0x00ffffff-no-rj"/>
+<h1 class="site-title">TERAPIA LIBERAL</h1>
+</div>
 
+</header>
 <div class="container">
 <!-- Hero Section -->
 <section class="hero-section">
@@ -3355,16 +3140,27 @@
 <!-- Footer -->
 
 <!-- Back to Top Button -->
-<button class="back-to-top" onclick="scrollToTop()">↑</button>]]></ns0:encoded>
-      <ns44:post_date xmlns:ns44="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns44:post_date>
-      <ns45:status xmlns:ns45="http://wordpress.org/export/1.2/">publish</ns45:status>
-      <ns46:post_type xmlns:ns46="http://wordpress.org/export/1.2/">post</ns46:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/j/e/f/f/r/e/y/h/t/m/l/</guid>
+<button class="back-to-top" onclick="scrollToTop()">↑</button>]]></content:encoded>
+      <wp:post_id>1014</wp:post_id>
+      <wp:post_date>2025-12-06 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2025-12-06 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>jeffrey</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>La-Matrix-Del-Poder</title>
-      <ns0:encoded><![CDATA[<main>
-<div class="video-container">
+      <title>La Matrix del Poder: Quiénes Son los Verdaderos Dueños del Planeta</title>
+      <link>https://terapialiberal.github.io/articles/la-matrix-del-poder.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/la-matrix-del-poder.html</guid>
+      <description>Dominic Cummings reveló que el gobierno británico es 'teatro guionado'. Un análisis profundo de 2 horas sobre las verdaderas estructuras de poder global: oligarquías coordinadas, sociedades secretas como Le Cercle, la conexión Rothschild-Soros, y cómo realmente funcionan los gobiernos. Desde los 147 corporaciones que controlan el 40% de la riqueza global hasta las confesiones de políticos como Rory Stewart y Mark Carney.</description>
+      <content:encoded><![CDATA[<div class="video-container">
 <iframe allowfullscreen="" src="https://www.youtube.com/embed/wsVwjy3z0KE"></iframe>
 </div>
 <h2>Introducción: El Teatro del Poder</h2>
@@ -3564,43 +3360,27 @@
 <li><strong>The Politics of Heroin</strong> - Alfred McCoy: Agencias de inteligencia y narcotráfico</li>
 <li><strong>Foundations: Their Power and Influence</strong> - René Wormser: Fundaciones libres de impuestos y poder</li>
 </ul>
-</div>
-</main>
-<div class="back-to-top" onclick="scrollToTop()">↑</div>]]></ns0:encoded>
-      <ns47:post_date xmlns:ns47="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns47:post_date>
-      <ns48:status xmlns:ns48="http://wordpress.org/export/1.2/">publish</ns48:status>
-      <ns49:post_type xmlns:ns49="http://wordpress.org/export/1.2/">post</ns49:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/l/a/-/m/a/t/r/i/x/-/d/e/l/-/p/o/d/e/r/h/t/m/l/</guid>
+</div>]]></content:encoded>
+      <wp:post_id>1015</wp:post_id>
+      <wp:post_date>2025-11-13 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2025-11-13 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>la-matrix-del-poder</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>Nuevo-Complejo-Militar</title>
-      <ns0:encoded><![CDATA[<!-- Navigation -->
-
-<!-- Header -->
-
-<!-- Video Principal -->
-<section class="container mx-auto px-4 mb-12" data-tags="video, introduccion, complejo-militar, blackrock, palantir, tecnologia">
-<div class="max-w-4xl mx-auto">
-<div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-800">
-<h2 class="text-3xl font-bold text-gold mb-6">
-<i class="fas fa-play-circle mr-3"></i>
-                    Video Principal: Los Ganadores del Nuevo Complejo Militar TECNOLÓGICO
-                </h2>
-<div class="aspect-video mb-6">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="w-full h-full rounded-lg" frameborder="0" src="https://www.youtube.com/embed/k3mX98Xo_qc">
-</iframe>
-</div>
-<p class="text-gray-300 leading-relaxed">
-                    Un análisis profundo del entramado entre las grandes financieras como BlackRock, las empresas tecnológicas 
-                    como Palantir, y cómo estas corporaciones han capturado reguladores y políticos para dirigir dinero público 
-                    hacia empresas militares en las que tienen participaciones significativas.
-                </p>
-</div>
-</div>
-</section>
-<!-- Contenido Principal -->
-<main class="container mx-auto px-4 space-y-16">
-<!-- Larry Fink y el Nuevo Orden -->
+      <title>Los Ganadores del Nuevo Complejo Militar TECNOLÓGICO</title>
+      <link>https://terapialiberal.github.io/articles/nuevo-complejo-militar.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/nuevo-complejo-militar.html</guid>
+      <description>El entramado entre Silicon Valley, Wall Street y el complejo militar global. Análisis del sistema militar-industrial-tecnológico donde BlackRock, Palantir y las élites financieras convierten la guerra en negocio.</description>
+      <content:encoded><![CDATA[<!-- Larry Fink y el Nuevo Orden -->
 <section class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-800" data-tags="larry-fink, blackrock, globalizacion, nuevo-orden-mundial, nearshoring, ucrania" id="introduccion">
 <h2 class="text-3xl font-bold text-gold mb-8">
 <i class="fas fa-globe mr-3"></i>
@@ -3929,47 +3709,27 @@
 </ul>
 </div>
 </div>
-</section>
-</main>
-<!-- Footer -->
-
-<!-- Back to Top Button -->
-<div class="back-to-top" id="backToTop">
-<i class="fas fa-arrow-up"></i>
-</div>]]></ns0:encoded>
-      <ns50:post_date xmlns:ns50="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns50:post_date>
-      <ns51:status xmlns:ns51="http://wordpress.org/export/1.2/">publish</ns51:status>
-      <ns52:post_type xmlns:ns52="http://wordpress.org/export/1.2/">post</ns52:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/n/u/e/v/o/-/c/o/m/p/l/e/j/o/-/m/i/l/i/t/a/r/h/t/m/l/</guid>
+</section>]]></content:encoded>
+      <wp:post_id>1016</wp:post_id>
+      <wp:post_date>2025-06-29 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2025-06-29 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>nuevo-complejo-militar</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>Seunda-Globalizacion</title>
-      <ns0:encoded><![CDATA[<!-- Navigation -->
-
-<!-- Header -->
-
-<!-- Video Principal -->
-<section class="container mx-auto px-4 mb-12" data-tags="video, introduccion, reset, agenda-oculta">
-<div class="max-w-6xl mx-auto">
-<div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-800">
-<h2 class="text-3xl font-bold text-gold mb-6">
-<i class="fas fa-play-circle mr-3"></i>
-                    Video Principal: Revelado - El RESET es la Agenda Oculta
-                </h2>
-<div class="aspect-video mb-6">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="w-full h-full rounded-lg" frameborder="0" src="https://www.youtube.com/embed/zYV-hGwE-RQ">
-</iframe>
-</div>
-<p class="text-gray-300 leading-relaxed">
-                    Mientras la narrativa pública se fragmenta entre crisis energéticas, conflictos geopolíticos y revoluciones 
-                    tecnológicas, detrás de escena se perfila un rediseño integral del sistema financiero global.
-                </p>
-</div>
-</div>
-</section>
-<!-- Contenido Principal -->
-<main class="container mx-auto px-4 space-y-16">
-<!-- La Agenda Oculta del RESET -->
+      <title>El Segundo Borrador del Orden Mundial</title>
+      <link>https://terapialiberal.github.io/articles/seunda-globalizacion.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/seunda-globalizacion.html</guid>
+      <description>Rediseño del orden financiero global, geopolítica, CBDC y nueva arquitectura del poder monetario. Análisis completo de la agenda oculta tras la crisis en Medio Oriente.</description>
+      <content:encoded><![CDATA[<!-- La Agenda Oculta del RESET -->
 <section class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-800" data-tags="larry-fink, blackrock, globalizacion, ft, nacionalismo-economico" id="introduccion">
 <h2 class="text-3xl font-bold text-gold mb-8">
 <i class="fas fa-eye mr-3"></i>
@@ -4171,22 +3931,41 @@
 </ul>
 </div>
 </div>
-</section>
-</main>
-<!-- Footer -->
-
-<!-- Back to Top Button -->
-<div class="back-to-top" id="backToTop">
-<i class="fas fa-arrow-up"></i>
-</div>]]></ns0:encoded>
-      <ns53:post_date xmlns:ns53="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns53:post_date>
-      <ns54:status xmlns:ns54="http://wordpress.org/export/1.2/">publish</ns54:status>
-      <ns55:post_type xmlns:ns55="http://wordpress.org/export/1.2/">post</ns55:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/s/e/u/n/d/a/-/g/l/o/b/a/l/i/z/a/c/i/o/n/h/t/m/l/</guid>
+</section>]]></content:encoded>
+      <wp:post_id>1017</wp:post_id>
+      <wp:post_date>2025-06-25 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2025-06-25 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>seunda-globalizacion</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>Terapia-Liberal-Rimland-Nuevo-Orden-Mundial</title>
-      <ns0:encoded><![CDATA[<h1 class="fade-in">La Teoría del Rimland y la Arquitectura del Nuevo Orden Mundial</h1>
+      <title>La Teoría del Rimland y el Nuevo Orden Mundial</title>
+      <link>https://terapialiberal.github.io/articles/terapia-liberal-rimland-nuevo-orden-mundial.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/terapia-liberal-rimland-nuevo-orden-mundial.html</guid>
+      <description>Análisis expandido del video de Terapia Liberal sobre la teoría geopolítica de Nicholas Spykman, el Rimland y la arquitectura del poder contemporáneo.</description>
+      <content:encoded><![CDATA[<section class="hero-section fade-in">
+<div class="video-wrapper">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/9AMPffjQREY?start=782&amp;rel=0&amp;modestbranding=1" title="La Teoría del Rimland y el Nuevo Orden Mundial - Terapia Liberal">
+</iframe>
+</div>
+<div class="video-meta">
+<p><strong>Duración:</strong> Video completo + análisis expandido</p>
+<p><strong>Inicio del análisis:</strong> Minuto 13:02 (782 segundos)</p>
+<p><strong>Canal:</strong> Terapia Liberal</p>
+<p><strong>Autor:</strong> Nicolás Martínez Lage</p>
+</div>
+</section>
+<div class="article-content">
+<article>
+<h1 class="fade-in">La Teoría del Rimland y la Arquitectura del Nuevo Orden Mundial</h1>
 <p class="fade-in">
                     En el contexto geopolítico actual, donde las declaraciones de funcionarios estadounidenses sobre la pertenencia del hemisferio occidental generan titulares internacionales y los acuerdos diplomáticos se suceden a un ritmo vertiginoso, resulta imprescindible comprender las bases teóricas que sustentan estas acciones. La teoría geopolítica del Rimland, desarrollada por Nicholas Spykman en la primera mitad del siglo XX, ofrece un marco interpretativo fundamental para entender por qué ciertas regiones del planeta son consideradas estratégicas y por qué el control de las costas de Eurasia representa el objetivo central de la política exterior estadounidense desde hace décadas. Este análisis expandido explora los fundamentos de esta teoría, su evolución histórica y su manifestación contemporánea en las decisiones de Washington que están reconfigurando el orden mundial establecido tras la Segunda Guerra Mundial.
                 </p>
@@ -4348,19 +4127,119 @@
 <div class="highlight-box fade-in">
 <p>"La única pregunta es si el Nuevo Orden Mundial surgirá del entendimiento intelectual y moral, y por diseño, o si será impuesto a la humanidad por una serie de catástrofes."</p>
 <span class="attribution">— Henry Kissinger, 1992</span>
-</div>]]></ns0:encoded>
-      <ns56:post_date xmlns:ns56="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns56:post_date>
-      <ns57:status xmlns:ns57="http://wordpress.org/export/1.2/">publish</ns57:status>
-      <ns58:post_type xmlns:ns58="http://wordpress.org/export/1.2/">post</ns58:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/t/e/r/a/p/i/a/-/l/i/b/e/r/a/l/-/r/i/m/l/a/n/d/-/n/u/e/v/o/-/o/r/d/e/n/-/m/u/n/d/i/a/l/h/t/m/l/</guid>
+</div>
+</article>
+</div>
+<section class="sources-section fade-in">
+<h3>📚 Fuentes y Referencias</h3>
+<ul class="sources-list">
+<li>
+<div class="source-category">Teoría Geopolítica</div>
+<a href="https://en.wikipedia.org/wiki/Nicholas_J._Spykman" rel="noopener noreferrer" target="_blank">Nicholas J. Spykman - Wikipedia</a>
+<p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Biografía y obra del teórico geopolítico estadounidense.</p>
+</li>
+<li>
+<div class="source-category">Teoría Geopolítica</div>
+<a href="https://dossiergeopolitico.com/2025/05/15/10485/" rel="noopener noreferrer" target="_blank">La Teoría Geopolítica del Rimland: Una Perspectiva Estratégica – Dossier Geopolitico</a>
+<p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Análisis detallado de la teoría del Rimland y su relevancia contemporánea.</p>
+</li>
+<li>
+<div class="source-category">Política Estadounidense</div>
+<a href="https://x.com/MarioNawfal/status/2009572113129378049" rel="noopener noreferrer" target="_blank">Mario Nawfal en X: Trump sobre derecho internacional</a>
+<p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Declaraciones del presidente Trump sobre los límites de su poder.</p>
+</li>
+<li>
+<div class="source-category">Política Estadounidense</div>
+<a href="https://x.com/EricLDaugh/status/2007830000435622170" rel="noopener noreferrer" target="_blank">Eric Daugherty en X: Marco Rubio sobre el hemisferio occidental</a>
+<p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Declaraciones del Secretario de Estado sobre la doctrina Monroe renovada.</p>
+</li>
+<li>
+<div class="source-category">Poder Financiero</div>
+<a href="https://www.infobae.com/america/agencias/2025/03/04/blackrock-adquiere-los-puertos-del-canal-de-panama-operados-por-ck-hutchison-por-21650-millones/" rel="noopener noreferrer" target="_blank">Blackrock adquiere los puertos del Canal de Panamá - Infobae</a>
+<p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Transacción de 21.650 millones que posiciona a BlackRock en el Canal.</p>
+</li>
+<li>
+<div class="source-category">Poder Financiero</div>
+<a href="https://www.bloomberg.com/news/articles/2025-08-14/blackrock-s-gip-leads-10-billion-deal-for-saudi-gas-facilities" rel="noopener noreferrer" target="_blank">BlackRock's GIP Leads $11 Billion Saudi Gas Deal - Bloomberg</a>
+<p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Inversiones de GIP en infraestructura saudí.</p>
+</li>
+<li>
+<div class="source-category">Geopolítica</div>
+<a href="https://www.axios.com/2026/01/29/trump-panama-canal-court-ruling-china" rel="noopener noreferrer" target="_blank">Trump expecting favorable Panama Canal ruling - Axios</a>
+<p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Doctrina Donroe y el Canal de Panamá.</p>
+</li>
+<li>
+<div class="source-category">Geopolítica</div>
+<a href="https://x.com/Antony_ant_cl/status/2015569106473242975" rel="noopener noreferrer" target="_blank">Antonio Rishi en X: Laura Richardson sobre recursos latinoamericanos</a>
+<p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Declaraciones del Comandante del Comando Sur sobre recursos estratégicos.</p>
+</li>
+<li>
+<div class="source-category">Instituciones</div>
+<a href="https://www.cfr.org/membership/roster" rel="noopener noreferrer" target="_blank">Council on Foreign Relations - Miembros</a>
+<p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Think tank principal de política exterior estadounidense.</p>
+</li>
+<li>
+<div class="source-category">Instituciones</div>
+<a href="https://en.wikipedia.org/wiki/Yale_Institute_of_International_Studies" rel="noopener noreferrer" target="_blank">Yale Institute of International Studies - Wikipedia</a>
+<p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Institución fundada por Spykman y su legado.</p>
+</li>
+<li>
+<div class="source-category">Orden Mundial</div>
+<a href="https://www.ft.com/content/cc04b14e-577b-4668-8897-dea96e60199f" rel="noopener noreferrer" target="_blank">Xi Jinping calls for China's renminbi - Financial Times</a>
+<p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Aspiraciones del renminbi como moneda de reserva global.</p>
+</li>
+<li>
+<div class="source-category">Orden Mundial</div>
+<a href="https://asia.nikkei.com/politics/international-relations/indo-pacific/trilateral-commission-calls-2023-year-one-of-new-world-order" rel="noopener noreferrer" target="_blank">Trilateral Commission calls 2023 'Year One' - Nikkei Asia</a>
+<p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Declaraciones de la Comisión Trilateral sobre el Nuevo Orden Mundial.</p>
+</li>
+</ul>
+</section>
+<section class="sources-section fade-in">
+<h3>🔗 Marcadores Relacionados (Spykman)</h3>
+<ul class="sources-list">
+<li>
+<div class="source-category">Documentos Históricos</div>
+<a href="https://archive.org/stream/prospect-for-america-the-rockefeller-panel-reports/Prospect%20For%20America%20-%20The%20Rockefeller%20Panel%20Reports_djvu.txt" rel="noopener noreferrer" target="_blank">Full text of "Prospect For America" - The Rockefeller Panel Reports</a>
+</li>
+<li>
+<div class="source-category">Documentos Históricos</div>
+<a href="https://info.publicintelligence.net/bilderberg/BilderbergConferenceReport1972.pdf" rel="noopener noreferrer" target="_blank">Bilderberg Conference Report 1972</a>
+</li>
+<li>
+<div class="source-category">Infraestructura Global</div>
+<a href="https://www.visualcapitalist.com/mapped-every-known-u-s-military-base-overseas/" rel="noopener noreferrer" target="_blank">Mapped: Every Known U.S. Military Base Overseas - Visual Capitalist</a>
+</li>
+<li>
+<div class="source-category">Corredores Económicos</div>
+<a href="https://www-atlanticcouncil-org.translate.goog/in-depth-research-reports/report/the-india-middle-east-europe-economic-corridor" rel="noopener noreferrer" target="_blank">El Corredor Económico India-Oriente Medio-Europa - Atlantic Council</a>
+</li>
+<li>
+<div class="source-category">Poder Naval</div>
+<a href="https://www.theasset.com/article/50746/blackrock-gip-deal-shakes-infrastructure-investing" rel="noopener noreferrer" target="_blank">BlackRock-GIP deal shakes infrastructure investing - The Asset</a>
+</li>
+</ul>
+</section>]]></content:encoded>
+      <wp:post_id>1018</wp:post_id>
+      <wp:post_date>2026-02-07 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2026-02-07 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>terapia-liberal-rimland-nuevo-orden-mundial</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>Trump-Cbdc</title>
-      <ns0:encoded><![CDATA[<!-- Header -->
-
-<!-- Main Content -->
-<main>
-<!-- Hero Section con Video Integrado -->
+      <title>TRUMP ES el Caballo de Troya Tecnocrático!</title>
+      <link>https://terapialiberal.github.io/articles/trump-cbdc.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/trump-cbdc.html</guid>
+      <description>La batalla por el control ha comenzado!</description>
+      <content:encoded><![CDATA[<!-- Hero Section con Video Integrado -->
 <section class="hero-section">
 <div class="video-date">24 de Julio, 2025</div>
 <h1 class="hero-title">Trump ES el Caballo de Troya Tecnocrático</h1>
@@ -4588,23 +4467,27 @@
 <p class="source-description">Regulación de stablecoins en el Congreso</p>
 </div>
 </div>
-</section>
-</main>
-<!-- Footer -->
-
-<!-- Back to Top Button -->
-<a class="back-to-top" href="#" id="backToTop">
-<i class="fas fa-arrow-up"></i>
-</a>
-<!-- Twitter Widgets Script -->]]></ns0:encoded>
-      <ns59:post_date xmlns:ns59="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns59:post_date>
-      <ns60:status xmlns:ns60="http://wordpress.org/export/1.2/">publish</ns60:status>
-      <ns61:post_type xmlns:ns61="http://wordpress.org/export/1.2/">post</ns61:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/t/r/u/m/p/-/c/b/d/c/h/t/m/l/</guid>
+</section>]]></content:encoded>
+      <wp:post_id>1019</wp:post_id>
+      <wp:post_date>2025-07-24 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2025-07-24 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>trump-cbdc</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>Trump-Poderes-Emergencia-Cog-Proyecto-2025</title>
-      <ns0:encoded><![CDATA[<article class="article-container">
+      <title>Trump Activa Poderes de Emergencia: COG, Proyecto 2025 y el Control de Washington DC</title>
+      <link>https://terapialiberal.github.io/articles/trump-poderes-emergencia-cog-proyecto-2025.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/trump-poderes-emergencia-cog-proyecto-2025.html</guid>
+      <description>Análisis profundo sobre la activación de poderes presidenciales extraordinarios, la implementación del Proyecto 2025 y la militarización de Washington DC.</description>
+      <content:encoded><![CDATA[<article class="article-container">
 <header class="article-header">
 <h1>Trump Activa Poderes de Emergencia: COG, Proyecto 2025 y el Control de Washington DC</h1>
 <div class="article-meta">
@@ -4847,19 +4730,27 @@
 <p>Lo que está en juego no es meramente una administración política diferente, sino la naturaleza misma del sistema de gobierno estadounidense y, por extensión, el modelo político occidental en su conjunto.</p>
 <p class="final-note"><em>Este análisis se basa en información pública disponible y fuentes verificables. Las conexiones presentadas emergen de patrones documentados y declaraciones públicas de los actores involucrados. Los lectores están invitados a verificar independientemente las fuentes citadas y formar sus propias conclusiones.</em></p>
 </section>
-</article>]]></ns0:encoded>
-      <ns62:post_date xmlns:ns62="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns62:post_date>
-      <ns63:status xmlns:ns63="http://wordpress.org/export/1.2/">publish</ns63:status>
-      <ns64:post_type xmlns:ns64="http://wordpress.org/export/1.2/">post</ns64:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/t/r/u/m/p/-/p/o/d/e/r/e/s/-/e/m/e/r/g/e/n/c/i/a/-/c/o/g/-/p/r/o/y/e/c/t/o/-/2/0/2/5/h/t/m/l/</guid>
+</article>]]></content:encoded>
+      <wp:post_id>1020</wp:post_id>
+      <wp:post_date>2025-08-20 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2025-08-20 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>trump-poderes-emergencia-cog-proyecto-2025</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>Wall-Street-Repunte-Crash-Analisis</title>
-      <ns0:encoded><![CDATA[<!-- Header -->
-
-<!-- Main Content -->
-<main>
-<!-- Video Section -->
+      <title>Wall Street Advierte: 'Primero un Gran Repunte, Luego un Crash' - Análisis del Paralelismo con 1929</title>
+      <link>https://terapialiberal.github.io/articles/wall-street-repunte-crash-analisis.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/wall-street-repunte-crash-analisis.html</guid>
+      <description>Análisis sobre las advertencias Y el paralelismo histórico con el crash de 1929.</description>
+      <content:encoded><![CDATA[<!-- Video Section -->
 <section class="video-section">
 <h1 class="video-title">Wall Street Advierte: "Primero un Gran Repunte, Luego un Crash"</h1>
 <div class="video-container">
@@ -4967,26 +4858,54 @@
 <li><a href="https://english.pravda.ru/news/science/163898-hunan-china-massive-gold-discovery/" target="_blank">Depósito masivo de oro descubierto en China podría remodelar el mercado global</a></li>
 </ul>
 </div>
-</section>
-</main>
-<!-- Footer -->
-
-<!-- Back to Top Button -->
-<button class="back-to-top" id="backToTop">
-<i class="fas fa-arrow-up"></i>
-</button>
-<!-- Twitter Widgets Script -->
-
-<!-- Main JavaScript -->]]></ns0:encoded>
-      <ns65:post_date xmlns:ns65="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns65:post_date>
-      <ns66:status xmlns:ns66="http://wordpress.org/export/1.2/">publish</ns66:status>
-      <ns67:post_type xmlns:ns67="http://wordpress.org/export/1.2/">post</ns67:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/w/a/l/l/-/s/t/r/e/e/t/-/r/e/p/u/n/t/e/-/c/r/a/s/h/-/a/n/a/l/i/s/i/s/h/t/m/l/</guid>
+</section>]]></content:encoded>
+      <wp:post_id>1021</wp:post_id>
+      <wp:post_date>2025-10-03 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2025-10-03 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>wall-street-repunte-crash-analisis</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
     <item>
-      <title>Zbig</title>
-      <ns0:encoded><![CDATA[<!-- Header -->
+      <title>El Gran Tablero Mundial: La Profecía de Brzezinski</title>
+      <link>https://terapialiberal.github.io/articles/zbig.html</link>
+      <dc:creator>admin</dc:creator>
+      <guid isPermaLink="false">https://terapialiberal.github.io/articles/zbig.html</guid>
+      <description>Análisis definitivo de la visión geopolítica de Zbigniew Brzezinski y su impacto en el orden mundial.</description>
+      <content:encoded><![CDATA[<!-- Header -->
+<header class="sticky top-0 z-50 sticky-nav">
+<div class="container mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<img alt="Terapia Liberal" class="w-12 h-12 rounded-full" src="https://yt3.ggpht.com/ZzVyDrXt4x8YWoKbISHZzC9CCtkEPCN4GRET1Xxf_wssNyw7mfN-xTbBmpwEJHO0DRQrg0Dgug=s68-c-k-c0x00ffffff-no-rj"/>
+<h1 class="text-2xl font-bold gradient-text">Terapia Liberal</h1>
+</div>
 
+</div>
+<!-- Navigation Sections -->
+<div class="nav-sections">
+<a href="#que-es">¿Qué es?</a>
+<a href="#brzezinski">Brzezinski</a>
+<a href="#heartland">Heartland</a>
+<a href="#eurasia">Eurasia</a>
+<a href="#pivotes">Países Pivotes</a>
+<a href="#cecom">CECOM</a>
+<a href="#chokepoints">Chokepoints</a>
+<a href="#china-rusia">China-Rusia</a>
+<a href="#nueva-guerra-fria">Nueva Guerra Fría</a>
+<a href="#elites">Élites</a>
+<a href="#trump">Trump</a>
+<a href="#palantir">Palantir</a>
+<a href="#cronologia">Cronología</a>
+</div>
+</div>
+</header>
 <!-- Hero Section -->
 <section class="py-20" id="introduccion">
 <div class="container mx-auto px-6">
@@ -6000,81 +5919,19 @@
 <!-- Back to Top Button -->
 <div class="back-to-top" id="backToTop">
 <i class="fas fa-arrow-up"></i>
-</div>]]></ns0:encoded>
-      <ns68:post_date xmlns:ns68="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns68:post_date>
-      <ns69:status xmlns:ns69="http://wordpress.org/export/1.2/">publish</ns69:status>
-      <ns70:post_type xmlns:ns70="http://wordpress.org/export/1.2/">post</ns70:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/a/r/t/i/c/l/e/s/\/z/b/i/g/h/t/m/l/</guid>
-    </item>
-    <item>
-      <title>Cometa Atlas Fuentes</title>
-      <ns0:encoded><![CDATA[<h1>Bookmarks</h1>
-<dl><p>
-</p><dt><h3 personal_toolbar_folder="true">Barra de marcadores</h3>
-</dt><dl><p>
-</p><dt><h3>LISTA DE LECTURA</h3>
-</dt><dl><p>
-</p><dt><h3>OCULTISMO</h3>
-</dt><dl><p>
-</p><dt><a href="https://x.com/nashah25/status/1966019385023512714">JINA G GAME THEORU (1) Nasruddin Shah en X: "Ever wondered why world leaders act the way they do? Hint: It’s not luck — it’s game theory. Prof. Xueqin Jiang makes geopolitics feel like a strategy class you wish you had. https://t.co/DDtGhY2v4Z" / X</a>
-<dt><a href="https://gamma.app/docs/Poder-Oculto-y-Control-Social-fzrsqzzotq9p93u?mode=doc">Poder Oculto y Control Social | Gamma</a>
-<dt><a href="https://vigilantcitizen.com/moviesandtv/him-a-ridiculously-blatant-movie-about-the-occult-elite-grooming-its-stars/">"HIM": Una película ridículamente descarada sobre la élite oculta que prepara a sus estrellas - The Vigilant Citizen --- “HIM”: A Ridiculously Blatant Movie About the Occult Elite Grooming Its Stars - The Vigilant Citizen</a>
-<dt><a href="https://x.com/idropFbombs/status/1982766376751096135">𝒦𝑒𝓁𝓁𝓎࿎☽ en X: "How do secret societies work? Professor Jiang explains to us how each section of the hierarchy pyramid are compartmentalized within each other. This is how the bottom layers do the top layers' biddings without even knowing that they're doing it. 💯👇 https://t.co/VCCrARP5Ti" / X</a>
-<dt><a href="https://www.rockefellercenter.com/art/atlas/">Atlas --- Atlas</a>
-<dt><a href="https://es.wikipedia.org/wiki/Atlas_(mitolog%C3%ADa)">Atlas (mitología) - Wikipedia, la enciclopedia libre</a>
-<dt><a href="https://www.rockefellercenter.com/art/prometheus/">Prometeo --- Prometheus</a>
-<dt><a href="https://www.untappedcities.com/atlas-prometheus-sculpture-rockefeller-center/">8 secretos del Atlas y las esculturas de Prometeo en el Rockefeller Center - Untapped New York --- 8 Secrets of the Atlas and Prometheus Sculptures at Rockefeller Center - Untapped New York</a>
-<dt><a href="https://www.bloomberg.com/news/features/2025-10-17/america-s-tech-right-is-obsessed-with-building-giant-statues?srnd=homepage-americas&amp;embedded-checkout=true">La derecha tecnológica de Estados Unidos está obsesionada con la construcción de estatuas gigantes - Bloomberg --- America’s Tech Right Is Obsessed With Building Giant Statues - Bloomberg</a>
-<dt><a href="https://www.fendevilliers.com/">Inicio | Fen de Villiers - Escultura --- Home | Fen de Villiers - Sculpture</a>
-<dt><a href="https://theconversation.com/peter-thiel-thinks-greta-thunberg-could-be-the-antichrist-what-actually-is-the-antichrist-267439">Peter Thiel piensa que Greta Thunberg podría ser el Anticristo. ¿Qué es realmente el Anticristo? --- Peter Thiel thinks Greta Thunberg could be the Antichrist. What actually is the Antichrist?</a>
-<dt><a href="https://x.com/krustelkram/status/1708454133013893537">Céline Keller en X: "2022 the Atlas Society Gala honoured Michael Saylor sponsored by "Gays for Capitalism" and Peter Thiel. Michael "(shit)coin is Effective Altruism!" Saylor. Just thinking of all the bull shit that became our current reality threatening democracy+ life on earth 1999-2021 TESCREAL https://t.co/yFqgYMTxRU" / X</a>
-<dt><a href="https://x.com/sf_mills/status/1707204654189408623">Emily Mills en X: "Here’s a transcript of the Thiel Talk. https://t.co/KdzqX84DDf" / X</a>
-<dt><a href="https://x.com/RedPandaKoala/status/1982481776556838940">(1) Red Panda Koala en X: "🚨 BREAKING: Harvard astronomer Avi Loeb now says there is a 40% chance 3I/Atlas is alien technology https://t.co/XFQMdbhVvs" / X</a>
-<dt><a href="https://www.lanacion.com.ar/lifestyle/en-las-redes/advertencia-por-el-cometa-3iatlas-un-cientifico-de-harvard-alerto-por-una-cola-extraterrestre-nid27102025/">Advertencia por el cometa 3I/ATLAS: un científico de Harvard alertó por una “cola extraterrestre” - LA NACION</a>
-<dt><a href="https://www.lanacion.com.ar/lifestyle/en-las-redes/registran-una-anomalia-en-el-cometa-3iatlas-y-la-asocian-a-una-maniobra-inteligente-nid28102025/">Registran una anomalía en el cometa 3I/ATLAS y la asocian a una “maniobra inteligente” - LA NACION</a>
-<dt><a href="https://ciencia.nasa.gov/sistema-solar/cometa-3i-atlas/">Cometa 3I/ATLAS - NASA Ciencia</a>
-<dt><a href="https://gamma.app/docs/3IATLAS-El-Cometa-Interestelar-282gs44f7253knk?mode=doc">3I/ATLAS: El Cometa Interestelar | Gamma</a>
-<dt><a href="https://www.eleconomista.es/tecnologia/noticias/13608659/10/25/atlas-de-chatgpt-vs-comet-de-perplexity-comparamos-los-navegadores-que-quieren-destronar-a-google-chrome.html">Atlas de ChatGPT vs Comet de Perplexity: comparamos los navegadores que quieren destronar a Google Chrome</a>
-<dt><a href="https://x.com/GlobaltrekX/status/1982584027485032666">Global𝕏 en X: "3I/ATLAS UPDATE Michio Kaku stated: 'This week on 30th October they're going to track it to see if it picks up extra energy whilst it whizzes around the sun, if it picks up extra energy on its flyby it could clitch it as being extraterrestrial intelligent life'. https://t.co/8XWsdY8F2P" / X</a>
-<dt><a href="https://mkaku.org/">Sitio web oficial del Dr. Michio Kaku --- Official Website of Dr. Michio Kaku</a>
-<dt><a href="https://www.netflix.com/ar/title/81252357">No miren arriba | Sitio oficial de Netflix</a>
-<dt><a href="https://x.com/BGatesIsaPyscho/status/1982768709975572709">(1) Concerned Citizen en X: "Man claims he used the CIA Technique that is ‘Remote Viewing’ to look inside 3I/Atlas and claims it’s a ship housing 5 Million Dormant Draco Soldiers inside of it. So yep that’s probably enough internet for today. https://t.co/BdP3ME3Czb" / X</a>
-<dt><a href="https://x.com/joerogan/status/1983222579562193263">Joe Rogan en X: "What the hell is 3i Atlas? I sat down with Avi Loeb to get the details https://t.co/tLKGQSHcSN https://t.co/gCcbdyJ6uw" / X</a>
-<dt><a href="https://x.com/terapia_liberal/status/1983307128682230229">Terapia Liberal en X: "@UAPReportingCnt https://t.co/5WBL6Pcv0A" / X</a>
-<dt><a href="https://es.wikipedia.org/wiki/Abraham_Loeb">Abraham Loeb - Wikipedia, la enciclopedia libre</a>
-<dt><a href="https://x.com/tsarnick/status/1824935534848000396">Tsarathustra en X: "Peter Thiel says if advanced alien civilizations have faster-than-light travel then they must evolve into either demons or angels https://t.co/dRAe2hRRPh" / X</a>
-<dt><a href="https://x.com/MarioNawfal/status/1983160664521842863">(7) Mario Nawfal en X: "🇷🇺 GREEN FIREBALL OVER MOSCOW - NOT ALIENS, JUST ORBITAL KARMA Moscow’s sky lit up with a glowing green streak that had social media yelling “aliens,” “missile,” and “Skynet’s awake.” Turns out, it was something far less cinematic - but still cosmic. Experts say the slow https://t.co/rkAgFIifeJ" / X</a>
-<dt><a href="https://x.com/MiddleOfMayhem/status/1982573200723821020">(4) Steven Greenstreet 🐷 en X: "🚨 BREAKING - Enigma, a UAP-tracking app, reveals "thousands" of UFOs are lurking near American coastlines! They "logged more than 9,000" UFOs in the ocean "within 10 miles of US". US Navy veteran Tim Gallaudet warns these underwater UFOs are "not... made by humans"! 😱😱😱 https://t.co/yiW2Nm7dKc" / X</a>
-<dt><a href="https://x.com/RedPandaKoala/status/1983223996104749294">(8) Red Panda Koala en X: "Glowing green USOs are being seen all over the eastern coast of the US https://t.co/Gs9dA5uFnv" / X</a>
-<dt><a href="https://x.com/UAPWatchers/status/1982425556126970273">(4) Skywatch Signal en X: "🚨Congresswoman Anna Paulina Luna Promised To Expedite The Release Of NASA’s Data On 3I/ATLAS Dr. Avi Loeb has just revealed that Rep. Luna will expedite the data that NASA has on 3I/ATLAS! This is huge news, huge thanks to Avi. #3IATLAS #ufotwitter #uapX https://t.co/iIF7eVo1WV" / X</a>
-<dt><a href="https://en.wikipedia.org/wiki/The_Galileo_Project#:~:text=Its%20activities%20are%20funded%20by,was%20announced%20in%20September%202022.">El proyecto Galileo - Wikipedia, la enciclopedia libre --- The Galileo Project - Wikipedia</a>
-<dt><a href="https://galileo.hsites.harvard.edu/news/galileo-project-welcomes-christopher-mellon-and-luis-elizondo-research-affiliates">El Proyecto Galileo da la bienvenida a Christopher Mellon y Luis Elizondo como investigadores afiliados | El proyecto Galileo --- The Galileo Project Welcomes Christopher Mellon and Luis Elizondo as Research Affiliates | The Galileo Project</a>
-<dt><a href="https://issues.org/ufos-wont-go-away/">UFOs Won't Go Away</a>
-<dt><a href="https://x.com/uaphenomenon/status/1665510938345197569">UFOs&amp;Disclosure en X: "“I think that assertion should be taken seriously..it is an issue that should be taken seriously…This is a topic that the oversight committees should take seriously and investigate.” Chris Mellon on the idea that the US gov. is in possession of off-world objects. #ufotwitter https://t.co/qEKoyEZf0o" / X</a>
-<dt><a href="https://en-wikipedia-org.translate.goog/wiki/Christopher_Mellon?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=tc">Christopher Mellon - Wikipedia, la enciclopedia libre --- Christopher Mellon - Wikipedia</a>
-<dt><a href="https://en.wikipedia.org/wiki/United_States_Special_Operations_Command">United States Special Operations Command - Wikipedia</a>
-<dt><a href="https://x.com/GalileoProject1/status/1952730488549867596">(4) Galileo Project en X: "The Visionary Letter from Congresswoman Anna Paulina Luna to NASA Regarding 3I/ATLAS https://t.co/CmLNpYn2CN" / X</a>
-<dt><a href="https://x.com/ShadowofEzra/status/1978995995724644480">Shadow of Ezra en X: "Secretary of State Marco Rubio reveals that UFOs have been observed flying over restricted U.S. nuclear facilities which are not from our world. Marco Rubio claims people have lost their lives speaking out about these things. The upcoming documentary The Age of Disclosure will https://t.co/KqBfWrqGBp" / X</a>
-<dt><a href="https://www.disclose.tv/id/5j73ko1ihg/">Timothy Mellon es un donante que dio 130 millones de dólares para pagar a las tropas - Disclose.tv --- Timothy Mellon Is donor who gave $130 million to pay troops - Disclose.tv</a>
-<dt><a href="https://www.whitehouse.gov/government-shutdown-clock/">Reloj de cierre del gobierno – La Casa Blanca --- Government Shutdown Clock – The White House</a>
-<dt><a href="https://www.eurasiantimes.com/nuclear-attack-on-chicago-u-s-missile/">Falla el "ataque nuclear" en Chicago, el escudo de defensa antimisiles de EE. UU.: la trama de la película de Netflix genera una reprimenda "rara" del Pentágono --- "Nuclear Attack" On Chicago, U.S. Missile Defense Shield Fails: Netflix Movie Plot Draws "Rare" Rebuke From Pentagon</a>
-<dt><a href="https://www.sensacine.com/peliculas/pelicula-193444/">La noche más oscura (Zero Dark Thirty) - Película 2012 - SensaCine.com</a>
-<dt><a href="https://defensescoop.com/2024/11/21/anduril-space-surveillance-network-upgrade-contract-sdanet/">Anduril recibe un acuerdo de casi 100 millones de dólares para modernizar la Red de Vigilancia Espacial | Primicia de defensa --- Anduril receives nearly $100M deal to modernize Space Surveillance Network | DefenseScoop</a>
-<dt><a href="https://defonline.com.ar/ciencia-tecnologia/golden-dome-la-nueva-herramienta-espacial-armamentista-de-spacex-para-estados-unidos/">Golden Dome: la herramienta espacial armamentista de SpaceX</a>
-<dt><a href="https://x.com/surajit_ghosh2/status/1982987170442039310">(2) Surajit en X: "Avi Loeb stated that instead of fighting among ourselves humanity should unite to explore space He warned that threats like #3IATLAS and other cosmic risks the future of life on Earth is uncertain He urges that we should seriously consider building space habitats as a backup https://t.co/n6RqfyxNxU" / X</a>
-<dt><a href="https://x.com/surajit_ghosh2/status/1982868917262659718">(4) Surajit en X: "If #3IATLAS changes its direction toward Earth after passing close to the Sun it could trigger a global stock market crash warns Avi Loeb It’s like going on a blind date with a cosmic visitor we don’t know who or what is in control of this massive technological object https://t.co/TdiFCnyIOs" / X</a>
-<dt><a href="https://x.com/JuanitoSay/status/1981750611776250146">(1) Juanito Say en X: "🛸 Avi Loeb, astrofísico de Harvard, tiró una bomba: “No sé si el dinero seguirá teniendo sentido si este objeto (3I/ATLAS) resulta ser tecnológico después del 29 de octubre. Si querés tomarte unas vacaciones, hacelo antes de esa fecha. Porque quién sabe qué pueda pasar.” https://t.co/hWB2AABty9" / X</a>
-<dt><a href="https://www.bbc.com/culture/article/20231027-behind-the-broadcast-orson-welles-on-the-mass-hysteria-of-the-war-of-the-worlds">"No tenía idea de que me convertiría en un evento nacional": Orson Welles sobre la histeria colectiva de La guerra de los mundos --- 'I had no idea I'd become a national event': Orson Welles on the mass hysteria of The War of the Worlds</a>
-<dt><a href="https://resource.rockarch.org/story/war-of-the-worlds-rockefeller-philanthropies-disinformation-and-media-literacy-in-the-1930s/">La guerra de los mundos: Filantropías, desinformación y alfabetización mediática de Rockefeller en la década de 1930 - REsource --- War of the Worlds: Rockefeller Philanthropies, Disinformation, and Media Literacy in the 1930s - REsource</a>
-</dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dt></dl><p>
-</p></dl><p>
-</p></dl><p>
-</p></dl><p>
-</p>]]></ns0:encoded>
-      <ns71:post_date xmlns:ns71="http://wordpress.org/export/1.2/">2026-02-26 14:25:10</ns71:post_date>
-      <ns72:status xmlns:ns72="http://wordpress.org/export/1.2/">publish</ns72:status>
-      <ns73:post_type xmlns:ns73="http://wordpress.org/export/1.2/">post</ns73:post_type>
-      <guid isPermaLink="false">https://terapialiberal.github.io/f/u/e/n/t/e/s/\/C/O/M/E/T/A/ /A/T/L/A/S/ /F/U/E/N/T/E/S/h/t/m/l/</guid>
+</div>]]></content:encoded>
+      <wp:post_id>1022</wp:post_id>
+      <wp:post_date>2025-08-18 00:00:00</wp:post_date>
+      <wp:post_date_gmt>2025-08-18 00:00:00</wp:post_date_gmt>
+      <wp:comment_status>open</wp:comment_status>
+      <wp:ping_status>open</wp:ping_status>
+      <wp:post_name>zbig</wp:post_name>
+      <wp:status>publish</wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_password></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
     </item>
   </channel>
 </rss>
